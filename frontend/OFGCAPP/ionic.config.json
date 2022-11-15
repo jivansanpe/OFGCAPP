@@ -1,0 +1,7 @@
+{
+  "name": "OFGCAPP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
