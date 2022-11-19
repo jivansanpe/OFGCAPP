@@ -1,0 +1,34 @@
+.circle {
+  background: #004D4D;
+  border-radius: 50%;
+  height: 15em;
+  width: 15em;
+  position: relative;
+  right: 50px;
+  bottom: 30px;
+}
+
+.circle2 {
+  background: #004D4D;
+  border-radius: 50%;
+  height: 15em;
+  width: 15em;
+  position: relative;
+  right: -290px;
+}
+
+.tap {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-logo {
+  height: 15em;
+  width: 15em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -4em;
+}
