@@ -16,13 +16,15 @@ return new class extends Migration
         Schema::create('event_musician', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('musician_id');
-            $table->foreign('musician_id')->references('id')->on('musician')
+            $table->foreign('musician_id')->references('id')->on('musicians')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->unsignedBigInteger('event_id');
-            $table->foreign('event_id')->references('id')->on('event')
+            $table->foreign('event_id')->references('id')->on('events')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+            $table->string('category');
+            $table->string('special');
         });
     }
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Api\EventController;
+use App\Http\Resources\MusicianResource;
 use App\Models\Musician;
 use Illuminate\Http\Request;
 
@@ -15,8 +17,7 @@ class MusicianController extends Controller
      */
     public function index()
     {
-        $musicians = Musician::all();
-        return $musicians;
+        return MusicianResource::collection(Musician::all());
     }
 
     /**
@@ -37,7 +38,7 @@ class MusicianController extends Controller
      */
     public function store(Request $request)
     {
-        $event = Event::create($request->all());
+        $musician = Musician::create($request->all());
 
         return response()->json([
             'message' => "Musician saved successfully!",
@@ -53,7 +54,7 @@ class MusicianController extends Controller
      */
     public function show(Musician $musician)
     {
-        //
+        return new MusicianResource($musician);
     }
 
     /**
@@ -76,7 +77,7 @@ class MusicianController extends Controller
      */
     public function update(Request $request, Musician $musician)
     {
-        $event->update($request->all());
+        $musician->update($request->all());
 
         return response()->json([
             'message' => "Event updated successfully!",

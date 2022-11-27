@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('pieces', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('author_id');
-            $table->foreign('author_id')->references('id')->on('author')
+            $table->foreign('author_id')->references('id')->on('authors')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->unsignedBigInteger('event_id');
-            $table->foreign('event_id')->references('id')->on('event')
+            $table->foreign('event_id')->references('id')->on('events')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->string('name');

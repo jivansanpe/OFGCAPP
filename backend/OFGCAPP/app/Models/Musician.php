@@ -10,4 +10,8 @@ class Musician extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'description'];
+    public function events()
+    {
+        return $this->belongsToMany(Event::class);
+    }
 }

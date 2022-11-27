@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\AuthorResource;
 use App\Models\Author;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,11 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        $authors = Author::all();
-        return $authors;
+        if(isset($temp['include']) && $temp['include']=='pieces'){
+            return AuthorResource::collection(Author::with('pieces')->get());
+        } else{
+            return AuthorResource::collection(Author::all());
+        }
     }
 
     /**
@@ -53,7 +57,7 @@ class AuthorController extends Controller
      */
     public function show(Author $author)
     {
-        //
+        return new AuthorResource($author);
     }
 
     /**

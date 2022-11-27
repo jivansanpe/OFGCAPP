@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\PieceResource;
 use App\Models\Piece;
+use App\Models\Author;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class PieceController extends Controller
@@ -15,8 +18,7 @@ class PieceController extends Controller
      */
     public function index()
     {
-        $pieces = Piece::all();
-        return $pieces;
+        return PieceResource::collection(Piece::all());
     }
 
     /**
@@ -39,6 +41,12 @@ class PieceController extends Controller
     {
         $piece = Piece::create($request->all());
 
+        // $event = Event::find($request->event_id);
+        // $event->pieces()->save($piece);
+
+        // $author = Author::find($request->author_id);
+        // $author->pieces()->save($piece);
+
         return response()->json([
             'message' => "Piece saved successfully!",
             'piece' => $piece
@@ -53,7 +61,15 @@ class PieceController extends Controller
      */
     public function show(Piece $piece)
     {
-        //
+        return new PieceResource($piece);
+    }
+    public function byEvent(Event $event)
+    {
+        return $event->pieces;
+    }
+    public function byAuthor(Author $author)
+    {
+        return $author->pieces;
     }
 
     /**
