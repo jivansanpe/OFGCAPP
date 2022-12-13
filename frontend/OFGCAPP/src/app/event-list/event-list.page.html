@@ -9,7 +9,7 @@
 
 <div class="ion-page" id="main-content">
   <ion-header>
-    <ion-title>OFGC</ion-title>
+    <ion-title (click)="goToHome()">OFGC</ion-title>
     <ion-menu-button color="light"></ion-menu-button>
   </ion-header>
 
@@ -17,39 +17,31 @@
     <div class="title-div">
       <ion-title>Events</ion-title>
     </div>
-    <ion-list lines="inset">
-      <ion-row (click)="goToEvent()">
-        <ion-item>
-          <ion-col>
-            <img src="../../assets/images/pulsosdeeuropa.jpg">
-          </ion-col>
-          <ion-col>
-            <div>
-              <ion-text>awaw</ion-text>
-            </div>
-            <div>
-              <ion-text>awawww</ion-text>
-            </div>
-          </ion-col>
-        </ion-item>
+    <ion-card button="true" (click)="goToEvent()">
+      <ion-row>
+        <ion-col>
+          <img alt="Pulsos de europa" src="../../assets/images/pulsosdeeuropa.jpg" />
+        </ion-col>
+        <ion-col>
+          <ion-card-header>
+            <ion-card-title>Pulsos de europa</ion-card-title>
+            <ion-card-subtitle>27/5/22</ion-card-subtitle>
+          </ion-card-header>
+        </ion-col>
       </ion-row>
-      <ion-row (click)="goToEvent()">
-        <ion-item>
-          <ion-col>
-            <img src="../../assets/images/elmarhombre.jpg">
-          </ion-col>
-          <ion-col class="item-info">
-            <div>
-              <div class="item-title">
-                <ion-text>awaw</ion-text>
-              </div>
-              <div>
-                <ion-text>awawww</ion-text>
-              </div>
-            </div>
-          </ion-col>
-        </ion-item>
+    </ion-card>
+    <ion-card button="true" (click)="goToEvent()">
+      <ion-row>
+        <ion-col>
+          <img alt="Pulsos de europa" src="../../assets/images/pulsosdeeuropa.jpg" />
+        </ion-col>
+        <ion-col>
+          <ion-card-header>
+            <ion-card-title>Pulsos de europa</ion-card-title>
+            <ion-card-subtitle>27/5/22</ion-card-subtitle>
+          </ion-card-header>
+        </ion-col>
       </ion-row>
-    </ion-list>
+    </ion-card>
   </ion-content>
 </div>

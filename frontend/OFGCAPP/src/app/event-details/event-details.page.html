@@ -9,7 +9,7 @@
 
 <div class="ion-page" id="main-content">
   <ion-header>
-    <ion-title>OFGC</ion-title>
+    <ion-title (click)="goToHome()">OFGC</ion-title>
     <ion-menu-button color="light"></ion-menu-button>
   </ion-header>
 
@@ -55,7 +55,7 @@
     <div class="subtitle-div">
       <ion-title>Musicos</ion-title>
     </div>
-    <ion-card>
+    <ion-card (click)="goToMusician()">
       <img alt="Silhouette of mountains" src="../../assets/images/elmarhombre.jpg" />
       <ion-card-header>
         <ion-card-title>Juan Miguel Rodríguez</ion-card-title>
@@ -65,5 +65,26 @@
     <div class="subtitle-div">
       <ion-title>Pieces</ion-title>
     </div>
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header">
+          <ion-label>First piece</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          This is the first piece
+        </div>
+        <div class="ion-padding" (click)="goToAuthor()" slot="content">
+          Go to author
+        </div>
+      </ion-accordion>
+      <ion-accordion value="second">
+        <ion-item slot="header">
+          <ion-label>Second piece</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          This is the second piece
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
   </ion-content>
 </div>

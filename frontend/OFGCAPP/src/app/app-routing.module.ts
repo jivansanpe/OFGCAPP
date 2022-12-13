@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'musician',
     loadChildren: () => import('./musician/musician.module').then( m => m.MusicianPageModule)
   },
+  {
+    path: 'author-details',
+    loadChildren: () => import('./author-details/author-details.module').then( m => m.AuthorDetailsPageModule)
+  },
 ];
 
 @NgModule({

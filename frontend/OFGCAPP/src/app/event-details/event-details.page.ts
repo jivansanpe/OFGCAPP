@@ -11,5 +11,11 @@ export class EventDetailsPage {
   goToMusician() {
     this.router.navigateByUrl("/musician");
   }
+  goToAuthor() {
+    this.router.navigateByUrl("/author-details");
+  }
+  goToHome() {
+    this.router.navigateByUrl("/home");
+  }
 
 }

@@ -11,5 +11,8 @@ export class EventListPage {
   goToEvent() {
     this.router.navigateByUrl("/event-details");
   }
+  goToHome() {
+    this.router.navigateByUrl("/home");
+  }
 
 }
