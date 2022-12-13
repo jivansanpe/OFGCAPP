@@ -1,0 +1,58 @@
+ion-header {
+  height: 80px;
+
+  ion-menu-button {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    size: 20em;
+
+  }
+
+  ion-title {
+    background-color: #004D4D;
+    color: #ffff;
+    font-family: TexGyreHeros;
+    text-align: left;
+    font-size: 2em;
+    padding-left: 40px;
+  }
+
+}
+
+.title-div {
+  position: relative;
+  margin-bottom: 80px;
+  margin-top: 20px;
+  z-index: 2;
+  text-align: left;
+
+  ion-title {
+    font-family: TexGyreHeros;
+    padding: 0%;
+    padding-left: 40px;
+    padding-top: 10px;
+    text-align: left;
+    font-size: 2em;
+    color: #004D4D;
+
+  }
+}
+
+.item-info {
+  vertical-align: top;
+
+}
+
+.item-title {
+  font-family: TexGyreHeros;
+
+  color: #098181;
+}
+
+img {
+  border-radius: 8px;
+  max-width: 150px;
+  padding: 10px;
+  padding-bottom: 30px;
+}

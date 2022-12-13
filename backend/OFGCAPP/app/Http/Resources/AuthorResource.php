@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Resources;
-
+use App\Http\Resources\PieceResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class AuthorResource extends JsonResource
@@ -17,6 +17,7 @@ class AuthorResource extends JsonResource
         return [
             'name' => $this->name,
             'description' => $this->description,
+            'pieces'=> PieceResource::collection($this->whenLoaded('pieces')),
         ];
     }
 }

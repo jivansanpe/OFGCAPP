@@ -14,8 +14,9 @@ class AuthorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $temp = $request->all();
         if(isset($temp['include']) && $temp['include']=='pieces'){
             return AuthorResource::collection(Author::with('pieces')->get());
         } else{
@@ -45,7 +46,7 @@ class AuthorController extends Controller
 
         return response()->json([
             'message' => "Author saved successfully!",
-            'author' => $Author
+            'author' => $author
         ], 200);
     }
 
