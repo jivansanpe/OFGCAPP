@@ -13,14 +13,14 @@
     <ion-menu-button color="light"></ion-menu-button>
   </ion-header>
 
-  <ion-content class="ion-padding">
+  <ion-content *ngIf="event" class="ion-padding">
     <div class="title-div">
       <ion-row>
         <ion-col>
-          <ion-title>El Mar</ion-title>
+          <ion-title>{{event.name}} </ion-title>
         </ion-col>
         <ion-col>
-          <ion-title class="date">04/11/22</ion-title>
+          <ion-title class="date">{{event.date}}</ion-title>
         </ion-col>
       </ion-row>
     </div>
@@ -29,7 +29,7 @@
     </div>
     <ion-list class="list">
       <ion-item>
-        <ion-label class="subtext">Concierto de temporada</ion-label>
+        <ion-label class="subtext">{{event.category}}</ion-label>
       </ion-item>
       <ion-item>
         <ion-label class="subtext">Auditorio Alfredo Kraus</ion-label>
@@ -43,48 +43,36 @@
       <ion-title>Descripcion</ion-title>
     </div>
     <div class="text-div">
-      <ion-text>En su debut con la OFGC, el británico Ben Glassberg ha confeccionado un programa con El mar de Debussy
-        como pieza eje, y que incluye la Obertura de Beatriz y Benedicto de Berlioz y la Pavana de Fauré. Como solista,
-        también en su presentación con la OFGC, tendremos al brillante fagotista franco-chileno Guilhaume Santana, que
-        ha
-        sido Fagot Principal de la Deutsche Radio Philharmonie, la Orchestra Mozart y la Orquesta del Festival de
-        Lucerna,
-        además de invitado habitual de conjuntos del prestigio de la Orquesta Filarmónica de Berlín,
+      <ion-text>
+        {{event.description}}
       </ion-text>
     </div>
     <div class="subtitle-div">
       <ion-title>Musicos</ion-title>
     </div>
-    <ion-card (click)="goToMusician()">
+    <ion-card *ngFor="let e of event.musicians" (click)="goToMusician(e.id)">
       <img alt="Silhouette of mountains" src="../../assets/images/elmarhombre.jpg" />
       <ion-card-header>
-        <ion-card-title>Juan Miguel Rodríguez</ion-card-title>
-        <ion-card-subtitle>Director</ion-card-subtitle>
+        <ion-card-title>{{e.name}}</ion-card-title>
+        <ion-card-subtitle>{{e.pivot.category}}</ion-card-subtitle>
       </ion-card-header>
     </ion-card>
     <div class="subtitle-div">
       <ion-title>Pieces</ion-title>
     </div>
-    <ion-accordion-group>
-      <ion-accordion value="first">
+    <ion-accordion-group class="ion-padding">
+      <ion-accordion *ngFor="let p of event.pieces">
         <ion-item slot="header">
-          <ion-label>First piece</ion-label>
+          <ion-label>{{p.name}}</ion-label>
         </ion-item>
-        <div class="ion-padding" slot="content">
-          This is the first piece
+        <div class="accordion-info ion-padding" slot="content">
+          {{p.description}}
         </div>
-        <div class="ion-padding" (click)="goToAuthor()" slot="content">
-          Go to author
-        </div>
-      </ion-accordion>
-      <ion-accordion value="second">
-        <ion-item slot="header">
-          <ion-label>Second piece</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">
-          This is the second piece
+        <div class="accordion-info ion-padding" (click)="goToAuthor(p.id)" slot="content">
+          <ion-button>Comprar entradas</ion-button>
         </div>
       </ion-accordion>
     </ion-accordion-group>
   </ion-content>
+
 </div>

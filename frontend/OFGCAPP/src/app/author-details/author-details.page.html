@@ -11,15 +11,15 @@
     <ion-title (click)="goToHome()">OFGC</ion-title>
     <ion-menu-button color="light"></ion-menu-button>
   </ion-header>
-  <ion-content class="ion-padding">
+  <ion-content *ngIf="author" class="ion-padding">
     <div class="title-div">
-      <ion-title>Autor 1</ion-title>
+      <ion-title>{{author.name}}</ion-title>
     </div>
     <div>
       <ion-img class="img-div" src="../../assets/images/musiccanxxi.png"></ion-img>
     </div>
     <div class="text-div">
-      <ion-text>autoooooorautoutroiturptuwoithyuwothgwo`pgtw
+      <ion-text>{{author.description}}
       </ion-text>
     </div>
   </ion-content>

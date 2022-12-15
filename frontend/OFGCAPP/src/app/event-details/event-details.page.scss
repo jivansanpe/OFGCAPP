@@ -35,7 +35,7 @@ ion-header {
     padding-left: 20px;
     padding-top: 10px;
     text-align: left;
-    font-size: 2em;
+    font-size: 1.5em;
     color: #004D4D;
 
 
@@ -44,6 +44,7 @@ ion-header {
   .date {
     font-family: Raleway;
     text-align: right;
+    font-size: 1.5em;
     padding-right: 20px;
     color: #098181;
   }
@@ -125,14 +126,33 @@ ion-card-subtitle {
 
 ion-accordion {
   ion-item {
-    --background: #004D4D;
+    --background: #a86a33;
   }
 
   ion-label {
     font-family: Raleway;
-    text-align: center;
+    text-align: left;
     padding-right: 20px;
     color: #ffff;
     font-size: 1.2em;
+  }
+
+  .accordion-info {
+    background-color: #a86a33;
+    font-size: 1.1em;
+    color: #ffff;
+  }
+
+  ion-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: #ffff;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    --background: #CD7E3A;
+    --background-activated: #a86a33;
+    --background-focused: #CD7E3A;
+    font-size: 1.1em;
   }
 }

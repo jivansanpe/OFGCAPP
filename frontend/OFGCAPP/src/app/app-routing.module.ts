@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: '',
@@ -13,19 +13,23 @@ const routes: Routes = [
   },
   {
     path: 'event-list',
-    loadChildren: () => import('./event-list/event-list.module').then( m => m.EventListPageModule)
+    loadChildren: () => import('./event-list/event-list.module').then(m => m.EventListPageModule)
   },
   {
-    path: 'event-details',
-    loadChildren: () => import('./event-details/event-details.module').then( m => m.EventDetailsPageModule)
+    path: 'event-details/:id',
+    loadChildren: () => import('./event-details/event-details.module').then(m => m.EventDetailsPageModule)
   },
   {
-    path: 'musician',
-    loadChildren: () => import('./musician/musician.module').then( m => m.MusicianPageModule)
+    path: 'musician/:id',
+    loadChildren: () => import('./musician/musician.module').then(m => m.MusicianPageModule)
   },
   {
-    path: 'author-details',
-    loadChildren: () => import('./author-details/author-details.module').then( m => m.AuthorDetailsPageModule)
+    path: 'author-details/:id',
+    loadChildren: () => import('./author-details/author-details.module').then(m => m.AuthorDetailsPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
 ];
 

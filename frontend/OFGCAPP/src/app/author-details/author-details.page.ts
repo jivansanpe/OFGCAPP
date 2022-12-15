@@ -1,14 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+
+import { AuthorService } from '../services/author.service';
 @Component({
   selector: 'app-author-details',
   templateUrl: './author-details.page.html',
   styleUrls: ['./author-details.page.scss'],
 })
-export class AuthorDetailsPage {
+export class AuthorDetailsPage implements OnInit {
 
-  constructor(private router: Router) { }
+  author: any;
+  id: any;
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private authorService: AuthorService) {
+    this.id = this.activatedRoute.snapshot.paramMap.get('id')
+  }
+  ngOnInit(): void {
+    this.getAuthor(this.id);
+  }
+  getAuthor(id: any) {
+    this.authorService.getAuthor(id).subscribe(response => {
+      this.author = response;
+      this.author = this.author['data'];
+      console.log(this.author);
 
+    });
+  }
   goToHome() {
     this.router.navigateByUrl("/home");
   }

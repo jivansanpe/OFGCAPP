@@ -11,21 +11,15 @@
     <ion-title (click)="goToHome()">OFGC</ion-title>
     <ion-menu-button color="light"></ion-menu-button>
   </ion-header>
-  <ion-content class="ion-padding">
+  <ion-content *ngIf="musician" class="ion-padding">
     <div class="title-div">
-      <ion-title>Juan Miguel Rodríguez</ion-title>
+      <ion-title>{{musician.name}}</ion-title>
     </div>
     <div>
       <ion-img class="img-div" src="../../assets/images/elmarhombre.jpg"></ion-img>
     </div>
     <div class="text-div">
-      <ion-text>En su debut con la OFGC, el británico Ben Glassberg ha confeccionado un programa con El mar de Debussy
-        como pieza eje, y que incluye la Obertura de Beatriz y Benedicto de Berlioz y la Pavana de Fauré. Como solista,
-        también en su presentación con la OFGC, tendremos al brillante fagotista franco-chileno Guilhaume Santana, que
-        ha
-        sido Fagot Principal de la Deutsche Radio Philharmonie, la Orchestra Mozart y la Orquesta del Festival de
-        Lucerna,
-        además de invitado habitual de conjuntos del prestigio de la Orquesta Filarmónica de Berlín,
+      <ion-text>{{musician.description}}
       </ion-text>
     </div>
   </ion-content>

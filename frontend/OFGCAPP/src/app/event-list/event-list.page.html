@@ -17,31 +17,21 @@
     <div class="title-div">
       <ion-title>Events</ion-title>
     </div>
-    <ion-card button="true" (click)="goToEvent()">
-      <ion-row>
-        <ion-col>
-          <img alt="Pulsos de europa" src="../../assets/images/pulsosdeeuropa.jpg" />
-        </ion-col>
-        <ion-col>
-          <ion-card-header>
-            <ion-card-title>Pulsos de europa</ion-card-title>
-            <ion-card-subtitle>27/5/22</ion-card-subtitle>
-          </ion-card-header>
-        </ion-col>
-      </ion-row>
-    </ion-card>
-    <ion-card button="true" (click)="goToEvent()">
-      <ion-row>
-        <ion-col>
-          <img alt="Pulsos de europa" src="../../assets/images/pulsosdeeuropa.jpg" />
-        </ion-col>
-        <ion-col>
-          <ion-card-header>
-            <ion-card-title>Pulsos de europa</ion-card-title>
-            <ion-card-subtitle>27/5/22</ion-card-subtitle>
-          </ion-card-header>
-        </ion-col>
-      </ion-row>
-    </ion-card>
+    <ion-row *ngFor="let e of events">
+      <ion-card button="true" (click)="goToEvent(e.id)">
+        <ion-row>
+          <ion-col>
+            <img alt="Pulsos de europa" src="../../assets/images/pulsosdeeuropa.jpg" />
+          </ion-col>
+          <ion-col>
+            <ion-card-header>
+              <ion-card-title>{{e.name}}</ion-card-title>
+              <ion-card-subtitle>{{e.description}}</ion-card-subtitle>
+            </ion-card-header>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+
   </ion-content>
 </div>
