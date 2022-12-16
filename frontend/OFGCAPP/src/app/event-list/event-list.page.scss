@@ -44,6 +44,19 @@ ion-header {
 
 }
 
+ion-button {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  --background: #CD7E3A;
+  --background-activated: #a86a33;
+  --background-focused: #CD7E3A;
+  font-size: 1.2em;
+  max-width: 200px;
+}
+
 .item-title {
   font-family: TexGyreHeros;
 

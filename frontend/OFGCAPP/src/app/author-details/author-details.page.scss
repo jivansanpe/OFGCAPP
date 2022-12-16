@@ -54,3 +54,16 @@ ion-header {
     font-size: 1.19em;
   }
 }
+
+ion-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: #ffff;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  --background: #CD7E3A;
+  --background-activated: #a86a33;
+  --background-focused: #CD7E3A;
+  font-size: 1.1em;
+}

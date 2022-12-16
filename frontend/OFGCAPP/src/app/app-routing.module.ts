@@ -31,6 +31,26 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'new-event',
+    loadChildren: () => import('./new-event/new-event.module').then( m => m.NewEventPageModule)
+  },
+  {
+    path: 'new-author',
+    loadChildren: () => import('./new-author/new-author.module').then( m => m.NewAuthorPageModule)
+  },
+  {
+    path: 'new-musician',
+    loadChildren: () => import('./new-musician/new-musician.module').then( m => m.NewMusicianPageModule)
+  },
+  {
+    path: 'new-piece',
+    loadChildren: () => import('./new-piece/new-piece.module').then( m => m.NewPiecePageModule)
+  },
 ];
 
 @NgModule({

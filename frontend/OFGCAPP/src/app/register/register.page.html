@@ -13,14 +13,14 @@
   </ion-header>
   <ion-content class="ion-padding">
     <div class="title-div">
-      <ion-title>Login</ion-title>
+      <ion-title>Register</ion-title>
     </div>
     <div class="ion-padding">
-      <form #log="ngForm" (ngSubmit)="onLogin()" novalidate>
+      <form #log="ngForm" (ngSubmit)="onRegister()" novalidate>
         <div class="input-div">
           <ion-label class="subtext">Username</ion-label>
           <ion-item>
-            <ion-input [(ngModel)]="userName" name="userName" required placeholder="Enter your username"></ion-input>
+            <ion-input [(ngModel)]="name" name="userName" required placeholder="Enter your username"></ion-input>
           </ion-item>
         </div>
         <div class="input-div">
@@ -30,16 +30,20 @@
           </ion-item>
         </div>
         <div class="input-div">
+          <ion-label class="subtext">Confirm Password</ion-label>
+          <ion-item>
+            <ion-input [(ngModel)]="confPassword" name="confPassword" required
+              placeholder="Confirm your password"></ion-input>
+          </ion-item>
+        </div>
+        <div class="input-div">
           <ion-label class="subtext">Email</ion-label>
           <ion-item>
             <ion-input [(ngModel)]="email" name="email" required placeholder="Enter your email"></ion-input>
           </ion-item>
         </div>
-        <ion-button type="submit">Log in </ion-button>
+        <ion-button type="submit">Register </ion-button>
       </form>
-      <div class="text-div">
-        <ion-text (click)="goToRegister()">Not registered yet? Register here!</ion-text>
-      </div>
     </div>
   </ion-content>
 </div>

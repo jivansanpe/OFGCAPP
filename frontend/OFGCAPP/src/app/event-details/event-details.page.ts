@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { EventsService } from '../services/events.service';
+import { TokenService } from '../services/token.service';
 
 @Component({
   selector: 'app-event-details',
@@ -11,7 +12,7 @@ import { EventsService } from '../services/events.service';
 export class EventDetailsPage implements OnInit {
   event: any;
   id: any;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private eventsService: EventsService) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private eventsService: EventsService, private tokenService: TokenService) {
     this.id = this.activatedRoute.snapshot.paramMap.get('id')
   }
   ngOnInit(): void {
@@ -37,5 +38,8 @@ export class EventDetailsPage implements OnInit {
   goToHome() {
     this.router.navigateByUrl("/home");
   }
-
+  logOut(): void {
+    this.tokenService.logOut();
+    this.router.navigateByUrl("/home");
+  }
 }

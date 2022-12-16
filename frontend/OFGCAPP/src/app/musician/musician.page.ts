@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { TokenService } from '../services/token.service';
 import { MusicianService } from '../services/musician.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class MusicianPage implements OnInit {
 
   musician: any;
   id: any;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private musicianService: MusicianService) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private tokenService: TokenService, private musicianService: MusicianService) {
     this.id = this.activatedRoute.snapshot.paramMap.get('id')
   }
   ngOnInit(): void {
@@ -27,6 +27,10 @@ export class MusicianPage implements OnInit {
     });
   }
   goToHome() {
+    this.router.navigateByUrl("/home");
+  }
+  logOut(): void {
+    this.tokenService.logOut();
     this.router.navigateByUrl("/home");
   }
 }

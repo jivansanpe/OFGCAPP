@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { TokenService } from '../services/token.service';
 
 import { AuthorService } from '../services/author.service';
 @Component({
@@ -11,7 +12,7 @@ export class AuthorDetailsPage implements OnInit {
 
   author: any;
   id: any;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private authorService: AuthorService) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private tokenService: TokenService, private authorService: AuthorService) {
     this.id = this.activatedRoute.snapshot.paramMap.get('id')
   }
   ngOnInit(): void {
@@ -28,5 +29,8 @@ export class AuthorDetailsPage implements OnInit {
   goToHome() {
     this.router.navigateByUrl("/home");
   }
-
+  logOut(): void {
+    this.tokenService.logOut();
+    this.router.navigateByUrl("/home");
+  }
 }
