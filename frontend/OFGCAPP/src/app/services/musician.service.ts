@@ -34,4 +34,10 @@ export class MusicianService {
   public createMusician(musician: Musician, token: any): Observable<any> {
     return this.httpClient.post<any>(this.endpoint, musician, this.httpOptionsUsingUrlEncoded);
   }
+  public updateMusician(id: any, musician: Musician): Observable<any> {
+    return this.httpClient.put<any>(this.endpoint + '/' + id, musician, this.httpOptionsUsingUrlEncoded);
+  }
+  public deleteMusician(id: any) {
+    return this.httpClient.delete<any>(this.endpoint + '/' + id, this.httpOptionsUsingUrlEncoded);
+  }
 }

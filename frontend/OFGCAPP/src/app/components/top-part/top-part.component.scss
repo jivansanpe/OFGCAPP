@@ -1,0 +1,24 @@
+.title-div {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-top: 0%;
+  z-index: 2;
+  text-align: left;
+
+  ion-title {
+    font-family: TexGyreHeros;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #004D4D;
+
+  }
+}
+
+ion-button {
+  z-index: 2;
+  padding-right: 20px;
+  font-size: 1.4em;
+  --color: #004D4D;
+}

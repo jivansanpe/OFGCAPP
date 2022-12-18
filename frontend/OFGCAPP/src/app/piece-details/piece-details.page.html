@@ -1,0 +1,12 @@
+<app-menu></app-menu>
+
+<div class="ion-page" id="main-content">
+  <app-header></app-header>
+  <ion-content *ngIf="piece" class="ion-padding">
+    <app-top-part title='{{piece.name}}'></app-top-part>
+    <div class="text-div">
+      <ion-text>{{piece.description}}
+      </ion-text>
+    </div>
+  </ion-content>
+</div>

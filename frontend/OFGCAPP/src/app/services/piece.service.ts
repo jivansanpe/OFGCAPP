@@ -35,4 +35,10 @@ export class PieceService {
   public createPiece(piece: Piece, token: any): Observable<any> {
     return this.httpClient.post<any>(this.endpoint, piece, this.httpOptionsUsingUrlEncoded);
   }
+  public updatePiece(id: any, piece: Piece): Observable<any> {
+    return this.httpClient.put<any>(this.endpoint + '/' + id, piece, this.httpOptionsUsingUrlEncoded);
+  }
+  public deletePiece(id: any) {
+    return this.httpClient.delete<any>(this.endpoint + '/' + id, this.httpOptionsUsingUrlEncoded);
+  }
 }

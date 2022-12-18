@@ -36,7 +36,10 @@ export class EventDetailsPage implements OnInit {
     this.router.navigateByUrl(`/author-details/${id}`);
   }
   goToHome() {
-    this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/event-list");
+  }
+  goToPage(path: any) {
+    this.router.navigateByUrl("/" + path);
   }
   logOut(): void {
     this.tokenService.logOut();

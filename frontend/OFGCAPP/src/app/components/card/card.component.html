@@ -1,0 +1,25 @@
+<ion-card button="true">
+  <ion-row>
+    <ion-col>
+      <img alt="Pulsos de europa" src="../../../assets/images/pulsosdeeuropa.jpg" />
+    </ion-col>
+    <ion-col>
+      <ion-card-header (click)="goToOne(element.id)">
+        <ion-card-title>{{element.name}}</ion-card-title>
+        <div class="subtext">
+          <ion-card-subtitle>{{element.description}}</ion-card-subtitle>
+        </div>
+      </ion-card-header>
+    </ion-col>
+  </ion-row>
+  <div class="buttons-div">
+    <ion-button *ngIf="isLoggedIn" (click)="goToUpdate(element.id)">
+      <ion-icon name="create-outline"></ion-icon>
+      Update
+    </ion-button>
+    <ion-button *ngIf="isLoggedIn" (click)="deleteElement(element.id)">
+      <ion-icon name="trash-bin-outline"></ion-icon>
+      Delete
+    </ion-button>
+  </div>
+</ion-card>

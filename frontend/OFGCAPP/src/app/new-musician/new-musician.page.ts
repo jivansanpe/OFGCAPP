@@ -22,7 +22,7 @@ export class NewMusicianPage {
 
   }
   goToHome() {
-    this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/event-list");
   }
   onCreate() {
     this.newMusician = new Musician(this.name, this.description);
@@ -31,7 +31,7 @@ export class NewMusicianPage {
       data => {
         this.toastColor = 'success'
         this.presentToast(data.message);
-        this.router.navigate(['/event-list']);
+        this.router.navigate(['/musician-list']);
       },
       err => {
         this.toastColor = 'danger'

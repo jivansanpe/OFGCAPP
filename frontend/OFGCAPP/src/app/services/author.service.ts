@@ -31,8 +31,14 @@ export class AuthorService {
         // catchError(this.handleError<Story[]>(`Get story id=${id}`))
       );
   }
-  public createAuthor(author: Author, token: any): Observable<any> {
+  public createAuthor(author: Author): Observable<any> {
     return this.httpClient.post<any>(this.endpoint, author, this.httpOptionsUsingUrlEncoded);
+  }
+  public updateAuthor(id: any, author: Author): Observable<any> {
+    return this.httpClient.put<any>(this.endpoint + '/' + id, author, this.httpOptionsUsingUrlEncoded);
+  }
+  public deleteAuthor(id: any) {
+    return this.httpClient.delete<any>(this.endpoint + '/' + id, this.httpOptionsUsingUrlEncoded);
   }
 
 }

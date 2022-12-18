@@ -29,7 +29,7 @@ export class NewPiecePage {
     this.getAllAuthors();
   }
   goToHome() {
-    this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/event-list");
   }
   getAllEvents() {
     this.eventsService.getEvents().subscribe(response => {
@@ -52,7 +52,7 @@ export class NewPiecePage {
       data => {
         this.toastColor = 'success'
         this.presentToast(data.message);
-        this.router.navigate(['/event-list']);
+        this.router.navigate(['/piece-list']);
       },
       err => {
         this.toastColor = 'danger'

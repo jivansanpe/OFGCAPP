@@ -24,16 +24,15 @@ export class NewAuthorPage {
 
   }
   goToHome() {
-    this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/event-list");
   }
   onCreate() {
     this.newAuthor = new Author(this.name, this.description);
-    this.token = this.tokenService.getToken();
-    this.authorService.createAuthor(this.newAuthor, this.token).subscribe(
+    this.authorService.createAuthor(this.newAuthor).subscribe(
       data => {
         this.toastColor = 'success'
         this.presentToast(data.message);
-        this.router.navigate(['/event-list']);
+        this.router.navigate(['/author-list']);
       },
       err => {
         this.toastColor = 'danger'

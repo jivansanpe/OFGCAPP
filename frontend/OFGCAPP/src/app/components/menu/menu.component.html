@@ -1,0 +1,15 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-button (click)="goToPage('event-list')">Events List</ion-button>
+    <ion-button (click)="goToPage('musician-list')">Musicians List</ion-button>
+    <ion-button (click)="goToPage('author-list')">Authors List</ion-button>
+    <ion-button (click)="goToPage('piece-list')">Pieces List</ion-button>
+  </ion-content>
+  <ion-button *ngIf="isLogged" class="create-button" (click)="logOut()">Log Out</ion-button>
+
+</ion-menu>

@@ -1,0 +1,14 @@
+<app-menu></app-menu>
+<div class="ion-page" id="main-content">
+  <app-header></app-header>
+  <ion-content class="ion-padding">
+    <div>
+      <app-top-part title="Musicians"></app-top-part>
+      <ion-searchbar></ion-searchbar>
+    </div>
+    <ion-row *ngFor="let m of musicians">
+      <app-card [element]=m type="musician"></app-card>
+    </ion-row>
+    <ion-button *ngIf="isLoggedIn" expand="full" (click)="createMusician()">Create</ion-button>
+  </ion-content>
+</div>

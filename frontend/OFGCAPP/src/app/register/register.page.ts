@@ -32,7 +32,7 @@ export class RegisterPage implements OnInit {
 
   }
   goToHome() {
-    this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/event-list");
   }
   ionViewWillEnter() {
 

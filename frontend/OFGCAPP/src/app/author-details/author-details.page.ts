@@ -27,10 +27,13 @@ export class AuthorDetailsPage implements OnInit {
     });
   }
   goToHome() {
-    this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/event-list");
   }
   logOut(): void {
     this.tokenService.logOut();
     this.router.navigateByUrl("/home");
+  }
+  goToPage(path: any) {
+    this.router.navigateByUrl("/" + path);
   }
 }

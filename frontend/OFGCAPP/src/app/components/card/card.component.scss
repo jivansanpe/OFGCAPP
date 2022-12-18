@@ -1,0 +1,38 @@
+// img {
+//   border-radius: 8px;
+//   max-width: 150px;
+//   padding: 10px;
+//   padding-bottom: 30px;
+// }
+
+ion-card {
+  ion-card-title {
+    font-family: Raleway;
+    text-align: left;
+    padding-right: 20px;
+    color: #098181;
+    font-size: 1.5em;
+  }
+
+  ion-card-subtitle {
+    font-family: Raleway;
+    font-size: 1.19em;
+  }
+
+  ion-button {
+    --background: #098181;
+    --background-activated: #043f3f;
+    --background-focused: #043f3f;
+    color: #ffff;
+  }
+
+  .subtext {
+    padding-top: 15px;
+  }
+
+  .buttons-div {
+    text-align: center;
+    padding: 15px;
+
+  }
+}
