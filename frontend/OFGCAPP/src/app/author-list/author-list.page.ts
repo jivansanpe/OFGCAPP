@@ -13,7 +13,7 @@ export class AuthorListPage {
   authors: any = [];
   toastColor: string;
   isLoggedIn: any;
-
+  filterTerm: string;
   constructor(private router: Router, private tokenService: TokenService, private authorService: AuthorService, private toastController: ToastController) { }
   goToAuthor(id: any) {
     this.router.navigateByUrl(`/author-details/${id}`);

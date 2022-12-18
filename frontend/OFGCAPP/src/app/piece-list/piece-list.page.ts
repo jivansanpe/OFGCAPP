@@ -13,6 +13,7 @@ export class PieceListPage {
   pieces: any = [];
   toastColor: string;
   isLoggedIn: any;
+  filterTerm: string;
 
   constructor(private router: Router, private tokenService: TokenService, private pieceService: PieceService, private toastController: ToastController) { }
   goToPiece(id: any) {

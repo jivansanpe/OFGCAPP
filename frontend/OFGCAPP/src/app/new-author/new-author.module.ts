@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { NewAuthorPageRoutingModule } from './new-author-routing.module';
 
 import { NewAuthorPage } from './new-author.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NewAuthorPageRoutingModule
+    NewAuthorPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [NewAuthorPage]
 })
-export class NewAuthorPageModule {}
+export class NewAuthorPageModule { }

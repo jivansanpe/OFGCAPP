@@ -4,11 +4,11 @@ import { TokenService } from '../services/token.service';
 import { MusicianService } from '../services/musician.service';
 
 @Component({
-  selector: 'app-musician',
-  templateUrl: './musician.page.html',
-  styleUrls: ['./musician.page.scss'],
+  selector: 'app-musician-details',
+  templateUrl: './musician-details.page.html',
+  styleUrls: ['./musician-details.page.scss'],
 })
-export class MusicianPage implements OnInit {
+export class MusicianDetailsPage implements OnInit {
 
   musician: any;
   id: any;

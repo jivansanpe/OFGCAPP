@@ -8,14 +8,15 @@ import { AuthorListPageRoutingModule } from './author-list-routing.module';
 
 import { AuthorListPage } from './author-list.page';
 import { ComponentsModule } from '../components/components.module';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     AuthorListPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    Ng2SearchPipeModule
   ],
   declarations: [AuthorListPage]
 })

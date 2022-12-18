@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MusicianPageRoutingModule } from './musician-routing.module';
+import { MusicianDetailsPageRoutingModule } from './musician-details-routing.module';
 
-import { MusicianPage } from './musician.page';
+import { MusicianDetailsPage } from './musician-details.page';
 import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    MusicianPageRoutingModule,
+    MusicianDetailsPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [MusicianPage]
+  declarations: [MusicianDetailsPage]
 })
 export class MusicianPageModule { }

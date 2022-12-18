@@ -16,8 +16,9 @@ export class EventListPage {
   events: any = [];
   isLoggedIn: boolean;
   toastColor: string;
-
+  filterTerm: string;
   constructor(private router: Router, private tokenService: TokenService, private location: Location, private toastController: ToastController, private eventsService: EventsService) { }
+
   goToEvent(id: any) {
     this.router.navigateByUrl(`/event-details/${id}`);
   }

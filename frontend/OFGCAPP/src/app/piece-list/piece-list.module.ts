@@ -8,6 +8,7 @@ import { PieceListPageRoutingModule } from './piece-list-routing.module';
 
 import { PieceListPage } from './piece-list.page';
 import { ComponentsModule } from '../components/components.module';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ComponentsModule } from '../components/components.module';
     FormsModule,
     IonicModule,
     PieceListPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    Ng2SearchPipeModule
   ],
   declarations: [PieceListPage]
 })

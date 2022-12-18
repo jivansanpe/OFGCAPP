@@ -8,6 +8,7 @@ import { EventListPageRoutingModule } from './event-list-routing.module';
 
 import { EventListPage } from './event-list.page';
 import { ComponentsModule } from '../components/components.module';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ComponentsModule } from '../components/components.module';
     FormsModule,
     IonicModule,
     EventListPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    Ng2SearchPipeModule
   ],
   declarations: [EventListPage]
 })

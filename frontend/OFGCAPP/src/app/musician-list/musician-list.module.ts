@@ -8,6 +8,7 @@ import { MusicianListPageRoutingModule } from './musician-list-routing.module';
 
 import { MusicianListPage } from './musician-list.page';
 import { ComponentsModule } from '../components/components.module';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ComponentsModule } from '../components/components.module';
     FormsModule,
     IonicModule,
     MusicianListPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    Ng2SearchPipeModule
   ],
   declarations: [MusicianListPage]
 })

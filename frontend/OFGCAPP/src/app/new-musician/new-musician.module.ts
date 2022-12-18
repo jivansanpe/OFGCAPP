@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { NewMusicianPageRoutingModule } from './new-musician-routing.module';
 
 import { NewMusicianPage } from './new-musician.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NewMusicianPageRoutingModule
+    NewMusicianPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [NewMusicianPage]
 })
-export class NewMusicianPageModule {}
+export class NewMusicianPageModule { }

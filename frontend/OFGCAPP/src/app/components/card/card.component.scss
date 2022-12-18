@@ -1,9 +1,9 @@
-// img {
-//   border-radius: 8px;
-//   max-width: 150px;
-//   padding: 10px;
-//   padding-bottom: 30px;
-// }
+img {
+  border-radius: 8px;
+  max-width: 150px;
+  padding: 10px;
+  padding-bottom: 30px;
+}
 
 ion-card {
   ion-card-title {
@@ -14,9 +14,23 @@ ion-card {
     font-size: 1.5em;
   }
 
+  ion-card-title::first-letter {
+    text-transform: uppercase;
+  }
+
   ion-card-subtitle {
     font-family: Raleway;
     font-size: 1.19em;
+    text-transform: lowercase;
+    display: -webkit-box;
+    max-width: 100px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  ion-card-subtitle::first-letter {
+    text-transform: uppercase;
   }
 
   ion-button {
@@ -36,3 +50,26 @@ ion-card {
 
   }
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  img {
+    border-radius: 8px;
+    max-width: 250px;
+    padding-left: 40px;
+
+  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'musician/:id',
-    loadChildren: () => import('./musician/musician.module').then(m => m.MusicianPageModule)
+    loadChildren: () => import('./musician-details/musician-details.module').then(m => m.MusicianPageModule)
   },
   {
     path: 'author-details/:id',

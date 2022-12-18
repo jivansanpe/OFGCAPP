@@ -1,12 +1,12 @@
-<app-menu [isLogged]="isLoggedIn"></app-menu>
+<app-menu></app-menu>
 <div class="ion-page" id="main-content">
   <app-header></app-header>
   <ion-content class="ion-padding">
     <div>
       <app-top-part title="Events"></app-top-part>
-      <ion-searchbar></ion-searchbar>
+      <ion-searchbar [(ngModel)]="filterTerm" name="filterTerm"></ion-searchbar>
     </div>
-    <ion-row *ngFor="let e of events">
+    <ion-row *ngFor="let e of events | filter:filterTerm">
       <app-card [element]=e type="event"></app-card>
     </ion-row>
     <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="createEvent()">Create</ion-button>

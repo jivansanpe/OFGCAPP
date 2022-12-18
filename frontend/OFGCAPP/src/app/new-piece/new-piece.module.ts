@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { NewPiecePageRoutingModule } from './new-piece-routing.module';
 
 import { NewPiecePage } from './new-piece.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NewPiecePageRoutingModule
+    NewPiecePageRoutingModule,
+    ComponentsModule
   ],
   declarations: [NewPiecePage]
 })
-export class NewPiecePageModule {}
+export class NewPiecePageModule { }

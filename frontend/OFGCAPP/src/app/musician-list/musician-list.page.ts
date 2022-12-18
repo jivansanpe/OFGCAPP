@@ -13,7 +13,7 @@ export class MusicianListPage {
   musicians: any = [];
   toastColor: string;
   isLoggedIn: any;
-
+  filterTerm: string;
   constructor(private router: Router, private tokenService: TokenService, private musicianService: MusicianService, private toastController: ToastController) { }
   goToMusician(id: any) {
     this.router.navigateByUrl(`/musician/${id}`);

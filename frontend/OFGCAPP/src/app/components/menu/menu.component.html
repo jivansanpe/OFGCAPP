@@ -1,15 +1,33 @@
 <ion-menu side="end" contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
+  <div class="border-div">
+    <ion-header>
       <ion-title>Menu </ion-title>
-    </ion-toolbar>
-  </ion-header>
+    </ion-header>
+  </div>
   <ion-content class="ion-padding">
-    <ion-button (click)="goToPage('event-list')">Events List</ion-button>
-    <ion-button (click)="goToPage('musician-list')">Musicians List</ion-button>
-    <ion-button (click)="goToPage('author-list')">Authors List</ion-button>
-    <ion-button (click)="goToPage('piece-list')">Pieces List</ion-button>
+    <div class="item-div">
+      <ion-item [ngClass]="{'item': activeList != 'event-list', 'highlighted' : activeList === 'event-list' }"
+        lines="full" button detail="false" (click)="goToPage('event-list')">
+        <ion-icon name="pricetag-outline"></ion-icon>Events</ion-item>
+    </div>
+    <div class="item-div">
+      <ion-item [ngClass]="{'item': activeList != 'musician-list', 'highlighted' : activeList === 'musician-list' }"
+        lines="full" button detail="false" (click)="goToPage('musician-list')">
+        <ion-icon name="musical-notes-outline"></ion-icon>Musicians</ion-item>
+    </div>
+    <div class="item-div">
+      <ion-item [ngClass]="{'item': activeList != 'author-list', 'highlighted' : activeList === 'author-list' }"
+        lines="full" button detail="false" (click)="goToPage('author-list')">
+        <ion-icon name="book-outline"></ion-icon>Authors</ion-item>
+    </div>
+    <div class="item-div">
+      <ion-item [ngClass]="{'item': activeList != 'piece-list', 'highlighted' : activeList === 'piece-list' }"
+        lines="full" button detail="false" (click)="goToPage('piece-list')">
+        <ion-icon name="receipt-outline"></ion-icon>Pieces</ion-item>
+    </div>
+    <div class="item-div">
+      <ion-item *ngIf="isLoggedIn" lines="full" button detail="false" (click)="logOut()">
+        <ion-icon name="person-remove-outline"></ion-icon>Log Out</ion-item>
+    </div>
   </ion-content>
-  <ion-button *ngIf="isLogged" class="create-button" (click)="logOut()">Log Out</ion-button>
-
 </ion-menu>
