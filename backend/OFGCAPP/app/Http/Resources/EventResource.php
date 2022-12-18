@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 use App\Http\Resources\PieceResource;
+use App\Http\Resources\MusicianResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class EventResource extends JsonResource
@@ -15,11 +16,15 @@ class EventResource extends JsonResource
     public function toArray($request)
     {   
         return [
+            'id'=> $this->id,
             'name' => $this->name,
             'description' => $this->description,
             'date' => $this->date,
             'category' => $this->category,
             'pieces'=> PieceResource::collection($this->whenLoaded('pieces')),
+            // 'musicians'=> MusicianResource::collection($this->whenLoaded('musicians')),
+            'musicians' => $this->musicians,
+            
         ];
     }
 }

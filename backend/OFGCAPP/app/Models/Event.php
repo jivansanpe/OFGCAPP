@@ -16,6 +16,6 @@ class Event extends Model
     }
     public function musicians()
     {
-        return $this->belongsToMany(Musician::class);
+        return $this->belongsToMany(Musician::class)->withPivot('category');
     }
 }

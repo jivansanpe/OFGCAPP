@@ -55,14 +55,14 @@ class EventController extends Controller
     }
     public function store(Request $request)
     {
-        // $event = Event::create($request->all());
-        // if($request->input('musicians')){
-        //     $this->assignMusicians($request->input('musicians'));
-        // } 
-        var_dump($request); die();
+        $event = Event::create($request->all());
+        if($request->input('musicians')){
+            $this->assignMusicians($request->input('musicians'));
+        } 
+
         return response()->json([
             'message' => "Event saved successfully!",
-            'event' => 'a'
+            'event' => $event
         ], 200);
     }
     /**
@@ -71,9 +71,14 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show(Event $event,Request $request)
     {
-        return new EventResource($event);
+        if($request->input("include") && $request->input("include")=='pieces'){
+            $event = Event::with(['pieces'])->where('id', $event['id'])->first();
+            return new EventResource($event);
+        } else{
+            return new EventResource($event);
+        }
     }
 
     /**
@@ -102,7 +107,7 @@ class EventController extends Controller
         } 
         return response()->json([ 
             'message' => "Event updated successfully!",
-            'request' => $request->all()
+            'request' => $request->input()
         ], 200);
     }
 
