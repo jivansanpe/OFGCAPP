@@ -4,27 +4,41 @@ Mobile app for the Orquesta Filarmónica de Gran Canaria.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Nowadays, our society moves fast. People feel the ever growing need of instant access to the things they want and this project comes as 
+one of the reimaginations of old resources, made to satisfy that need. The OFGCAPP is the evolution of the old pamphlet that announces 
+all the concerts you love but in your pocket, with a fresh look and many functions such as administrator functions (CRUDS for all entities).
 
 ## Getting Started
 
-### Dependencies
+### Requirements for installation
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Code editor (Visual Studio Code)
+* Laragon or XAMPP
+* php Composer
+* MySQL Workbench
+* Postman if you want to test the API
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Open your code editor and go to the folder of your choice
+* Install php composer in the project folder or globally
+* Install the laravel installer in this project folder or globally
+* Clone this project
+* Create a MySQL Schema called "ofgcapp" and set the .env of the backend folder properly
+* Execute npm install
+* Enjoy!
 
-### Executing program
+### Executing OFGCAPP
 
-* How to run the program
-* Step-by-step bullets
+* Run the backend
 ```
-code blocks for commands
+php artisan serve
 ```
+* Run the frontend
+```
+ionic serve
+```
+
 
 ## Help
 
@@ -35,22 +49,8 @@ command to run if program contains helper info
 
 ## Authors
 
-Contributors names and contact info
+Pablo Hernández Marrero
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
