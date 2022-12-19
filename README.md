@@ -105,6 +105,7 @@ Some of the main competitors are:
 * React Native: It's a framework for mobile apps created in Facebook. It uses JavaScript and the React library to build mobile apps.
 * Flutter: It's a mobile app framework made by Google. It uses a programming language called Dart and a group of widgets for building mobile web apps.
 * NativeScript: It's a mobile framework that uses JavaScript and allows the developers to create native mobile apps.
+
 In general, Ionic is considered to be a solid option for developing hybrid mobile apps, apps that can be run in mobile and web. However, React Native, FLutter and NativeScript are also very popular between mobile developers and can be a better option depending on the needs and priorities of the project.
 #### Laravel
 
