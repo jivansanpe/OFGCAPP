@@ -99,7 +99,7 @@ A basic project and task organization of this app was done in my Github Projects
 
 [Planning](https://github.com/users/PabloHern/projects/1)
 
-## Authors
+## Author
 
 Pablo Hernández Marrero.
 
