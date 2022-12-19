@@ -9,7 +9,7 @@ one of the reimaginations of old resources, made to satisfy that need. The OFGCA
 all the concerts you love but in your pocket, with a fresh look and many functions such as administrator functions (CRUDS for all entities).
 
 ## Technologies used
-* Ionic-angular
+* Ionic-Angular
 * Laravel
 
 
@@ -26,11 +26,17 @@ all the concerts you love but in your pocket, with a fresh look and many functio
 ### Installing
 
 * Open your code editor and go to the folder of your choice.
-* Install php composer in the project folder or globally.
+
+* Install php composer in this project folder or globally.
+
 * Install the laravel installer in this project folder or globally.
+
 * Clone this project.
-* Create a MySQL Schema called "ofgcapp" and set the .env of the backend folder properly.
+
+* Create a MySQL Schema called "ofgcapp" and set the .env of the backend folder properly (ports, mysql password, etc).
+
 * Execute npm install.
+
 * Enjoy!
 
 ### Executing OFGCAPP
@@ -44,7 +50,7 @@ php artisan serve
 ionic serve
 ```
 ## API Testing
-If you want to test the API and check the different endpoints before jumping in you are free to check the 
+If you want to test the API and check the different endpoints before jumping in, feel free to check the 
 [Postman documentation](https://documenter.getpostman.com/view/23478629/2s8YzZPe45).
 
 ## Data Model
@@ -59,7 +65,7 @@ If you want to test the API and check the different endpoints before jumping in 
 #### Users
 * name: the user's name.
 * email: the user's email.
-* password: the user's password. This value is encrypted so no personal password are stored in the database.
+* password: the user's password. This value is encrypted so no personal passwords are stored in the database.
 #### Events
 * name: the event's name.
 * description: the event's description.
@@ -79,9 +85,11 @@ If you want to test the API and check the different endpoints before jumping in 
 * special: if a certain musician is a highlighted participant in an event.
 ## Use cases
 ![diagrama casos de uso](https://user-images.githubusercontent.com/56371021/208329978-29a8def0-6bee-4ff3-9f60-0a5a108ba3d5.png)
+
 As we can see, the admin has full control of all the CRUDS while the average user of the app will only be able to see the information.
 ## Prototype
 [Figma Prototype](https://www.figma.com/file/CR9ft732P6DSkdf3yY9DKT/Untitled?node-id=1%3A2&t=t63D9M46tMqHRbyB-1)
+
 The basic prototype helped me to obtain the style and feel that I want to convey through the app,
 along with the navigation structure and the page's design.
 ## Authors
@@ -92,5 +100,7 @@ Pablo Hernández Marrero.
 ## Acknowledgments
 
 Resources used for this project:
+* [Figma](https://www.figma.com/)
+* [Diagrams.net](https://www.diagrams.net/)
 * [Ionic Documentation](https://ionicframework.com/docs/)
 * [Laravel Documentation](https://laravel.com/docs/9.x)
