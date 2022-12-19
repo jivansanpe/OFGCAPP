@@ -11,7 +11,11 @@ ion-card {
     text-align: left;
     padding-right: 20px;
     color: #098181;
-    font-size: 1.5em;
+    font-size: 1.3em;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-width: 110px;
+    overflow: hidden;
   }
 
   ion-card-title::first-letter {
@@ -20,7 +24,7 @@ ion-card {
 
   ion-card-subtitle {
     font-family: Raleway;
-    font-size: 1.19em;
+    font-size: 1.08em;
     text-transform: lowercase;
     display: -webkit-box;
     max-width: 100px;

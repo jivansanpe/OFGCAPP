@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
+import { Event } from '../models/event';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpHeaders } from '@angular/common/http';
 
@@ -30,6 +31,9 @@ export class EventsService {
         tap(_ => console.log(`Event fetched: ${id}`)),
         // catchError(this.handleError<Story[]>(`Get story id=${id}`))
       );
+  }
+  public createEvent(event: Event): Observable<any> {
+    return this.httpClient.post<any>(this.endpoint, event, this.httpOptionsUsingUrlEncoded);
   }
   public updateEvent(id: any, event: Event): Observable<any> {
     return this.httpClient.put<any>(this.endpoint + '/' + id, event, this.httpOptionsUsingUrlEncoded);

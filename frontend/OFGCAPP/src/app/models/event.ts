@@ -1,4 +1,4 @@
-export class Piece {
+export class Event {
   name: string;
   description: string;
   date: string;

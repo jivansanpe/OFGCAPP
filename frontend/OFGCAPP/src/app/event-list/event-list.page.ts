@@ -40,7 +40,7 @@ export class EventListPage {
     });
   }
   createEvent() {
-    this.router.navigateByUrl("new-piece");
+    this.router.navigateByUrl("new-event");
   }
   deleteEvent(id: any) {
     this.eventsService.deleteEvent(id).subscribe(

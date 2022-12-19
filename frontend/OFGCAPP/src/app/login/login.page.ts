@@ -39,7 +39,6 @@ export class LoginPage implements OnInit {
       data => {
         this.isLogged = true;
         this.tokenService.setToken(data['data'].token);
-        console.log(data['data'].token);
         this.router.navigate(['/event-list']);
       },
       err => {

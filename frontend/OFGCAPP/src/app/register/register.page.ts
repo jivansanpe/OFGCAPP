@@ -23,6 +23,7 @@ export class RegisterPage implements OnInit {
   confPassword = '';
   email = '';
   isLogged = false;
+  toastColor: string;
   constructor(private tokenService: TokenService,
     private toastController: ToastController,
     private authService: AuthService,
@@ -46,10 +47,12 @@ export class RegisterPage implements OnInit {
       data => {
         this.tokenService.setToken(data['data'].token);
         this.isLogged = true;
+        this.toastColor = 'success';
         this.presentToast('cuenta creada');
         this.router.navigate(['/event-list']);
       },
       err => {
+        this.toastColor = 'danger';
         this.presentToast(err.error.message);
       }
     );
@@ -59,7 +62,7 @@ export class RegisterPage implements OnInit {
       message: mss,
       duration: 2500,
       position: 'middle',
-      color: "danger",
+      color: this.toastColor,
       icon: "alert-circle-outline",
       animated: true
     });

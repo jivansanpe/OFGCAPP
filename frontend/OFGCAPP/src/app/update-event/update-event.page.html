@@ -1,38 +1,38 @@
 <app-menu></app-menu>
 <div class="ion-page" id="main-content">
   <app-header></app-header>
-  <ion-content class="ion-padding">
+  <ion-content *ngIf="event" class="ion-padding">
     <div>
-      <app-top-part title='New Event'></app-top-part>
+      <app-top-part title='{{event.name}}'></app-top-part>
     </div>
     <div class="ion-padding">
-      <form #log="ngForm" (ngSubmit)="onCreate()" novalidate>
+      <form #log="ngForm" (ngSubmit)="onUpdate()" novalidate>
         <div class="input-div">
-          <ion-label class="subtext">Event name</ion-label>
+          <ion-label class="subtext">Musician name</ion-label>
           <ion-item>
-            <ion-input [(ngModel)]="name" name="name" required placeholder="Piece name"></ion-input>
+            <ion-input [(ngModel)]="name" name="name" required></ion-input>
           </ion-item>
         </div>
         <div class="input-div">
           <ion-label class="subtext">Event date</ion-label>
           <ion-item>
-            <ion-textarea [(ngModel)]="date" name="date" required placeholder="date"></ion-textarea>
+            <ion-input [(ngModel)]="date" name="date" required></ion-input>
           </ion-item>
         </div>
         <div class="input-div">
           <ion-label class="subtext">Event description</ion-label>
           <ion-item>
-            <ion-textarea [(ngModel)]="description" name="description" required
-              placeholder="Description"></ion-textarea>
+            <ion-input [(ngModel)]="description" name="description" required></ion-input>
           </ion-item>
         </div>
+
         <div class="input-div">
           <ion-label class="subtext">Event category</ion-label>
           <ion-item>
-            <ion-textarea [(ngModel)]="category" name="category" required placeholder="Category"></ion-textarea>
+            <ion-input [(ngModel)]="category" name="category" required></ion-input>
           </ion-item>
         </div>
-        <ion-button type="submit">Create</ion-button>
+        <ion-button type="submit">Update</ion-button>
       </form>
     </div>
   </ion-content>

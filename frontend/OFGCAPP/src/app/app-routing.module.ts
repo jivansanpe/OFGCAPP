@@ -20,7 +20,7 @@ const routes: Routes = [
     loadChildren: () => import('./event-details/event-details.module').then(m => m.EventDetailsPageModule)
   },
   {
-    path: 'musician/:id',
+    path: 'musician-details/:id',
     loadChildren: () => import('./musician-details/musician-details.module').then(m => m.MusicianPageModule)
   },
   {
@@ -79,6 +79,11 @@ const routes: Routes = [
     path: 'update-piece/:id',
     loadChildren: () => import('./update-piece/update-piece.module').then(m => m.UpdatePiecePageModule)
   },
+  {
+    path: 'update-event/:id',
+    loadChildren: () => import('./update-event/update-event.module').then(m => m.UpdateEventPageModule)
+  },
+
 ];
 
 @NgModule({
