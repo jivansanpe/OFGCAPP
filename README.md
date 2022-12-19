@@ -92,6 +92,13 @@ As we can see, the admin has full control of all the CRUDS while the average use
 
 The basic prototype helped me to obtain the style and feel that I want to convey through the app,
 along with the navigation structure and the page's design.
+
+##Project organization
+
+A basic project and task organization of this app was done in my Github Projects tool.
+
+[Planning](https://github.com/users/PabloHern/projects/1)
+
 ## Authors
 
 Pablo Hernández Marrero.
