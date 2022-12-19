@@ -98,7 +98,27 @@ along with the navigation structure and the page's design.
 A basic project and task organization of this app was done in my Github Projects tool.
 
 [Planning](https://github.com/users/PabloHern/projects/1)
+## Tecnhology stack comparison
+#### Ionic 
+Ionic is a mobile app framework based on Angular, a Javascript framework for web apps.
+Some of the main competitors are:
+* React Native: It's a framework for mobile apps created in Facebook. It uses JavaScript and the React library to build mobile apps.
+* Flutter: It's a mobile app framework made by Google. It uses a programming language called Dart and a group of widgets for building mobile web apps.
+* NativeScript: It's a mobile framework that uses JavaScript and allows the developers to create native mobile apps.
+In general, Ionic is considered to be a solid option for developing hybrid mobile apps, apps that can be run in mobile and web. However, React Native, FLutter and NativeScript are also very popular between mobile developers and can be a better option depending on the needs and priorities of the project.
+#### Laravel
 
+Laravel is a PHP framework for web application development. Some of its main competitors are:
+
+* Symfony: It is a very popular and widely used PHP framework in the industry. It offers a full set of tools and components for web application development.
+
+* CodeIgniter: It is a lightweight and easy-to-use PHP framework. It is popular among developers who are looking for a quick and simple solution for creating web applications.
+
+* Zend Framework: It is a full-featured and powerful PHP framework, with a set of advanced components and tools for web application development.
+
+* CakePHP: It is a PHP framework with a focus on simplicity and ease of use. It offers a wide range of features and tools for web application development.
+
+Overall, Laravel is considered one of the most popular and widely used PHP frameworks in the industry. It offers a wide range of features and tools for web application development and is highly praised for its focus on simplicity and ease of use. However, there are also many other PHP frameworks available, each with its own advantages and disadvantages, and the choice of the right framework depends on the needs and preferences of the project.
 ## Author
 
 Pablo Hernández Marrero.
