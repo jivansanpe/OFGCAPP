@@ -10,7 +10,7 @@ all the concerts you love but in your pocket, with a fresh look and many functio
 
 ## Technologies used
 * Ionic-Angular
-* Laravel
+* Laravel and it's ORM (Eloquent)
 
 
 ## Getting Started
