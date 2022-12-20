@@ -26,7 +26,6 @@ export class EventDetailsPage implements OnInit {
       this.event = response;
       this.event = this.event['data'];
       console.log(this.event);
-
     });
   }
   goToMusician(id: any) {

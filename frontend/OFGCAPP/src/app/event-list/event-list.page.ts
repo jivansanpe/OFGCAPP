@@ -37,6 +37,9 @@ export class EventListPage {
       this.events = response;
       this.events = this.events['data'];
       console.log(this.events);
+    }, err => {
+      this.toastColor = 'danger';
+      this.presentToast("Can not connect to server")
     });
   }
   createEvent() {
