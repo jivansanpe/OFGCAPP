@@ -3,13 +3,14 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Api\BaseController as BaseController;
 use App\Http\Resources\PieceResource;
 use App\Models\Piece;
 use App\Models\Author;
 use App\Models\Event;
 use Illuminate\Http\Request;
-
-class PieceController extends Controller
+use Validator;
+class PieceController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -39,17 +40,21 @@ class PieceController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'event_id' => 'required',
+            'author_id' => 'required',
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return $this->sendError('Error validation', $validator->errors());
+        }
         $piece = Piece::create($request->all());
-
-        // $event = Event::find($request->event_id);
-        // $event->pieces()->save($piece);
-
-        // $author = Author::find($request->author_id);
-        // $author->pieces()->save($piece);
 
         return response()->json([
             'message' => "Piece saved successfully!",
-            'piece' => $piece
+            'piece' => $request->all()
         ], 200);
     }
 
@@ -62,14 +67,6 @@ class PieceController extends Controller
     public function show(Piece $piece)
     {
         return new PieceResource($piece);
-    }
-    public function byEvent(Event $event)
-    {
-        return $event->pieces;
-    }
-    public function byAuthor(Author $author)
-    {
-        return $author->pieces;
     }
 
     /**
@@ -92,6 +89,14 @@ class PieceController extends Controller
      */
     public function update(Request $request, Piece $piece)
     {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return $this->sendError('Error validation', $validator->errors());
+        }
         $piece->update($request->all());
 
         return response()->json([

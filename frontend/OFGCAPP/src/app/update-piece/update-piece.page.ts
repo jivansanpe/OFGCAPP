@@ -47,6 +47,11 @@ export class UpdatePiecePage implements OnInit {
     });
   }
   onUpdate() {
+    if (this.name == '' || this.description == '' || this.authorId == '' || this.eventId == '') {
+      this.toastColor = 'danger'
+      this.presentToast('Please fill all fields');
+      return;
+    }
     this.newPiece = new Piece(this.authorId, this.eventId, this.name, this.description);
     this.pieceService.updatePiece(this.id, this.newPiece).subscribe(
       data => {
@@ -56,14 +61,18 @@ export class UpdatePiecePage implements OnInit {
       },
       err => {
         this.toastColor = 'danger'
-        this.presentToast(err.error.message);
+        if (err.status == 404) {
+          this.presentToast(err.error.message);
+        } else {
+          this.presentToast("Can not connect to server")
+        }
       }
     )
   }
   async presentToast(msj: string) {
     const toast = await this.toastController.create({
       message: msj,
-      duration: 2000,
+      duration: 2500,
       position: 'bottom',
       color: this.toastColor,
       icon: "alert-circle-outline",

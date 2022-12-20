@@ -42,25 +42,29 @@ export class RegisterPage implements OnInit {
   onRegister(): void {
     this.newUser = new NewUser(this.name, this.email, this.password, this.confPassword);
     console.log(this.name);
-    this.registerUser = new Login(this.name, this.password, this.email);
+    this.registerUser = new Login(this.email, this.password,);
     this.authService.newUser(this.newUser).pipe(concatMap(newRes => this.authService.loginUser(this.registerUser))).subscribe(
       data => {
         this.tokenService.setToken(data['data'].token);
         this.isLogged = true;
         this.toastColor = 'success';
-        this.presentToast('cuenta creada');
+        this.presentToast('Created account');
         this.router.navigate(['/event-list']);
       },
       err => {
         this.toastColor = 'danger';
-        this.presentToast(err.error.message);
+        if (err.status == 404) {
+          this.presentToast("Incorrect email or password");
+        } else {
+          this.presentToast("Can not connect to server")
+        }
       }
     );
   }
   async presentToast(mss: string) {
     const toast = await this.toastController.create({
       message: mss,
-      duration: 2500,
+      duration: 2800,
       position: 'middle',
       color: this.toastColor,
       icon: "alert-circle-outline",

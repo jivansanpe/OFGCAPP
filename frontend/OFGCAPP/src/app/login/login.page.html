@@ -8,9 +8,9 @@
     <div class="ion-padding">
       <form #log="ngForm" (ngSubmit)="onLogin()" novalidate>
         <div class="input-div">
-          <ion-label class="subtext">Username</ion-label>
+          <ion-label class="subtext">Email</ion-label>
           <ion-item>
-            <ion-input [(ngModel)]="userName" name="userName" required placeholder="Enter your username"></ion-input>
+            <ion-input [(ngModel)]="email" name="email" required placeholder="Enter your email"></ion-input>
           </ion-item>
         </div>
         <div class="input-div">
@@ -19,12 +19,7 @@
             <ion-input [(ngModel)]="password" name="password" required placeholder="Enter your password"></ion-input>
           </ion-item>
         </div>
-        <div class="input-div">
-          <ion-label class="subtext">Email</ion-label>
-          <ion-item>
-            <ion-input [(ngModel)]="email" name="email" required placeholder="Enter your email"></ion-input>
-          </ion-item>
-        </div>
+
         <ion-button type="submit">Log in </ion-button>
       </form>
       <div class="text-div">

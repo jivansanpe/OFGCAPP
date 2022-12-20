@@ -44,6 +44,11 @@ export class NewPiecePage {
     });
   }
   onCreate() {
+    if (this.name == '' || this.description == '' || this.authorId == '' || this.eventId == '') {
+      this.toastColor = 'danger'
+      this.presentToast('Please fill all fields');
+      return;
+    }
     console.log(this.authorId)
     console.log(this.eventId)
     this.newPiece = new Piece(this.authorId, this.eventId, this.name, this.description);
@@ -56,15 +61,22 @@ export class NewPiecePage {
       },
       err => {
         this.toastColor = 'danger'
-        this.presentToast(err.error.message);
+        if (err.status == 404) {
+          this.presentToast(err.error.message);
+        }
+        if (err.status == 500) {
+          this.presentToast("Server error");
+        } else {
+          this.presentToast("Can not connect to server")
+        }
       }
     )
   }
   async presentToast(msj: string) {
     const toast = await this.toastController.create({
       message: msj,
-      duration: 2000,
-      position: 'bottom',
+      duration: 2500,
+      position: 'top',
       color: this.toastColor,
       icon: "alert-circle-outline",
       animated: true

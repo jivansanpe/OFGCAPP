@@ -16,7 +16,6 @@ export class LoginPage implements OnInit {
   isLogged = false;
 
   loginUser: Login;
-  userName = '';
   password = '';
   email = '';
   constructor(private tokenService: TokenService, private toastController: ToastController, private authService: AuthService, private router: Router, public formBuilder: FormBuilder) { }
@@ -34,7 +33,7 @@ export class LoginPage implements OnInit {
     this.vaciar();
   }
   onLogin(): void {
-    this.loginUser = new Login(this.userName, this.password, this.email);
+    this.loginUser = new Login(this.email, this.password,);
     this.authService.loginUser(this.loginUser).subscribe(
       data => {
         this.isLogged = true;
@@ -42,8 +41,10 @@ export class LoginPage implements OnInit {
         this.router.navigate(['/event-list']);
       },
       err => {
-        if (err.status === 401) {
-          this.presentToast("Incorrect username or password");
+        if (err.status == 404) {
+          this.presentToast("Incorrect email or password");
+        } else {
+          this.presentToast("Can not connect to server")
         }
       }
     )
@@ -51,7 +52,7 @@ export class LoginPage implements OnInit {
   async presentToast(mss: string) {
     const toast = await this.toastController.create({
       message: mss,
-      duration: 2500,
+      duration: 2800,
       position: 'middle',
       color: "danger",
       icon: "alert-circle-outline",
@@ -60,7 +61,6 @@ export class LoginPage implements OnInit {
     await toast.present();
   }
   vaciar() {
-    this.userName = '';
     this.password = '';
     this.email = '';
   }

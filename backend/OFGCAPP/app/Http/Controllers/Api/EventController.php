@@ -3,14 +3,15 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Api\BaseController as BaseController;
 use App\Models\Event;
 use App\Models\Musician;
 use App\Http\Resources\EventResource;
 use App\Http\Resources\MusicianResource;
 use App\Http\Controllers\Api\MusicianController;
 use Illuminate\Http\Request;
-
-class EventController extends Controller
+use Validator;
+class EventController extends BaseController
 {
 
     /**
@@ -55,6 +56,16 @@ class EventController extends Controller
     }
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'description' => 'required',
+            'date' => 'required|date',
+            'category' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return $this->sendError('Error validation', $validator->errors());
+        }
         $event = Event::create($request->all());
         if($request->input('musicians')){
             $this->assignMusicians($request->input('musicians'));
@@ -101,6 +112,16 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'description' => 'required',
+            'date' => 'required',
+            'category' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return $this->sendError('Error validation', $validator->errors());
+        }
         $event->update($request->all());
         if($request->input('musicians')){
             $this->assignMusicians($event, $request->input('musicians'));

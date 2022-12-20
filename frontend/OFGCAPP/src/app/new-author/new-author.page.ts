@@ -27,6 +27,11 @@ export class NewAuthorPage {
     this.router.navigateByUrl("/event-list");
   }
   onCreate() {
+    if (this.name == '' || this.description == '') {
+      this.toastColor = 'danger'
+      this.presentToast('Please fill all fields');
+      return;
+    }
     this.newAuthor = new Author(this.name, this.description);
     this.authorService.createAuthor(this.newAuthor).subscribe(
       data => {
@@ -36,15 +41,19 @@ export class NewAuthorPage {
       },
       err => {
         this.toastColor = 'danger'
-        this.presentToast(err.error.message);
+        if (err.status == 404) {
+          this.presentToast(err.error.message);
+        } else {
+          this.presentToast("Can not connect to server")
+        }
       }
     )
   }
   async presentToast(msj: string) {
     const toast = await this.toastController.create({
       message: msj,
-      duration: 2000,
-      position: 'bottom',
+      duration: 2500,
+      position: 'top',
       color: this.toastColor,
       icon: "alert-circle-outline",
       animated: true

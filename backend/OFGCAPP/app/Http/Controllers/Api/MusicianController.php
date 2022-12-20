@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Api\EventController;
 use App\Http\Resources\MusicianResource;
+use App\Http\Controllers\Api\BaseController as BaseController;
 use App\Models\Musician;
 use Illuminate\Http\Request;
-
-class MusicianController extends Controller
+use Validator;
+class MusicianController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -38,6 +39,14 @@ class MusicianController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return $this->sendError('Error validation', $validator->errors());
+        }
         $musician = Musician::create($request->all());
 
         return response()->json([
@@ -77,6 +86,14 @@ class MusicianController extends Controller
      */
     public function update(Request $request, Musician $musician)
     {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return $this->sendError('Error validation', $validator->errors());
+        }
         $musician->update($request->all());
 
         return response()->json([

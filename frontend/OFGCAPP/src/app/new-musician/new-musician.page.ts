@@ -25,6 +25,11 @@ export class NewMusicianPage {
     this.router.navigateByUrl("/event-list");
   }
   onCreate() {
+    if (this.name == '' || this.description == '') {
+      this.toastColor = 'danger'
+      this.presentToast('Please fill all fields');
+      return;
+    }
     this.newMusician = new Musician(this.name, this.description);
     this.token = this.tokenService.getToken();
     this.musicianService.createMusician(this.newMusician, this.token).subscribe(
@@ -35,15 +40,19 @@ export class NewMusicianPage {
       },
       err => {
         this.toastColor = 'danger'
-        this.presentToast(err.error.message);
+        if (err.status == 404) {
+          this.presentToast(err.error.message);
+        } else {
+          this.presentToast("Can not connect to server")
+        }
       }
     )
   }
   async presentToast(msj: string) {
     const toast = await this.toastController.create({
       message: msj,
-      duration: 2000,
-      position: 'bottom',
+      duration: 2500,
+      position: 'top',
       color: this.toastColor,
       icon: "alert-circle-outline",
       animated: true

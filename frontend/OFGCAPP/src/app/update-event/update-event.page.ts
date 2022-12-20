@@ -46,6 +46,16 @@ export class UpdateEventPage implements OnInit {
     });
   }
   onUpdate() {
+    if (!this.date.match(/^\d{4}-\d{2}-\d{2}$/)) {
+      this.toastColor = 'danger'
+      this.presentToast('Invalid date format');
+      return;
+    }
+    if (this.name == '' || this.description == '' || this.date == '' || this.category == '') {
+      this.toastColor = 'danger'
+      this.presentToast('Please fill all fields');
+      return;
+    }
     this.newEvent = new Event(this.name, this.description, this.date, this.category);
     this.eventsService.updateEvent(this.id, this.newEvent).subscribe(
       data => {
@@ -55,14 +65,18 @@ export class UpdateEventPage implements OnInit {
       },
       err => {
         this.toastColor = 'danger'
-        this.presentToast(err.error.message);
+        if (err.status == 404) {
+          this.presentToast(err.error.message);
+        } else {
+          this.presentToast("Can not connect to server")
+        }
       }
     )
   }
   async presentToast(msj: string) {
     const toast = await this.toastController.create({
       message: msj,
-      duration: 2000,
+      duration: 2500,
       position: 'bottom',
       color: this.toastColor,
       icon: "alert-circle-outline",

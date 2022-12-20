@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AuthorResource;
+use App\Http\Controllers\Api\BaseController as BaseController;
 use App\Models\Author;
 use Illuminate\Http\Request;
+use Validator;
 
-class AuthorController extends Controller
+class AuthorController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -42,6 +44,14 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return $this->sendError('Error validation', $validator->errors());
+        }
         $author = Author::create($request->all());
 
         return response()->json([
@@ -81,6 +91,14 @@ class AuthorController extends Controller
      */
     public function update(Request $request, Author $author)
     {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return $this->sendError('Error validation', $validator->errors());
+        }
         $author->update($request->all());
 
         return response()->json([

@@ -23,13 +23,16 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     this.isLogged();
   }
+
   goToOne(id: any) {
     this.router.navigateByUrl(`/${this.type}-details/${id}`);
   }
-  goToUpdate(id: any) {
+  goToUpdate(id: any, event: any) {
+    event.stopPropagation();
     this.router.navigateByUrl(`/update-${this.type}/${id}`);
   }
-  deleteElement(id: any) {
+  deleteElement(id: any, event: any) {
+    event.stopPropagation();
     if (this.type == "event") {
       this.eventsService.deleteEvent(id).subscribe(
         data => {
