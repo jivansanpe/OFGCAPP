@@ -27,15 +27,13 @@ all the concerts you love but in your pocket, with a fresh look and many functio
 
 * Open your code editor and go to the folder of your choice.
 
-* Install php composer in this project folder or globally.
-
-* Install the laravel installer in this project folder or globally.
-
 * Clone this project.
 
 * Create a MySQL Schema called "ofgcapp" and set the .env of the backend folder properly (ports, mysql password, etc).
 
 * Execute npm install.
+
+* Execute composer install.
 
 * Enjoy!
 
@@ -98,7 +96,7 @@ along with the navigation structure and the page's design.
 A basic project and task organization of this app was done in my Github Projects tool.
 
 [Planning](https://github.com/users/PabloHern/projects/1)
-## Tecnhology stack comparison
+## Technology stack comparison
 #### Ionic 
 Ionic is a mobile app framework based on Angular, a Javascript framework for web apps.
 Some of the main competitors are:
