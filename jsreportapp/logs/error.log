@@ -1,0 +1,18 @@
+2023-01-30T19:30:29.498Z - error: Report render failed
+(because) connect ECONNREFUSED 127.0.0.1:8000
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1161:16)
+    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) rootId=mdyuug1qpgtz91x, id=mdyuug1qpgtz91x
+2023-02-01T16:27:39.481Z - error: Report render failed
+(because) data is not defined
+ReferenceError: data is not defined
+    at ClientRequest.<anonymous> (sandbox.js:11:25)
+    at Object.onceWrapper (node:events:510:26)
+    at ClientRequest.emit (node:events:390:28)
+    at ClientRequest.emit (node:domain:537:15)
+    at HTTPParser.parserOnIncomingClient [as onIncoming] (node:_http_client:623:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:128:17)
+    at Socket.socketOnData (node:_http_client:487:22)
+    at Socket.emit (node:events:390:28)
+    at Socket.emit (node:domain:537:15)
+    at addChunk (node:internal/streams/readable:315:12) rootId=9xk55ej49cc4yie, id=9xk55ej49cc4yie

@@ -68,12 +68,11 @@ class EventController extends BaseController
         }
         $event = Event::create($request->all());
         if($request->input('musicians')){
-            $this->assignMusicians($request->input('musicians'));
+            $this->assignMusicians($event,$request->input('musicians'));
         } 
 
         return response()->json([
-            'message' => "Event saved successfully!",
-            'event' => $event
+            'message' => "Event saved successfully!"
         ], 200);
     }
     /**

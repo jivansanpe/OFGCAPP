@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metro/4.1.5/css/metro.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+     <h1>Authors</h1>
+        <!-- add hiden information to the page which is resolved in OrdersHeader template
+             during the pdf merge. See the docs about pdf utils extension for more details. -->
+        <canvas id="1" style="margin-bottom:30px"></canvas>
+        <table class='table striped'>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Numero de piezas</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each authors.[0]}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{description}}</td>
+                    <td>{{count}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+        <script>
+            // convert data into js string using function from asset global helpers.js
+            // this results into something like var data = { "a": "foo" }
+            // which gets afterwards interpreted in chrome into object
+
+            var ctx = document.getElementById('1').getContext('2d');
+            var myChart =  new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: {{{toJSON authors.[1]}}},
+                    datasets: [{
+                        fillColor: 'blue',
+                        label: "Number of pieces",
+                        backgroundColor: "rgba(27,161,226,0.2)",
+                        borderColor: "rgba(27,161,226,1)",
+                        borderWidth: 1,
+                        hoverBackgroundColor: "rgba(27,161,226,0.4)",
+                        hoverBorderColor: "rgba(27,161,226,1)",
+                        data: {{{toJSON authors.[2]}}},
+                    }]
+                },
+                options: {
+                    animation: {
+                        duration: 0
+                    }
+                }
+            });
+        </script>
+  </body>
+</html>
