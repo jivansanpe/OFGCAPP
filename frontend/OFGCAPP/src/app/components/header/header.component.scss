@@ -1,5 +1,6 @@
 ion-header {
   height: 80px;
+  background-color: #004D4D;
 
   ion-menu-button {
     position: absolute;
@@ -10,12 +11,12 @@ ion-header {
   }
 
   ion-title {
-    background-color: #004D4D;
     color: #ffff;
     font-family: TexGyreHeros;
     text-align: left;
     font-size: 2em;
     padding-left: 40px;
+    padding-top: 17px;
   }
 
 }
