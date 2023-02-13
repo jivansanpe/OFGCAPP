@@ -20,11 +20,11 @@ export class MenuComponent implements OnInit {
   }
   goToPage(path: any) {
     this.activeList = path;
-    this.router.navigateByUrl("/" + path);
+    this.router.navigateByUrl("/" + path, { replaceUrl: true });
   }
   logOut(): void {
     this.tokenService.logOut();
-    this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/home", { replaceUrl: true });
   }
   isLogged() {
     if (window.sessionStorage.getItem(TOKEN_KEY)) {

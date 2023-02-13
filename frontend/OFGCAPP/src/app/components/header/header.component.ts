@@ -12,6 +12,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() { }
   goToHome() {
-    this.router.navigateByUrl("/event-list");
+    this.router.navigateByUrl("/event-list", { replaceUrl: true });
   }
 }
