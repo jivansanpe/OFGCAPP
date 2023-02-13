@@ -143,7 +143,7 @@ Some of its disadvantages include:
 - The scarcity of tutorials due to the speed with which new versions of Laravel are released. In this case, we used version 9.
 - Incompatibility between different versions of Laravel. Many functions that worked a year ago are no longer compatible with the current version, so updating an old project can become a headache.
 
-**Native apps, hybrid apps, web apps and PWA.
+Native apps, hybrid apps, web apps and PWA.
 
 Native apps, hybrid apps, web apps, and progressive web apps (PWA) are four different types of mobile applications that have their own unique features and capabilities.
 
