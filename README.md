@@ -118,6 +118,45 @@ Laravel is a PHP framework for web application development. Some of its main com
 * CakePHP: It is a PHP framework with a focus on simplicity and ease of use. It offers a wide range of features and tools for web application development.
 
 Overall, Laravel is considered one of the most popular and widely used PHP frameworks in the industry. It offers a wide range of features and tools for web application development and is highly praised for its focus on simplicity and ease of use. However, there are also many other PHP frameworks available, each with its own advantages and disadvantages, and the choice of the right framework depends on the needs and preferences of the project.
+
+Let's move on to the advantages and disadvantages of using both technologies for the backend and frontend of this project.
+
+Advantages of using Ionic in the frontend of this application include:
+
+- The ease of adapting it for display on mobile devices.
+- Access to many types of UI component templates for creating a preliminary sketch that sets the design and functionality path, always in line with the requirements proposed by the project mentor.
+- Versatility for viewing the project on iOS and Android devices. This can easily be seen with the command ionic serve -l.
+
+Some of its disadvantages include:
+
+- Some components may need to be specifically programmed for iOS.
+- It will be heavier as a hybrid technology, as it requires many more libraries, plugins, and dependencies compared to a native application.
+
+Advantages of using Laravel in the backend include:
+
+- The creation of migrations for different tables has been quick and simple, with no need to use SQL statements.
+- The pre-established templates in the default structure have been a great help in following a consistent programming scheme in Laravel. An example would be the testing section, which had some already created as a guide.
+- Thanks to the different shortcuts provided by Laravel, the code has remained compact and clean.
+
+Some of its disadvantages include:
+
+- The scarcity of tutorials due to the speed with which new versions of Laravel are released. In this case, we used version 9.
+- Incompatibility between different versions of Laravel. Many functions that worked a year ago are no longer compatible with the current version, so updating an old project can become a headache.
+
+**Native apps, hybrid apps, web apps and PWA.
+
+Native apps, hybrid apps, web apps, and progressive web apps (PWA) are four different types of mobile applications that have their own unique features and capabilities.
+
+Native apps are applications built for specific platforms using their respective programming languages and development tools, such as Swift for iOS or Java for Android. They have full access to the device's functionality, including the camera, GPS, and more. They offer a smooth and fast user experience, but they need to be downloaded from an app store and often require more time and resources to build.
+
+Hybrid apps are built using a combination of web technologies (HTML, CSS, and JavaScript) and native technologies. They run on a native container and provide a similar look and feel to native apps, but with less access to the device's hardware. Hybrid apps are easier and faster to develop, but their performance can sometimes be slower than native apps.
+
+Web apps are web-based applications that run on a browser and do not require an app store download. They are usually built using HTML, CSS, and JavaScript and are designed to be used on multiple platforms. Web apps can be accessed from any device with an internet connection, but their performance can be limited by the capabilities of the device and the strength of the internet connection.
+
+PWA's are a relatively new type of mobile application that provides the best of both worlds by combining the benefits of native and web apps. PWAs are built using web technologies and run on a browser, but they have access to certain native device features and can be installed on a device like a native app. PWAs offer a fast and smooth user experience, and they can be updated and accessed from anywhere with an internet connection.
+
+In conclusion, the choice between these different types of mobile apps depends on the specific requirements and goals of the project. Native apps provide the best performance, but they require more resources and are limited to specific platforms. Hybrid apps are a good compromise between performance and ease of development, but they may not have full access to the device's hardware. Web apps are accessible from any device, but their performance can be limited. PWAs offer a fast and smooth user experience, with the ability to access certain native features, and can be updated and accessed from anywhere with an internet connection.
+
 ## Author
 
 Pablo Hernández Marrero.
