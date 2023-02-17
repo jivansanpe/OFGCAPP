@@ -1,8 +1,12 @@
 // Definimos la clase de nuestro tab
 .my-tab {
     // Establecemos la posición relativa para el componente
-    position: absolute;
-  
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+
     // Definimos la altura del tab-bar
     ion-tab-bar {
       height: 56px;
