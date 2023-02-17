@@ -1,0 +1,28 @@
+<ion-tabs class="my-tab">
+  <!-- Tab bar -->
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button [ngClass]="{'item': activeList !== 'event-list', 'highlighted' : activeList === 'event-list' }"
+      lines="full" button detail="false" (click)="goToPage('event-list')">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>Events</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button [ngClass]="{'item': activeList !== 'musician-list', 'highlighted' : activeList === 'musician-list' }"
+      lines="full" button detail="false" (click)="goToPage('musician-list')">
+      <ion-icon name="person-circle"></ion-icon>
+      <ion-label>Musicians</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button [ngClass]="{'item': activeList !== 'author-list', 'highlighted' : activeList === 'author-list' }"
+      lines="full" button detail="false" (click)="goToPage('author-list')">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Authors</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button [ngClass]="{'item': activeList !== 'piece-list', 'highlighted' : activeList === 'piece-list' }"
+      lines="full" button detail="false" (click)="goToPage('piece-list')">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>Pieces</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
