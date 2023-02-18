@@ -80,8 +80,8 @@ export class RegisterPage implements OnInit {
   async presentToast(mss: string) {
     const toast = await this.toastController.create({
       message: mss,
-      duration: 2800,
-      position: 'middle',
+      duration: 2500,
+      position: 'top',
       color: this.toastColor,
       icon: "alert-circle-outline",
       animated: true

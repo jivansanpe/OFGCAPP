@@ -27,11 +27,24 @@ export class NewAuthorPage {
     this.router.navigateByUrl("/event-list");
   }
   onCreate() {
-    if (this.name == '' || this.description == '') {
+    if (this.name.trim() == '' || this.description.trim() == '') {
       this.toastColor = 'danger'
       this.presentToast('Please fill all fields');
       return;
     }
+
+    if (this.name.length > 50) {
+      this.toastColor = 'danger'
+      this.presentToast('The name of the author can not be longer than 50 characters.');
+      return;
+    }
+
+    if (this.description.length > 100) {
+      this.toastColor = 'danger'
+      this.presentToast('The description of the author can not be longer than 100 characters.');
+      return;
+    }
+
     this.newAuthor = new Author(this.name, this.description);
     this.authorService.createAuthor(this.newAuthor).subscribe(
       data => {
@@ -44,7 +57,7 @@ export class NewAuthorPage {
         if (err.status == 404) {
           this.presentToast(err.error.message);
         } else {
-          this.presentToast("Can not connect to server")
+          this.presentToast("Can not connect to server.")
         }
       }
     )

@@ -37,16 +37,36 @@ export class NewEventPage {
     });
   }
   onCreate() {
+    if (this.name.trim() == '' || this.description.trim() == '' || this.date.trim() == '' || this.category.trim() == '') {
+      this.toastColor = 'danger'
+      this.presentToast('Please fill all fields.');
+      return;
+    }
+
+    if (this.name.length > 50) {
+      this.toastColor = 'danger'
+      this.presentToast('The name of the event can not be longer than 50 characters.');
+      return;
+    }
+
+    if (this.description.length > 100) {
+      this.toastColor = 'danger'
+      this.presentToast('The description of the event can not be longer than 100 characters.');
+      return;
+    }
+
+    if (this.category.length > 50) {
+      this.toastColor = 'danger'
+      this.presentToast('The category of the event can not be longer than 50 characters.');
+      return;
+    }
+
     if (!this.date.match(/^\d{4}-\d{2}-\d{2}$/)) {
       this.toastColor = 'danger'
-      this.presentToast('Invalid date format');
+      this.presentToast('Invalid date format.');
       return;
     }
-    if (this.name == '' || this.description == '' || this.date == '' || this.category == '') {
-      this.toastColor = 'danger'
-      this.presentToast('Please fill all fields');
-      return;
-    }
+
     this.newEvent = new Event(this.name, this.description, this.date, this.category);
     this.eventsService.createEvent(this.newEvent).subscribe(
       data => {
@@ -59,7 +79,7 @@ export class NewEventPage {
         if (err.status == 404) {
           this.presentToast(err.error.message);
         } else {
-          this.presentToast("Can not connect to server")
+          this.presentToast("Can not connect to server.")
         }
       }
     )

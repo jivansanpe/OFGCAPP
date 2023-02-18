@@ -16,20 +16,20 @@
         <div class="input-div">
           <ion-label class="subtext">Event date</ion-label>
           <ion-item>
-            <ion-textarea [(ngModel)]="date" name="date" required placeholder="YYYY-MM-DD"></ion-textarea>
+            <ion-input [(ngModel)]="date" name="date" required placeholder="YYYY-MM-DD"></ion-input>
           </ion-item>
         </div>
         <div class="input-div">
           <ion-label class="subtext">Event description</ion-label>
           <ion-item>
-            <ion-textarea [(ngModel)]="description" name="description" required
-              placeholder="Description"></ion-textarea>
+            <ion-input [(ngModel)]="description" name="description" required
+              placeholder="Description"></ion-input>
           </ion-item>
         </div>
         <div class="input-div">
           <ion-label class="subtext">Event category</ion-label>
           <ion-item>
-            <ion-textarea [(ngModel)]="category" name="category" required placeholder="Category"></ion-textarea>
+            <ion-input [(ngModel)]="category" name="category" required placeholder="Category"></ion-input>
           </ion-item>
         </div>
         <ion-button type="submit">Create</ion-button>

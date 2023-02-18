@@ -44,11 +44,24 @@ export class NewPiecePage {
     });
   }
   onCreate() {
-    if (this.name == '' || this.description == '' || this.authorId == '' || this.eventId == '') {
+    if (this.name.trim() == '' || this.description == '' || this.authorId == '' || this.eventId == '') {
       this.toastColor = 'danger'
-      this.presentToast('Please fill all fields');
+      this.presentToast('Please fill all fields.');
       return;
     }
+
+    if (this.name.length > 50) {
+      this.toastColor = 'danger'
+      this.presentToast('The name of the piece can not be longer than 50 characters.');
+      return;
+    }
+
+    if (this.description.length > 100) {
+      this.toastColor = 'danger'
+      this.presentToast('The description of the piece can not be longer than 100 characters.');
+      return;
+    }
+
     console.log(this.authorId)
     console.log(this.eventId)
     this.newPiece = new Piece(this.authorId, this.eventId, this.name, this.description);
