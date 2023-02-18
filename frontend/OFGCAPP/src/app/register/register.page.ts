@@ -40,6 +40,22 @@ export class RegisterPage implements OnInit {
     this.vaciar();
   }
   onRegister(): void {
+
+    if (!this.isValidUsername(this.name)) {
+      this.toastColor = 'danger';
+      this.presentToast('Invalid username. Usernames should only contain letters and/or digits.');
+      return;
+    } else if (!this.isValidPassword(this.password)) {
+      this.toastColor = 'danger';
+      this.presentToast('Invalid password. Passwords should only contain letters and/or digits.');
+      return;
+    } else if (this.password !== this.confPassword) {
+      this.toastColor = 'danger';
+      this.presentToast('Password and confirm password do not match.');
+      return;
+    }
+    
+
     this.newUser = new NewUser(this.name, this.email, this.password, this.confPassword);
     console.log(this.name);
     this.registerUser = new Login(this.email, this.password,);
@@ -48,15 +64,15 @@ export class RegisterPage implements OnInit {
         this.tokenService.setToken(data['data'].token);
         this.isLogged = true;
         this.toastColor = 'success';
-        this.presentToast('Created account');
+        this.presentToast('Created account.');
         this.router.navigate(['/event-list']);
       },
       err => {
         this.toastColor = 'danger';
         if (err.status == 404) {
-          this.presentToast("Incorrect email or password");
+          this.presentToast("Incorrect email.");
         } else {
-          this.presentToast("Can not connect to server")
+          this.presentToast("Can not connect to server.")
         }
       }
     );
@@ -83,6 +99,16 @@ export class RegisterPage implements OnInit {
     this.tokenService.logOut();
     this.isLogged = false;
     this.vaciar();
+  }
+
+  isValidUsername(name: string): boolean {
+    const regex = /^[a-zA-Z0-9]+$/;
+    return regex.test(name);
+  }
+
+  isValidPassword(password: string): boolean {
+    const regex = /^[a-zA-Z0-9]+$/;
+    return regex.test(password);
   }
 
 }

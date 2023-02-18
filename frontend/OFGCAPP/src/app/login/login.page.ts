@@ -18,6 +18,7 @@ export class LoginPage implements OnInit {
   loginUser: Login;
   password = '';
   email = '';
+  toastColor: string;
   constructor(private tokenService: TokenService, private toastController: ToastController, private authService: AuthService, private router: Router, public formBuilder: FormBuilder) { }
   ngOnInit() {
 
@@ -33,6 +34,21 @@ export class LoginPage implements OnInit {
     this.vaciar();
   }
   onLogin(): void {
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(this.email)) {
+      this.toastColor = 'danger';
+      this.presentToast("Invalid email address. The email adress must have a valid format.");
+      return;
+    }
+
+    const passwordRegex = /^[a-zA-Z0-9]+$/;
+    if (!passwordRegex.test(this.password)) {
+      this.toastColor = 'danger';
+      this.presentToast("Invalid password. Passwords should only contain letters and/or digits.");
+      return;
+    }
+
     this.loginUser = new Login(this.email, this.password,);
     this.authService.loginUser(this.loginUser).subscribe(
       data => {
