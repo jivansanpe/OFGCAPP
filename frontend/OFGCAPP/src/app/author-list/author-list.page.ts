@@ -15,7 +15,9 @@ export class AuthorListPage {
   isLoggedIn: any;
   filterTerm: string;
   newArray: any[];
-  constructor(private router: Router, private tokenService: TokenService, private authorService: AuthorService, private toastController: ToastController) { }
+  constructor(private router: Router, private tokenService: TokenService, private authorService: AuthorService, private toastController: ToastController) { 
+    
+  }
   goToAuthor(id: any) {
     this.router.navigateByUrl(`/author-details/${id}`);
   }
@@ -32,11 +34,10 @@ export class AuthorListPage {
       this.authors = this.authors['data'];
 
 
-      this.authors.forEach((element: any) =>
-        this.newArray[element.name] = 1
-
-      );
-      console.log(this.newArray);
+      // this.authors.forEach((element: any) =>
+      //   this.newArray[element.name] = 1
+      // );
+      // console.log(this.newArray);
       console.log(this.authors);
     });
   }

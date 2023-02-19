@@ -10,7 +10,7 @@ const TOKEN_KEY = 'api_token';
 })
 export class AuthorService {
 
-  endpoint = 'http://localhost:8000/api/authors?include=pieces';
+  endpoint = 'http://localhost:8000/api/authors';
   httpOptionsUsingUrlEncoded = {
     headers: new HttpHeaders({ 'Authorization': `Bearer ${window.sessionStorage.getItem(TOKEN_KEY)}` })
   };

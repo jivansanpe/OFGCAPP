@@ -47,11 +47,24 @@ export class UpdatePiecePage implements OnInit {
     });
   }
   onUpdate() {
-    if (this.name == '' || this.description == '' || this.authorId == '' || this.eventId == '') {
+    if (this.name.trim() == '' || this.description.trim() == '' || this.authorId == '' || this.eventId == '') {
       this.toastColor = 'danger'
       this.presentToast('Please fill all fields');
       return;
     }
+
+    if (this.name.length > 50) {
+      this.toastColor = 'danger'
+      this.presentToast('The name of the piece can not be longer than 50 characters.');
+      return;
+    }
+
+    if (this.description.length > 100) {
+      this.toastColor = 'danger'
+      this.presentToast('The description of the piece can not be longer than 100 characters.');
+      return;
+    }
+
     this.newPiece = new Piece(this.authorId, this.eventId, this.name, this.description);
     this.pieceService.updatePiece(this.id, this.newPiece).subscribe(
       data => {
@@ -73,7 +86,7 @@ export class UpdatePiecePage implements OnInit {
     const toast = await this.toastController.create({
       message: msj,
       duration: 2500,
-      position: 'bottom',
+      position: 'top',
       color: this.toastColor,
       icon: "alert-circle-outline",
       animated: true

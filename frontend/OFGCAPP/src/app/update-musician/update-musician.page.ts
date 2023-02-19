@@ -44,11 +44,24 @@ export class UpdateMusicianPage implements OnInit {
     });
   }
   onUpdate() {
-    if (this.name == '' || this.description == '') {
+    if (this.name.trim() == '' || this.description.trim() == '') {
       this.toastColor = 'danger'
       this.presentToast('Please fill all fields');
       return;
     }
+
+    if (this.name.length > 50) {
+      this.toastColor = 'danger'
+      this.presentToast('The name of the musician can not be longer than 50 characters.');
+      return;
+    }
+
+    if (this.description.length > 100) {
+      this.toastColor = 'danger'
+      this.presentToast('The description of the musician can not be longer than 100 characters.');
+      return;
+    }
+
     this.newMusician = new Musician(this.name, this.description);
     this.musicianService.updateMusician(this.id, this.newMusician).subscribe(
       data => {
