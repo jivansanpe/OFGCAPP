@@ -49,7 +49,7 @@ export class LoginPage implements OnInit {
       return;
     }
 
-    this.loginUser = new Login(this.email, this.password,);
+    this.loginUser = new Login(this.email, btoa(this.password));
     this.authService.loginUser(this.loginUser).subscribe(
       data => {
         this.isLogged = true;

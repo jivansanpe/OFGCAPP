@@ -7,6 +7,7 @@ import { NewUser } from '../models/new-user';
 import { AuthService } from '../services/auth.service';
 import { TokenService } from '../services/token.service';
 import { concatMap } from 'rxjs/operators';
+import { enc } from 'crypto-js';
 
 @Component({
   selector: 'app-register',
@@ -54,11 +55,13 @@ export class RegisterPage implements OnInit {
       this.presentToast('Password and confirm password do not match.');
       return;
     }
-    
 
-    this.newUser = new NewUser(this.name, this.email, this.password, this.confPassword);
+    const encryptedPassword = enc.Base64.stringify(enc.Utf8.parse(this.password));
+    const encryptedConfPassword = enc.Base64.stringify(enc.Utf8.parse(this.confPassword));
+
+    this.newUser = new NewUser(this.name, this.email, encryptedPassword, encryptedConfPassword);
     console.log(this.name);
-    this.registerUser = new Login(this.email, this.password,);
+    this.registerUser = new Login(this.email, encryptedPassword);
     this.authService.newUser(this.newUser).pipe(concatMap(newRes => this.authService.loginUser(this.registerUser))).subscribe(
       data => {
         this.tokenService.setToken(data['data'].token);
