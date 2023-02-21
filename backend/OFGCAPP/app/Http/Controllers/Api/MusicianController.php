@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\EventController;
 use App\Http\Resources\MusicianResource;
 use App\Http\Controllers\Api\BaseController as BaseController;
 use App\Models\Musician;
+use Illuminate\Support\Facades\File; 
 use Illuminate\Http\Request;
 use Validator;
 class MusicianController extends BaseController
@@ -41,13 +42,19 @@ class MusicianController extends BaseController
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'description' => 'required',
         ]);
 
         if ($validator->fails()) {
             return $this->sendError('Error validation', $validator->errors());
         }
-        $musician = Musician::create($request->all());
+        $image_path = $request->file('image')->store('image', 'public');
+        $musician = Musician::create([
+            'name' => $request->name,
+            'image' => $image_path,
+            'description' => $request->description,
+        ]);
 
         return response()->json([
             'message' => "Musician saved successfully!",
@@ -88,14 +95,27 @@ class MusicianController extends BaseController
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
+            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'description' => 'required',
         ]);
 
         if ($validator->fails()) {
             return $this->sendError('Error validation', $validator->errors());
         }
-        $musician->update($request->all());
-
+        if($request->input('image')){
+            $image_name = "storage/".$musician->image;
+            if(File::exists($image_name)) {
+                File::delete($image_name);
+            }
+            $image_path = $request->file('image')->store('image', 'public');
+            $musician->update([
+                'name' => $request->name,
+                'image' => $image_path,
+                'description' => $request->description,
+            ]);
+        } else{
+            $musician->update($request->all());
+        }
         return response()->json([
             'message' => "Event updated successfully!",
             'Musician' => $musician
@@ -111,7 +131,10 @@ class MusicianController extends BaseController
     public function destroy(Musician $musician)
     {
         $musician->delete();
-
+        $image_name = "storage/".$musician->image;
+        if(File::exists($image_name)) {
+            File::delete($image_name);
+        }
         return response()->json([
             'message' => "Musician deleted successfully!",
         ], 200);

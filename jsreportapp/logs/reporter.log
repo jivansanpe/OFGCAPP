@@ -4029,3 +4029,143 @@ Error: Error while executing pdf-utils operations
 2023-02-06T20:19:36.533Z - info: Rendering (child) request finished in 5898 ms rootId=3o4j2jrolw1aune, id=ca2xkketxoe154k, fromEmitProfile=true
 2023-02-06T20:19:36.535Z - info: pdf-utils pdf processing was finished rootId=3o4j2jrolw1aune, id=3o4j2jrolw1aune, fromEmitProfile=true
 2023-02-06T20:19:36.535Z - info: Rendering request 1 finished in 5931 ms rootId=3o4j2jrolw1aune, id=3o4j2jrolw1aune, fromEmitProfile=true
+2023-02-10T17:56:56.429Z - info: Initializing jsreport (version: 3.10.0, configuration file: jsreport.config.json, nodejs: 16.13.1)
+2023-02-10T17:56:56.432Z - info: Searching for available extensions in D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\
+2023-02-10T17:56:56.439Z - info: Extensions location cache contains up to date information, skipping crawling in D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\
+2023-02-10T17:56:56.488Z - info: Found 35 extension(s)
+2023-02-10T17:56:56.603Z - info: Using extension base@3.0.1
+2023-02-10T17:56:56.609Z - info: Using extension child-templates@3.1.0
+2023-02-10T17:56:56.613Z - info: Using extension cli@3.2.3
+2023-02-10T17:56:56.619Z - info: Using extension components@3.3.0
+2023-02-10T17:56:56.622Z - info: Using extension data@3.1.0
+2023-02-10T17:56:56.623Z - info: Using extension express@3.6.0
+2023-02-10T17:56:57.420Z - info: Using extension freeze@3.0.1
+2023-02-10T17:56:57.423Z - info: Using extension fs-store@3.2.4
+2023-02-10T17:56:57.663Z - info: Using extension handlebars@3.2.1
+2023-02-10T17:56:57.665Z - info: Using extension import-export@3.2.0
+2023-02-10T17:56:57.692Z - info: Using extension jsrender@3.0.0
+2023-02-10T17:56:57.694Z - info: Using extension licensing@3.0.2
+2023-02-10T17:56:57.750Z - info: Using extension localization@3.2.1
+2023-02-10T17:56:57.752Z - info: Using extension npm@3.1.2
+2023-02-10T17:56:57.755Z - info: Using extension pdf-utils@3.7.0
+2023-02-10T17:56:57.758Z - info: Using extension reports@3.1.1
+2023-02-10T17:56:57.764Z - info: Using extension tags@3.1.1
+2023-02-10T17:56:57.768Z - info: Using extension text@3.0.0
+2023-02-10T17:56:57.770Z - info: Using extension version-control@3.1.2
+2023-02-10T17:56:57.796Z - info: Using extension assets@3.6.0
+2023-02-10T17:56:57.822Z - info: Using extension authorization@3.3.0
+2023-02-10T17:56:57.831Z - info: Using extension browser-client@3.1.1
+2023-02-10T17:56:57.836Z - info: Using extension chrome-pdf@3.3.0
+2023-02-10T17:56:57.840Z - info: Using extension docx@3.6.0
+2023-02-10T17:56:57.846Z - info: Using extension html-to-xlsx@3.3.0
+2023-02-10T17:56:58.054Z - info: html-to-xlsx detected chrome as available html engine
+2023-02-10T17:56:58.055Z - info: Using extension pptx@3.4.0
+2023-02-10T17:56:58.059Z - info: Using extension scheduling@3.0.3
+2023-02-10T17:56:58.121Z - info: Using extension scripts@3.4.0
+2023-02-10T17:56:58.123Z - info: Using extension static-pdf@3.0.1
+2023-02-10T17:56:58.124Z - info: Using extension studio@3.9.0
+2023-02-10T17:56:58.358Z - info: Using extension xlsx@3.4.0
+2023-02-10T17:56:58.410Z - info: Using extension public-templates@3.0.0
+2023-02-10T17:56:58.414Z - info: Using extension sample-template@3.2.1
+2023-02-10T17:56:58.418Z - info: Using extension studio-theme-dark@3.0.1
+2023-02-10T17:56:58.421Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2023-02-10T17:56:58.421Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2023-02-10T17:56:58.422Z - info: Using fs provider for template store.
+2023-02-10T17:56:58.429Z - info: fs store is persisting using fs for D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\data
+2023-02-10T17:56:58.434Z - info: fs store is loading data
+2023-02-10T17:56:58.469Z - info: fs store is initialized successfully
+2023-02-10T17:56:58.486Z - info: Creating default express app.
+2023-02-10T17:56:58.531Z - info: jsreport server successfully started on http port: 5488
+2023-02-10T17:56:58.535Z - info: Verifying license key free
+2023-02-10T17:56:58.536Z - info: Using free license
+2023-02-10T17:56:58.540Z - info: Initializing worker threads
+2023-02-10T17:56:58.952Z - info: 2 worker threads initialized in 412ms
+2023-02-10T17:56:58.953Z - info: Starting temp files cleanup with 180000ms threshold
+2023-02-10T17:56:58.954Z - info: reporter initialized
+2023-02-10T17:57:58.475Z - warn: Cleaning fs journal failed, will reload Unexpected end of JSON input stack=SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-fs-store\lib\customUtils.js:83:15)
+    at Object.clean (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-fs-store\lib\journal.js:185:24)
+    at async lock (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-fs-store\lib\customUtils.js:163:12)
+2023-02-10T18:26:00.679Z - info: fs store is loading data
+2023-02-10T18:29:09.091Z - info: Render request 1 queued for execution and waiting for available worker fromEmitProfile=true, rootId=h1biicksbs0mwy1, id=h1biicksbs0mwy1
+2023-02-10T18:29:09.142Z - info: Starting rendering request 1 rootId=h1biicksbs0mwy1, id=h1biicksbs0mwy1, fromEmitProfile=true
+2023-02-10T18:29:09.143Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=h1biicksbs0mwy1, id=h1biicksbs0mwy1, fromEmitProfile=true
+2023-02-10T18:29:15.456Z - info: pdf-utils is starting pdf processing rootId=h1biicksbs0mwy1, id=h1biicksbs0mwy1, fromEmitProfile=true
+2023-02-10T18:29:15.467Z - info: Starting rendering (child) request rootId=h1biicksbs0mwy1, id=okml0jlvdnem171, fromEmitProfile=true
+2023-02-10T18:29:15.468Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=h1biicksbs0mwy1, id=okml0jlvdnem171, fromEmitProfile=true
+2023-02-10T18:29:15.814Z - info: Rendering (child) request finished in 6688 ms rootId=h1biicksbs0mwy1, id=okml0jlvdnem171, fromEmitProfile=true
+2023-02-10T18:29:15.816Z - info: pdf-utils pdf processing was finished rootId=h1biicksbs0mwy1, id=h1biicksbs0mwy1, fromEmitProfile=true
+2023-02-10T18:29:15.819Z - info: Rendering request 1 finished in 6725 ms rootId=h1biicksbs0mwy1, id=h1biicksbs0mwy1, fromEmitProfile=true
+2023-02-10T18:51:33.202Z - info: Render request 2 queued for execution and waiting for available worker fromEmitProfile=true, rootId=13hb87avnhdtucy, id=13hb87avnhdtucy
+2023-02-10T18:51:33.217Z - info: Starting rendering request 2 rootId=13hb87avnhdtucy, id=13hb87avnhdtucy, fromEmitProfile=true
+2023-02-10T18:51:33.218Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=13hb87avnhdtucy, id=13hb87avnhdtucy, fromEmitProfile=true
+2023-02-10T18:51:34.397Z - info: pdf-utils is starting pdf processing rootId=13hb87avnhdtucy, id=13hb87avnhdtucy, fromEmitProfile=true
+2023-02-10T18:51:34.406Z - info: Starting rendering (child) request rootId=13hb87avnhdtucy, id=wpxvbwlwdyh2clw, fromEmitProfile=true
+2023-02-10T18:51:34.407Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=13hb87avnhdtucy, id=wpxvbwlwdyh2clw, fromEmitProfile=true
+2023-02-10T18:51:34.673Z - info: Rendering (child) request finished in 1449 ms rootId=13hb87avnhdtucy, id=wpxvbwlwdyh2clw, fromEmitProfile=true
+2023-02-10T18:51:34.674Z - info: pdf-utils pdf processing was finished rootId=13hb87avnhdtucy, id=13hb87avnhdtucy, fromEmitProfile=true
+2023-02-10T18:51:34.675Z - info: Rendering request 2 finished in 1472 ms rootId=13hb87avnhdtucy, id=13hb87avnhdtucy, fromEmitProfile=true
+2023-02-10T18:51:43.839Z - info: Render request 3 queued for execution and waiting for available worker fromEmitProfile=true, rootId=sdjrzpzfm0frf6e, id=sdjrzpzfm0frf6e
+2023-02-10T18:51:43.854Z - info: Starting rendering request 3 rootId=sdjrzpzfm0frf6e, id=sdjrzpzfm0frf6e, fromEmitProfile=true
+2023-02-10T18:51:43.855Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=sdjrzpzfm0frf6e, id=sdjrzpzfm0frf6e, fromEmitProfile=true
+2023-02-10T18:51:44.539Z - info: pdf-utils is starting pdf processing rootId=sdjrzpzfm0frf6e, id=sdjrzpzfm0frf6e, fromEmitProfile=true
+2023-02-10T18:51:44.540Z - info: Starting rendering (child) request rootId=sdjrzpzfm0frf6e, id=stiznhhweg3oz8p, fromEmitProfile=true
+2023-02-10T18:51:44.541Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=sdjrzpzfm0frf6e, id=stiznhhweg3oz8p, fromEmitProfile=true
+2023-02-10T18:51:44.795Z - info: Rendering (child) request finished in 940 ms rootId=sdjrzpzfm0frf6e, id=stiznhhweg3oz8p, fromEmitProfile=true
+2023-02-10T18:51:44.797Z - info: pdf-utils pdf processing was finished rootId=sdjrzpzfm0frf6e, id=sdjrzpzfm0frf6e, fromEmitProfile=true
+2023-02-10T18:51:44.797Z - info: Rendering request 3 finished in 957 ms rootId=sdjrzpzfm0frf6e, id=sdjrzpzfm0frf6e, fromEmitProfile=true
+2023-02-10T18:52:43.072Z - info: Render request 4 queued for execution and waiting for available worker fromEmitProfile=true, rootId=wqwzit28llbfmck, id=wqwzit28llbfmck
+2023-02-10T18:52:43.084Z - info: Starting rendering request 4 rootId=wqwzit28llbfmck, id=wqwzit28llbfmck, fromEmitProfile=true
+2023-02-10T18:52:43.085Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=wqwzit28llbfmck, id=wqwzit28llbfmck, fromEmitProfile=true
+2023-02-10T18:52:43.760Z - info: pdf-utils is starting pdf processing rootId=wqwzit28llbfmck, id=wqwzit28llbfmck, fromEmitProfile=true
+2023-02-10T18:52:43.764Z - info: Starting rendering (child) request rootId=wqwzit28llbfmck, id=x0d0xhj7jfhr0i1, fromEmitProfile=true
+2023-02-10T18:52:43.764Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=wqwzit28llbfmck, id=x0d0xhj7jfhr0i1, fromEmitProfile=true
+2023-02-10T18:52:44.007Z - info: Rendering (child) request finished in 915 ms rootId=wqwzit28llbfmck, id=x0d0xhj7jfhr0i1, fromEmitProfile=true
+2023-02-10T18:52:44.008Z - info: pdf-utils pdf processing was finished rootId=wqwzit28llbfmck, id=wqwzit28llbfmck, fromEmitProfile=true
+2023-02-10T18:52:44.009Z - info: Rendering request 4 finished in 933 ms rootId=wqwzit28llbfmck, id=wqwzit28llbfmck, fromEmitProfile=true
+2023-02-10T18:53:21.182Z - info: Render request 5 queued for execution and waiting for available worker fromEmitProfile=true, rootId=2p7pw2x7ykbk7r3, id=2p7pw2x7ykbk7r3
+2023-02-10T18:53:21.195Z - info: Starting rendering request 5 rootId=2p7pw2x7ykbk7r3, id=2p7pw2x7ykbk7r3, fromEmitProfile=true
+2023-02-10T18:53:21.196Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=2p7pw2x7ykbk7r3, id=2p7pw2x7ykbk7r3, fromEmitProfile=true
+2023-02-10T18:53:21.795Z - info: pdf-utils is starting pdf processing rootId=2p7pw2x7ykbk7r3, id=2p7pw2x7ykbk7r3, fromEmitProfile=true
+2023-02-10T18:53:21.806Z - info: Starting rendering (child) request rootId=2p7pw2x7ykbk7r3, id=465jxj214qsn2n6, fromEmitProfile=true
+2023-02-10T18:53:21.807Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=2p7pw2x7ykbk7r3, id=465jxj214qsn2n6, fromEmitProfile=true
+2023-02-10T18:53:22.059Z - info: Rendering (child) request finished in 857 ms rootId=2p7pw2x7ykbk7r3, id=465jxj214qsn2n6, fromEmitProfile=true
+2023-02-10T18:53:22.060Z - info: pdf-utils pdf processing was finished rootId=2p7pw2x7ykbk7r3, id=2p7pw2x7ykbk7r3, fromEmitProfile=true
+2023-02-10T18:53:22.061Z - info: Rendering request 5 finished in 877 ms rootId=2p7pw2x7ykbk7r3, id=2p7pw2x7ykbk7r3, fromEmitProfile=true
+2023-02-10T18:53:53.737Z - info: Render request 6 queued for execution and waiting for available worker fromEmitProfile=true, rootId=x4ivsdazm4cbg8j, id=x4ivsdazm4cbg8j
+2023-02-10T18:53:53.749Z - info: Starting rendering request 6 rootId=x4ivsdazm4cbg8j, id=x4ivsdazm4cbg8j, fromEmitProfile=true
+2023-02-10T18:53:53.750Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=x4ivsdazm4cbg8j, id=x4ivsdazm4cbg8j, fromEmitProfile=true
+2023-02-10T18:53:54.416Z - info: pdf-utils is starting pdf processing rootId=x4ivsdazm4cbg8j, id=x4ivsdazm4cbg8j, fromEmitProfile=true
+2023-02-10T18:53:54.418Z - info: Starting rendering (child) request rootId=x4ivsdazm4cbg8j, id=vhfi95aos0nnevc, fromEmitProfile=true
+2023-02-10T18:53:54.418Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=x4ivsdazm4cbg8j, id=vhfi95aos0nnevc, fromEmitProfile=true
+2023-02-10T18:53:54.684Z - info: Rendering (child) request finished in 926 ms rootId=x4ivsdazm4cbg8j, id=vhfi95aos0nnevc, fromEmitProfile=true
+2023-02-10T18:53:54.685Z - info: pdf-utils pdf processing was finished rootId=x4ivsdazm4cbg8j, id=x4ivsdazm4cbg8j, fromEmitProfile=true
+2023-02-10T18:53:54.686Z - info: Rendering request 6 finished in 946 ms rootId=x4ivsdazm4cbg8j, id=x4ivsdazm4cbg8j, fromEmitProfile=true
+2023-02-10T18:54:54.699Z - info: Render request 7 queued for execution and waiting for available worker fromEmitProfile=true, rootId=b4l7r0i2qjfrwkk, id=b4l7r0i2qjfrwkk
+2023-02-10T18:54:54.713Z - info: Starting rendering request 7 rootId=b4l7r0i2qjfrwkk, id=b4l7r0i2qjfrwkk, fromEmitProfile=true
+2023-02-10T18:54:54.713Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=b4l7r0i2qjfrwkk, id=b4l7r0i2qjfrwkk, fromEmitProfile=true
+2023-02-10T18:54:55.387Z - info: pdf-utils is starting pdf processing rootId=b4l7r0i2qjfrwkk, id=b4l7r0i2qjfrwkk, fromEmitProfile=true
+2023-02-10T18:54:55.389Z - info: Starting rendering (child) request rootId=b4l7r0i2qjfrwkk, id=dw8558swqu2l5to, fromEmitProfile=true
+2023-02-10T18:54:55.389Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=b4l7r0i2qjfrwkk, id=dw8558swqu2l5to, fromEmitProfile=true
+2023-02-10T18:54:55.628Z - info: Rendering (child) request finished in 913 ms rootId=b4l7r0i2qjfrwkk, id=dw8558swqu2l5to, fromEmitProfile=true
+2023-02-10T18:54:55.629Z - info: pdf-utils pdf processing was finished rootId=b4l7r0i2qjfrwkk, id=b4l7r0i2qjfrwkk, fromEmitProfile=true
+2023-02-10T18:54:55.630Z - info: Rendering request 7 finished in 928 ms rootId=b4l7r0i2qjfrwkk, id=b4l7r0i2qjfrwkk, fromEmitProfile=true
+2023-02-10T18:56:54.755Z - info: Render request 8 queued for execution and waiting for available worker fromEmitProfile=true, rootId=0khopkyzef8bw27, id=0khopkyzef8bw27
+2023-02-10T18:56:54.773Z - info: Starting rendering request 8 rootId=0khopkyzef8bw27, id=0khopkyzef8bw27, fromEmitProfile=true
+2023-02-10T18:56:54.775Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=0khopkyzef8bw27, id=0khopkyzef8bw27, fromEmitProfile=true
+2023-02-10T18:56:55.372Z - info: pdf-utils is starting pdf processing rootId=0khopkyzef8bw27, id=0khopkyzef8bw27, fromEmitProfile=true
+2023-02-10T18:56:55.373Z - info: Starting rendering (child) request rootId=0khopkyzef8bw27, id=xxtdemuoajrupm1, fromEmitProfile=true
+2023-02-10T18:56:55.374Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=0khopkyzef8bw27, id=xxtdemuoajrupm1, fromEmitProfile=true
+2023-02-10T18:56:55.621Z - info: Rendering (child) request finished in 847 ms rootId=0khopkyzef8bw27, id=xxtdemuoajrupm1, fromEmitProfile=true
+2023-02-10T18:56:55.622Z - info: pdf-utils pdf processing was finished rootId=0khopkyzef8bw27, id=0khopkyzef8bw27, fromEmitProfile=true
+2023-02-10T18:56:55.623Z - info: Rendering request 8 finished in 866 ms rootId=0khopkyzef8bw27, id=0khopkyzef8bw27, fromEmitProfile=true
+2023-02-10T19:11:34.551Z - info: Render request 9 queued for execution and waiting for available worker fromEmitProfile=true, rootId=toldjqhnaslrm42, id=toldjqhnaslrm42
+2023-02-10T19:11:34.566Z - info: Starting rendering request 9 rootId=toldjqhnaslrm42, id=toldjqhnaslrm42, fromEmitProfile=true
+2023-02-10T19:11:34.566Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=toldjqhnaslrm42, id=toldjqhnaslrm42, fromEmitProfile=true
+2023-02-10T19:11:35.237Z - info: pdf-utils is starting pdf processing rootId=toldjqhnaslrm42, id=toldjqhnaslrm42, fromEmitProfile=true
+2023-02-10T19:11:35.239Z - info: Starting rendering (child) request rootId=toldjqhnaslrm42, id=1uijqksq2jpp1in, fromEmitProfile=true
+2023-02-10T19:11:35.239Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=toldjqhnaslrm42, id=1uijqksq2jpp1in, fromEmitProfile=true
+2023-02-10T19:11:35.481Z - info: Rendering (child) request finished in 913 ms rootId=toldjqhnaslrm42, id=1uijqksq2jpp1in, fromEmitProfile=true
+2023-02-10T19:11:35.482Z - info: pdf-utils pdf processing was finished rootId=toldjqhnaslrm42, id=toldjqhnaslrm42, fromEmitProfile=true
+2023-02-10T19:11:35.483Z - info: Rendering request 9 finished in 931 ms rootId=toldjqhnaslrm42, id=toldjqhnaslrm42, fromEmitProfile=true

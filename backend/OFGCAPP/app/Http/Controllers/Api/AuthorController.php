@@ -7,6 +7,7 @@ use App\Http\Resources\AuthorResource;
 use App\Http\Controllers\Api\BaseController as BaseController;
 use App\Models\Author;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File; 
 use Validator;
 
 class AuthorController extends BaseController
@@ -52,7 +53,12 @@ class AuthorController extends BaseController
         if ($validator->fails()) {
             return $this->sendError('Error validation', $validator->errors());
         }
-        $author = Author::create($request->all());
+        $image_path = $request->file('image')->store('image', 'public');
+        $author = Author::create([
+            'name' => $request->name,
+            'image' => $image_path,
+            'description' => $request->description,
+        ]);
 
         return response()->json([
             'message' => "Author saved successfully!",
@@ -66,9 +72,14 @@ class AuthorController extends BaseController
      * @param  \App\Models\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function show(Author $author)
-    {
-        return new AuthorResource($author);
+    public function show(Author $author, Request $request)
+    {   
+        if($request->input("include") && $request->input("include")=='pieces'){
+            $author = Author::with(['pieces'])->where('id', $author['id'])->first();
+            return new AuthorResource($author);
+        } else{
+            return new AuthorResource($author);
+        }
     }
 
     /**
@@ -90,17 +101,32 @@ class AuthorController extends BaseController
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Author $author)
-    {
+    {   
         $validator = Validator::make($request->all(), [
             'name' => 'required',
+            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'description' => 'required',
         ]);
 
         if ($validator->fails()) {
-            return $this->sendError('Error validation', $validator->errors());
+            return $this->sendError(''.$request->name, $validator->errors());
         }
-        $author->update($request->all());
-
+        if($request->input('image')){
+            $image_name = "storage/".$author->image;
+            if(File::exists($image_name)) {
+                File::delete($image_name);
+            }
+            $image_path = $request->file('image')->store('image', 'public');
+            $author->update([
+                'name' => $request->name,
+                'image' => $image_path,
+                'description' => $request->description,
+            ]);
+        } else{
+            $author->update($request->all());
+        }
+        
+        
         return response()->json([
             'message' => "Author updated successfully!",
             'author' => $author
@@ -116,7 +142,10 @@ class AuthorController extends BaseController
     public function destroy(Author $author)
     {
         $author->delete();
-
+        $image_name = "storage/".$author->image;
+        if(File::exists($image_name)) {
+            File::delete($image_name);
+        }
         return response()->json([
             'message' => "Author deleted successfully!",
         ], 200);

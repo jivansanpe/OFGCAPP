@@ -9,7 +9,7 @@ class Musician extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description'];
+    protected $fillable = ['name', 'image', 'description'];
     public function events()
     {
         return $this->belongsToMany(Event::class);

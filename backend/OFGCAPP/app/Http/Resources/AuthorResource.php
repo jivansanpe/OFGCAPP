@@ -18,6 +18,7 @@ class AuthorResource extends JsonResource
             'id'=> $this->id,
             'name' => $this->name,
             'description' => $this->description,
+            'image' => $this->image,
             'pieces'=> PieceResource::collection($this->whenLoaded('pieces')),
         ];
     }

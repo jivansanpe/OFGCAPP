@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
   {
     path: '',
@@ -13,75 +13,75 @@ const routes: Routes = [
   },
   {
     path: 'event-list',
-    loadChildren: () => import('./event-list/event-list.module').then(m => m.EventListPageModule)
+    loadChildren: () => import('./pages/event/event-list/event-list.module').then(m => m.EventListPageModule)
   },
   {
     path: 'event-details/:id',
-    loadChildren: () => import('./event-details/event-details.module').then(m => m.EventDetailsPageModule)
+    loadChildren: () => import('./pages/event/event-details/event-details.module').then(m => m.EventDetailsPageModule)
   },
   {
     path: 'musician-details/:id',
-    loadChildren: () => import('./musician-details/musician-details.module').then(m => m.MusicianPageModule)
+    loadChildren: () => import('./pages/musician/musician-details/musician-details.module').then(m => m.MusicianPageModule)
   },
   {
     path: 'author-details/:id',
-    loadChildren: () => import('./author-details/author-details.module').then(m => m.AuthorDetailsPageModule)
+    loadChildren: () => import('./pages/author/author-details/author-details.module').then(m => m.AuthorDetailsPageModule)
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
   },
   {
     path: 'register',
-    loadChildren: () => import('./register/register.module').then(m => m.RegisterPageModule)
+    loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterPageModule)
   },
   {
     path: 'new-event',
-    loadChildren: () => import('./new-event/new-event.module').then(m => m.NewEventPageModule)
+    loadChildren: () => import('./pages/event/new-event/new-event.module').then(m => m.NewEventPageModule)
   },
   {
     path: 'new-author',
-    loadChildren: () => import('./new-author/new-author.module').then(m => m.NewAuthorPageModule)
+    loadChildren: () => import('./pages/author/new-author/new-author.module').then(m => m.NewAuthorPageModule)
   },
   {
     path: 'new-musician',
-    loadChildren: () => import('./new-musician/new-musician.module').then(m => m.NewMusicianPageModule)
+    loadChildren: () => import('./pages/musician/new-musician/new-musician.module').then(m => m.NewMusicianPageModule)
   },
   {
     path: 'new-piece',
-    loadChildren: () => import('./new-piece/new-piece.module').then(m => m.NewPiecePageModule)
+    loadChildren: () => import('./pages/piece/new-piece/new-piece.module').then(m => m.NewPiecePageModule)
   },
   {
     path: 'author-list',
-    loadChildren: () => import('./author-list/author-list.module').then(m => m.AuthorListPageModule)
+    loadChildren: () => import('./pages/author/author-list/author-list.module').then(m => m.AuthorListPageModule)
   },
   {
     path: 'update-author/:id',
-    loadChildren: () => import('./update-author/update-author.module').then(m => m.UpdateAuthorPageModule)
+    loadChildren: () => import('./pages/author/update-author/update-author.module').then(m => m.UpdateAuthorPageModule)
   },
   {
     path: 'musician-list',
-    loadChildren: () => import('./musician-list/musician-list.module').then(m => m.MusicianListPageModule)
+    loadChildren: () => import('./pages/musician/musician-list/musician-list.module').then(m => m.MusicianListPageModule)
   },
   {
     path: 'update-musician/:id',
-    loadChildren: () => import('./update-musician/update-musician.module').then(m => m.UpdateMusicianPageModule)
+    loadChildren: () => import('./pages/musician/update-musician/update-musician.module').then(m => m.UpdateMusicianPageModule)
   },
   {
     path: 'piece-list',
-    loadChildren: () => import('./piece-list/piece-list.module').then(m => m.PieceListPageModule)
+    loadChildren: () => import('./pages/piece/piece-list/piece-list.module').then(m => m.PieceListPageModule)
   },
   {
     path: 'piece-details/:id',
-    loadChildren: () => import('./piece-details/piece-details.module').then(m => m.PieceDetailsPageModule)
+    loadChildren: () => import('./pages/piece/piece-details/piece-details.module').then(m => m.PieceDetailsPageModule)
   },
   {
     path: 'update-piece/:id',
-    loadChildren: () => import('./update-piece/update-piece.module').then(m => m.UpdatePiecePageModule)
+    loadChildren: () => import('./pages/piece/update-piece/update-piece.module').then(m => m.UpdatePiecePageModule)
   },
   {
     path: 'update-event/:id',
-    loadChildren: () => import('./update-event/update-event.module').then(m => m.UpdateEventPageModule)
+    loadChildren: () => import('./pages/event/update-event/update-event.module').then(m => m.UpdateEventPageModule)
   },
 
 ];

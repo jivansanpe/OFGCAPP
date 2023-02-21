@@ -10,7 +10,7 @@ const TOKEN_KEY = 'api_token';
 })
 export class AuthorService {
 
-  endpoint = 'http://localhost:8000/api/authors?include=pieces';
+  endpoint = 'http://localhost:8000/api/authors';
   httpOptionsUsingUrlEncoded = {
     headers: new HttpHeaders({ 'Authorization': `Bearer ${window.sessionStorage.getItem(TOKEN_KEY)}` })
   };
@@ -31,11 +31,19 @@ export class AuthorService {
         // catchError(this.handleError<Story[]>(`Get story id=${id}`))
       );
   }
-  public createAuthor(author: Author): Observable<any> {
-    return this.httpClient.post<any>(this.endpoint, author, this.httpOptionsUsingUrlEncoded);
+  public createAuthor(author: Author, blob: Blob): Observable<any> {
+    let data = new FormData();
+    data.append("name", author.name);
+    data.append("image", blob);
+    data.append("description", author.description);
+    return this.httpClient.post<any>(this.endpoint, data, this.httpOptionsUsingUrlEncoded);
   }
-  public updateAuthor(id: any, author: Author): Observable<any> {
-    return this.httpClient.put<any>(this.endpoint + '/' + id, author, this.httpOptionsUsingUrlEncoded);
+  public updateAuthor(id: any, author: Author, blob: Blob): Observable<any> {
+    let data = new FormData();
+    data.append("name", author.name);
+    data.append("image", blob);
+    data.append("description", author.description);
+    return this.httpClient.put<any>(this.endpoint + '/' + id, data, this.httpOptionsUsingUrlEncoded);
   }
   public deleteAuthor(id: any) {
     return this.httpClient.delete<any>(this.endpoint + '/' + id, this.httpOptionsUsingUrlEncoded);

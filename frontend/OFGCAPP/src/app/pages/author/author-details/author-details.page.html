@@ -1,0 +1,15 @@
+<app-menu></app-menu>
+
+<div class="ion-page" id="main-content">
+  <app-header></app-header>
+  <ion-content *ngIf="author" class="ion-padding">
+    <app-top-part title='{{author.name}}'></app-top-part>
+    <div>
+      <ion-img class="img-div" src="http://localhost:8000/storage/{{author.image}}"></ion-img>
+    </div>
+    <div class="text-div">
+      <ion-text>{{author.description}}
+      </ion-text>
+    </div>
+  </ion-content>
+</div>

@@ -31,11 +31,19 @@ export class MusicianService {
         // catchError(this.handleError<Story[]>(`Get story id=${id}`))
       );
   }
-  public createMusician(musician: Musician, token: any): Observable<any> {
-    return this.httpClient.post<any>(this.endpoint, musician, this.httpOptionsUsingUrlEncoded);
+  public createMusician(musician: Musician, blob: Blob): Observable<any> {
+    let data = new FormData();
+    data.append("name", musician.name);
+    data.append("image", blob);
+    data.append("description", musician.description);
+    return this.httpClient.post<any>(this.endpoint, data, this.httpOptionsUsingUrlEncoded);
   }
-  public updateMusician(id: any, musician: Musician): Observable<any> {
-    return this.httpClient.put<any>(this.endpoint + '/' + id, musician, this.httpOptionsUsingUrlEncoded);
+  public updateMusician(id: any, musician: Musician, blob: Blob): Observable<any> {
+    let data = new FormData();
+    data.append("name", musician.name);
+    data.append("image", blob);
+    data.append("description", musician.description);
+    return this.httpClient.put<any>(this.endpoint + '/' + id, data, this.httpOptionsUsingUrlEncoded);
   }
   public deleteMusician(id: any) {
     return this.httpClient.delete<any>(this.endpoint + '/' + id, this.httpOptionsUsingUrlEncoded);

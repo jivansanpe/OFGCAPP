@@ -26,8 +26,14 @@
         <ion-icon name="receipt-outline"></ion-icon>Pieces</ion-item>
     </div>
     <div class="item-div">
+      <ion-item *ngIf="isLoggedIn" href="http://localhost:5488/templates/HJH11D83ce" target="blank" lines="full" button
+        detail="false">
+        <ion-icon name="arrow-redo-outline"></ion-icon>Reports</ion-item>
+    </div>
+    <div class="item-div">
       <ion-item *ngIf="isLoggedIn" lines="full" button detail="false" (click)="logOut()">
         <ion-icon name="person-remove-outline"></ion-icon>Log Out</ion-item>
     </div>
+
   </ion-content>
 </ion-menu>

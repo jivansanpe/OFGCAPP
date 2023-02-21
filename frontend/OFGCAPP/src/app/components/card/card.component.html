@@ -1,7 +1,7 @@
 <ion-card (click)="goToOne(element.id)" button="true">
   <ion-row>
-    <ion-col>
-      <img alt="Pulsos de europa" src="../../../assets/images/pulsosdeeuropa.jpg" />
+    <ion-col *ngIf="element.image">
+      <img alt="Pulsos de europa" src="http://localhost:8000/storage/{{element.image}}" />
     </ion-col>
     <ion-col>
       <ion-card-header>

@@ -32,7 +32,7 @@ export class PieceService {
         // catchError(this.handleError<Story[]>(`Get story id=${id}`))
       );
   }
-  public createPiece(piece: Piece, token: any): Observable<any> {
+  public createPiece(piece: Piece): Observable<any> {
     return this.httpClient.post<any>(this.endpoint, piece, this.httpOptionsUsingUrlEncoded);
   }
   public updatePiece(id: any, piece: Piece): Observable<any> {

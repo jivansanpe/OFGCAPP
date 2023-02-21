@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('musicians', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('image');
             $table->longText('description');
             $table->timestamps();
         });
