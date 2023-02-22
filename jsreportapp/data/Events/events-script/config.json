@@ -1,0 +1,19 @@
+{
+    "name": "events-script",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1677063324810
+    },
+    "modificationDate": {
+        "$$date": 1677064652900
+    },
+    "scope": "template",
+    "isGlobal": false,
+    "entitySet": "scripts",
+    "type": "entity",
+    "key": "VNLlqmTIuctRhFCu",
+    "shortid": "WoARZ2p",
+    "_id": "Z9OBi3a0HhIVhuFz",
+    "$entitySet": "scripts"
+}

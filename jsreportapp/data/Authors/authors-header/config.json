@@ -1,0 +1,22 @@
+{
+    "name": "authors-header",
+    "recipe": "chrome-pdf",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true,
+        "marginTop": "1.5cm",
+        "marginRight": "1.5cm",
+        "marginLeft": "1.cm"
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1677016506665
+    },
+    "modificationDate": {
+        "$$date": 1677016506665
+    },
+    "shortid": "4oT_Mp6",
+    "_id": "bSDPVLwimiCZIh8N",
+    "$entitySet": "templates"
+}

@@ -1,0 +1,22 @@
+{
+    "name": "musicians-header",
+    "recipe": "chrome-pdf",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true,
+        "marginTop": "1.5cm",
+        "marginRight": "1.5cm",
+        "marginLeft": "1.cm"
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1677016710012
+    },
+    "modificationDate": {
+        "$$date": 1677063183090
+    },
+    "shortid": "G3YiEC1",
+    "_id": "3G3TBkqovjYa9vD0",
+    "$entitySet": "templates"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Musicians",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1677016709985
+    },
+    "modificationDate": {
+        "$$date": 1677016709985
+    },
+    "__entitySet": "folders",
+    "__name": "Authors",
+    "__shortid": "QnZvise",
+    "shortid": "Xju8gmm",
+    "_id": "KdkrR43WLTpkVeFU",
+    "$entitySet": "folders"
+}

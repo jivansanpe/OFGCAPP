@@ -4169,3 +4169,642 @@ Error: Error while executing pdf-utils operations
 2023-02-10T19:11:35.481Z - info: Rendering (child) request finished in 913 ms rootId=toldjqhnaslrm42, id=1uijqksq2jpp1in, fromEmitProfile=true
 2023-02-10T19:11:35.482Z - info: pdf-utils pdf processing was finished rootId=toldjqhnaslrm42, id=toldjqhnaslrm42, fromEmitProfile=true
 2023-02-10T19:11:35.483Z - info: Rendering request 9 finished in 931 ms rootId=toldjqhnaslrm42, id=toldjqhnaslrm42, fromEmitProfile=true
+2023-02-21T21:54:02.670Z - info: Initializing jsreport (version: 3.10.0, configuration file: jsreport.config.json, nodejs: 16.13.1)
+2023-02-21T21:54:02.673Z - info: Searching for available extensions in D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\
+2023-02-21T21:54:02.676Z - info: Extensions location cache not found, crawling directories
+2023-02-21T21:54:06.234Z - info: Found 35 extension(s)
+2023-02-21T21:54:06.343Z - info: Using extension base@3.0.1
+2023-02-21T21:54:06.350Z - info: Using extension child-templates@3.1.0
+2023-02-21T21:54:06.353Z - info: Using extension cli@3.2.3
+2023-02-21T21:54:06.359Z - info: Using extension components@3.3.0
+2023-02-21T21:54:06.362Z - info: Using extension data@3.1.0
+2023-02-21T21:54:06.364Z - info: Using extension express@3.6.0
+2023-02-21T21:54:06.987Z - info: Using extension freeze@3.0.1
+2023-02-21T21:54:06.989Z - info: Using extension fs-store@3.2.4
+2023-02-21T21:54:07.182Z - info: Using extension handlebars@3.2.1
+2023-02-21T21:54:07.184Z - info: Using extension import-export@3.2.0
+2023-02-21T21:54:07.209Z - info: Using extension jsrender@3.0.0
+2023-02-21T21:54:07.210Z - info: Using extension licensing@3.0.2
+2023-02-21T21:54:07.272Z - info: Using extension localization@3.2.1
+2023-02-21T21:54:07.275Z - info: Using extension npm@3.1.2
+2023-02-21T21:54:07.278Z - info: Using extension pdf-utils@3.7.0
+2023-02-21T21:54:07.283Z - info: Using extension reports@3.1.1
+2023-02-21T21:54:07.286Z - info: Using extension tags@3.1.1
+2023-02-21T21:54:07.291Z - info: Using extension text@3.0.0
+2023-02-21T21:54:07.293Z - info: Using extension version-control@3.1.2
+2023-02-21T21:54:07.325Z - info: Using extension assets@3.6.0
+2023-02-21T21:54:07.360Z - info: Using extension authorization@3.3.0
+2023-02-21T21:54:07.372Z - info: Using extension browser-client@3.1.1
+2023-02-21T21:54:07.381Z - info: Using extension chrome-pdf@3.3.0
+2023-02-21T21:54:07.386Z - info: Using extension docx@3.6.0
+2023-02-21T21:54:07.393Z - info: Using extension html-to-xlsx@3.3.0
+2023-02-21T21:54:07.707Z - info: html-to-xlsx detected chrome as available html engine
+2023-02-21T21:54:07.708Z - info: Using extension pptx@3.4.0
+2023-02-21T21:54:07.712Z - info: Using extension scheduling@3.0.3
+2023-02-21T21:54:07.775Z - info: Using extension scripts@3.4.0
+2023-02-21T21:54:07.777Z - info: Using extension static-pdf@3.0.1
+2023-02-21T21:54:07.779Z - info: Using extension studio@3.9.0
+2023-02-21T21:54:08.009Z - info: Using extension xlsx@3.4.0
+2023-02-21T21:54:08.060Z - info: Using extension public-templates@3.0.0
+2023-02-21T21:54:08.064Z - info: Using extension sample-template@3.2.1
+2023-02-21T21:54:08.068Z - info: Using extension studio-theme-dark@3.0.1
+2023-02-21T21:54:08.072Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2023-02-21T21:54:08.073Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2023-02-21T21:54:08.075Z - info: Using fs provider for template store.
+2023-02-21T21:54:08.084Z - info: fs store is persisting using fs for D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\data
+2023-02-21T21:54:08.094Z - info: fs store is loading data
+2023-02-21T21:54:08.148Z - info: fs store is initialized successfully
+2023-02-21T21:54:08.173Z - info: Creating default express app.
+2023-02-21T21:54:08.236Z - info: jsreport server successfully started on http port: 5488
+2023-02-21T21:54:08.238Z - info: Verifying license key free
+2023-02-21T21:54:08.243Z - info: Using free license
+2023-02-21T21:54:08.247Z - info: Initializing worker threads
+2023-02-21T21:54:08.664Z - info: 2 worker threads initialized in 417ms
+2023-02-21T21:54:08.664Z - info: Starting temp files cleanup with 180000ms threshold
+2023-02-21T21:54:08.665Z - info: reporter initialized
+2023-02-21T21:55:13.146Z - info: Verifying license key free
+2023-02-21T21:55:13.543Z - info: Starting one month enterprise trial
+2023-02-21T21:55:43.677Z - info: Render request 1 queued for execution and waiting for available worker fromEmitProfile=true, rootId=keoaeaoj6vkyog4, id=keoaeaoj6vkyog4
+2023-02-21T21:55:43.718Z - info: Starting rendering request 1 rootId=keoaeaoj6vkyog4, id=keoaeaoj6vkyog4, fromEmitProfile=true
+2023-02-21T21:55:43.720Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=keoaeaoj6vkyog4, id=keoaeaoj6vkyog4, fromEmitProfile=true
+2023-02-21T21:55:44.231Z - warn: Error when processing render request 1
+(because) error when evaluating custom script /Authors/authors-script
+connect ECONNREFUSED 127.0.0.1:8000
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at Function.AxiosError.from (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:823:14)
+    at RedirectableRequest.handleRequestError (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:2953:25)
+    at RedirectableRequest.emit (node:events:390:28)
+    at RedirectableRequest.emit (node:domain:475:12)
+    at ClientRequest.eventHandlers.<computed> (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\follow-redirects\index.js:14:24)
+    at ClientRequest.emit (node:events:390:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at Socket.socketErrorListener (node:_http_client:447:9)
+    at Socket.emit (node:events:390:28)
+    at Socket.emit (node:domain:475:12) rootId=keoaeaoj6vkyog4, id=keoaeaoj6vkyog4, fromEmitProfile=true
+2023-02-21T21:55:44.232Z - warn: Rendering request 1 finished with error in 556 ms rootId=keoaeaoj6vkyog4, id=keoaeaoj6vkyog4, fromEmitProfile=true
+2023-02-21T21:55:44.235Z - error: Report render failed
+(because) error when evaluating custom script /Authors/authors-script
+connect ECONNREFUSED 127.0.0.1:8000
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at Function.AxiosError.from (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:823:14)
+    at RedirectableRequest.handleRequestError (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:2953:25)
+    at RedirectableRequest.emit (node:events:390:28)
+    at RedirectableRequest.emit (node:domain:475:12)
+    at ClientRequest.eventHandlers.<computed> (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\follow-redirects\index.js:14:24)
+    at ClientRequest.emit (node:events:390:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at Socket.socketErrorListener (node:_http_client:447:9)
+    at Socket.emit (node:events:390:28)
+    at Socket.emit (node:domain:475:12) rootId=keoaeaoj6vkyog4, id=keoaeaoj6vkyog4
+2023-02-21T21:56:25.132Z - info: Render request 2 queued for execution and waiting for available worker fromEmitProfile=true, rootId=dolemfvbxejkjlq, id=dolemfvbxejkjlq
+2023-02-21T21:56:25.163Z - info: Starting rendering request 2 rootId=dolemfvbxejkjlq, id=dolemfvbxejkjlq, fromEmitProfile=true
+2023-02-21T21:56:25.164Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=dolemfvbxejkjlq, id=dolemfvbxejkjlq, fromEmitProfile=true
+2023-02-21T21:56:33.098Z - info: pdf-utils is starting pdf processing rootId=dolemfvbxejkjlq, id=dolemfvbxejkjlq, fromEmitProfile=true
+2023-02-21T21:56:33.114Z - info: Starting rendering (child) request rootId=dolemfvbxejkjlq, id=t7b1t5pvp8tf06d, fromEmitProfile=true
+2023-02-21T21:56:33.115Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=dolemfvbxejkjlq, id=t7b1t5pvp8tf06d, fromEmitProfile=true
+2023-02-21T21:56:33.553Z - info: Rendering (child) request finished in 8379 ms rootId=dolemfvbxejkjlq, id=t7b1t5pvp8tf06d, fromEmitProfile=true
+2023-02-21T21:56:33.556Z - info: pdf-utils pdf processing was finished rootId=dolemfvbxejkjlq, id=dolemfvbxejkjlq, fromEmitProfile=true
+2023-02-21T21:56:33.558Z - info: Rendering request 2 finished in 8420 ms rootId=dolemfvbxejkjlq, id=dolemfvbxejkjlq, fromEmitProfile=true
+2023-02-21T21:57:29.480Z - info: Render request 3 queued for execution and waiting for available worker fromEmitProfile=true, rootId=ofmsfawoiblnx13, id=ofmsfawoiblnx13
+2023-02-21T21:57:29.503Z - info: Starting rendering request 3 rootId=ofmsfawoiblnx13, id=ofmsfawoiblnx13, fromEmitProfile=true
+2023-02-21T21:57:29.504Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ofmsfawoiblnx13, id=ofmsfawoiblnx13, fromEmitProfile=true
+2023-02-21T21:57:30.228Z - info: pdf-utils is starting pdf processing rootId=ofmsfawoiblnx13, id=ofmsfawoiblnx13, fromEmitProfile=true
+2023-02-21T21:57:30.229Z - info: Starting rendering (child) request rootId=ofmsfawoiblnx13, id=c8j5s8wktoj9wy9, fromEmitProfile=true
+2023-02-21T21:57:30.230Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ofmsfawoiblnx13, id=c8j5s8wktoj9wy9, fromEmitProfile=true
+2023-02-21T21:57:30.502Z - info: Rendering (child) request finished in 994 ms rootId=ofmsfawoiblnx13, id=c8j5s8wktoj9wy9, fromEmitProfile=true
+2023-02-21T21:57:30.504Z - info: pdf-utils pdf processing was finished rootId=ofmsfawoiblnx13, id=ofmsfawoiblnx13, fromEmitProfile=true
+2023-02-21T21:57:30.504Z - info: Rendering request 3 finished in 1021 ms rootId=ofmsfawoiblnx13, id=ofmsfawoiblnx13, fromEmitProfile=true
+2023-02-21T22:36:27.833Z - info: Render request 4 queued for execution and waiting for available worker fromEmitProfile=true, rootId=jb7bi4lhhi3mo9q, id=jb7bi4lhhi3mo9q
+2023-02-21T22:36:27.848Z - info: Starting rendering request 4 rootId=jb7bi4lhhi3mo9q, id=jb7bi4lhhi3mo9q, fromEmitProfile=true
+2023-02-21T22:36:27.848Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=jb7bi4lhhi3mo9q, id=jb7bi4lhhi3mo9q, fromEmitProfile=true
+2023-02-21T22:36:28.115Z - warn: Error when processing render request 4
+(because) error when evaluating custom script /Musicians/authors-script
+Request failed with status code 404
+AxiosError: Request failed with status code 404
+    at settle (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:1894:12)
+    at IncomingMessage.handleStreamEnd (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:2932:11)
+    at IncomingMessage.emit (node:events:402:35)
+    at IncomingMessage.emit (node:domain:537:15)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) rootId=jb7bi4lhhi3mo9q, id=jb7bi4lhhi3mo9q, fromEmitProfile=true
+2023-02-21T22:36:28.117Z - warn: Rendering request 4 finished with error in 284 ms rootId=jb7bi4lhhi3mo9q, id=jb7bi4lhhi3mo9q, fromEmitProfile=true
+2023-02-21T22:36:28.119Z - error: Report render failed
+(because) error when evaluating custom script /Musicians/authors-script
+Request failed with status code 404
+AxiosError: Request failed with status code 404
+    at settle (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:1894:12)
+    at IncomingMessage.handleStreamEnd (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:2932:11)
+    at IncomingMessage.emit (node:events:402:35)
+    at IncomingMessage.emit (node:domain:537:15)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) rootId=jb7bi4lhhi3mo9q, id=jb7bi4lhhi3mo9q
+2023-02-21T22:36:48.209Z - info: Render request 5 queued for execution and waiting for available worker fromEmitProfile=true, rootId=cd4qtzhgbuoynls, id=cd4qtzhgbuoynls
+2023-02-21T22:36:48.224Z - info: Starting rendering request 5 rootId=cd4qtzhgbuoynls, id=cd4qtzhgbuoynls, fromEmitProfile=true
+2023-02-21T22:36:48.225Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=cd4qtzhgbuoynls, id=cd4qtzhgbuoynls, fromEmitProfile=true
+2023-02-21T22:36:48.489Z - warn: Error when processing render request 5
+(because) error when evaluating custom script /Musicians/authors-script
+forEach is not defined
+
+(sandbox.js line 16:9)
+
+  14 |         count = 0;
+  15 |         musician['count']= musician['events'].length;
+> 16 |         musician-forEach(event =>{
+     |         ^
+  17 |             if(event['pivot'].special == "Si"){
+  18 |                 count += 1;
+  19 |             }
+
+(sandbox.js line 13:29)
+
+  11 |      counts = [];
+  12 |      special_count = [];
+> 13 |      resMusicians.data.data.forEach(musician => {
+     |                             ^
+  14 |         count = 0;
+  15 |         musician['count']= musician['events'].length;
+  16 |         musician-forEach(event =>{
+
+
+ReferenceError: forEach is not defined
+    at sandbox.js:16:9
+    at Array.forEach (<anonymous>)
+    at Object.beforeRender (sandbox.js:13:29)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async executionFn (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\executeScript.js:67:11)
+    at async run (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-core\lib\worker\sandbox\createSandbox.js:184:24)
+    at async WorkerReporter._runInSandbox (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-core\lib\worker\sandbox\runInSandbox.js:180:14)
+    at async executeScript (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\executeScript.js:122:12)
+    at async Scripts._runScript (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\worker.js:140:30)
+    at async Scripts.handleBeforeRender (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\worker.js:64:7) rootId=cd4qtzhgbuoynls, id=cd4qtzhgbuoynls, fromEmitProfile=true
+2023-02-21T22:36:48.492Z - warn: Rendering request 5 finished with error in 281 ms rootId=cd4qtzhgbuoynls, id=cd4qtzhgbuoynls, fromEmitProfile=true
+2023-02-21T22:37:02.622Z - info: Render request 6 queued for execution and waiting for available worker fromEmitProfile=true, rootId=q2cmqv0f5qyeltt, id=q2cmqv0f5qyeltt
+2023-02-21T22:37:02.635Z - info: Starting rendering request 6 rootId=q2cmqv0f5qyeltt, id=q2cmqv0f5qyeltt, fromEmitProfile=true
+2023-02-21T22:37:02.635Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=q2cmqv0f5qyeltt, id=q2cmqv0f5qyeltt, fromEmitProfile=true
+2023-02-21T22:37:02.939Z - warn: Error when processing render request 6
+(because) error when evaluating custom script /Musicians/authors-script
+musician.forEach is not a function
+
+(sandbox.js line 16:18)
+
+  14 |         count = 0;
+  15 |         musician['count']= musician['events'].length;
+> 16 |         musician.forEach(event =>{
+     |                  ^
+  17 |             if(event['pivot'].special == "Si"){
+  18 |                 count += 1;
+  19 |             }
+
+(sandbox.js line 13:29)
+
+  11 |      counts = [];
+  12 |      special_count = [];
+> 13 |      resMusicians.data.data.forEach(musician => {
+     |                             ^
+  14 |         count = 0;
+  15 |         musician['count']= musician['events'].length;
+  16 |         musician.forEach(event =>{
+
+
+TypeError: musician.forEach is not a function
+    at sandbox.js:16:18
+    at Array.forEach (<anonymous>)
+    at Object.beforeRender (sandbox.js:13:29)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async executionFn (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\executeScript.js:67:11)
+    at async run (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-core\lib\worker\sandbox\createSandbox.js:184:24)
+    at async WorkerReporter._runInSandbox (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-core\lib\worker\sandbox\runInSandbox.js:180:14)
+    at async executeScript (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\executeScript.js:122:12)
+    at async Scripts._runScript (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\worker.js:140:30)
+    at async Scripts.handleBeforeRender (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\worker.js:64:7) rootId=q2cmqv0f5qyeltt, id=q2cmqv0f5qyeltt, fromEmitProfile=true
+2023-02-21T22:37:02.941Z - warn: Rendering request 6 finished with error in 318 ms rootId=q2cmqv0f5qyeltt, id=q2cmqv0f5qyeltt, fromEmitProfile=true
+2023-02-21T22:37:38.639Z - info: Render request 7 queued for execution and waiting for available worker fromEmitProfile=true, rootId=xle4n274tkkw52j, id=xle4n274tkkw52j
+2023-02-21T22:37:38.662Z - info: Starting rendering request 7 rootId=xle4n274tkkw52j, id=xle4n274tkkw52j, fromEmitProfile=true
+2023-02-21T22:37:38.663Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=xle4n274tkkw52j, id=xle4n274tkkw52j, fromEmitProfile=true
+2023-02-21T22:37:38.941Z - warn: Error when processing render request 7
+(because) error when evaluating custom script /Musicians/authors-script
+author is not defined
+
+(sandbox.js line 21:20)
+
+  19 |             }
+  20 |         })
+> 21 |         names.push(author.name);
+     |                    ^
+  22 |         counts.push(author.count);
+  23 |         special_count.push(count);
+  24 |         });
+
+(sandbox.js line 13:29)
+
+  11 |      counts = [];
+  12 |      special_count = [];
+> 13 |      resMusicians.data.data.forEach(musician => {
+     |                             ^
+  14 |         count = 0;
+  15 |         musician['count']= musician['events'].length;
+  16 |         musician['events'].forEach(event =>{
+
+
+ReferenceError: author is not defined
+    at sandbox.js:21:20
+    at Array.forEach (<anonymous>)
+    at Object.beforeRender (sandbox.js:13:29)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async executionFn (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\executeScript.js:67:11)
+    at async run (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-core\lib\worker\sandbox\createSandbox.js:184:24)
+    at async WorkerReporter._runInSandbox (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-core\lib\worker\sandbox\runInSandbox.js:180:14)
+    at async executeScript (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\executeScript.js:122:12)
+    at async Scripts._runScript (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\worker.js:140:30)
+    at async Scripts.handleBeforeRender (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\worker.js:64:7) rootId=xle4n274tkkw52j, id=xle4n274tkkw52j, fromEmitProfile=true
+2023-02-21T22:37:38.942Z - warn: Rendering request 7 finished with error in 302 ms rootId=xle4n274tkkw52j, id=xle4n274tkkw52j, fromEmitProfile=true
+2023-02-21T22:38:01.942Z - info: Render request 8 queued for execution and waiting for available worker fromEmitProfile=true, rootId=f1bqn0dbn99hagm, id=f1bqn0dbn99hagm
+2023-02-21T22:38:01.958Z - info: Starting rendering request 8 rootId=f1bqn0dbn99hagm, id=f1bqn0dbn99hagm, fromEmitProfile=true
+2023-02-21T22:38:01.959Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=f1bqn0dbn99hagm, id=f1bqn0dbn99hagm, fromEmitProfile=true
+2023-02-21T22:38:02.486Z - warn: Page error: SyntaxError: Unexpected token ',' rootId=f1bqn0dbn99hagm, id=f1bqn0dbn99hagm, fromEmitProfile=true
+2023-02-21T22:38:02.592Z - info: pdf-utils is starting pdf processing rootId=f1bqn0dbn99hagm, id=f1bqn0dbn99hagm, fromEmitProfile=true
+2023-02-21T22:38:02.601Z - info: Starting rendering (child) request rootId=f1bqn0dbn99hagm, id=imr9ehpkikzvaqo, fromEmitProfile=true
+2023-02-21T22:38:02.601Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=f1bqn0dbn99hagm, id=imr9ehpkikzvaqo, fromEmitProfile=true
+2023-02-21T22:38:02.869Z - info: Rendering (child) request finished in 912 ms rootId=f1bqn0dbn99hagm, id=imr9ehpkikzvaqo, fromEmitProfile=true
+2023-02-21T22:38:02.870Z - info: pdf-utils pdf processing was finished rootId=f1bqn0dbn99hagm, id=f1bqn0dbn99hagm, fromEmitProfile=true
+2023-02-21T22:38:02.871Z - info: Rendering request 8 finished in 927 ms rootId=f1bqn0dbn99hagm, id=f1bqn0dbn99hagm, fromEmitProfile=true
+2023-02-21T22:38:21.729Z - info: Render request 9 queued for execution and waiting for available worker fromEmitProfile=true, rootId=evkb0b3mu6kb71t, id=evkb0b3mu6kb71t
+2023-02-21T22:38:21.745Z - info: Starting rendering request 9 rootId=evkb0b3mu6kb71t, id=evkb0b3mu6kb71t, fromEmitProfile=true
+2023-02-21T22:38:21.746Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=evkb0b3mu6kb71t, id=evkb0b3mu6kb71t, fromEmitProfile=true
+2023-02-21T22:38:22.330Z - warn: Page error: SyntaxError: Unexpected token ',' rootId=evkb0b3mu6kb71t, id=evkb0b3mu6kb71t, fromEmitProfile=true
+2023-02-21T22:38:22.382Z - info: pdf-utils is starting pdf processing rootId=evkb0b3mu6kb71t, id=evkb0b3mu6kb71t, fromEmitProfile=true
+2023-02-21T22:38:22.396Z - info: Starting rendering (child) request rootId=evkb0b3mu6kb71t, id=5dyena26fwusvl3, fromEmitProfile=true
+2023-02-21T22:38:22.417Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=evkb0b3mu6kb71t, id=5dyena26fwusvl3, fromEmitProfile=true
+2023-02-21T22:38:22.695Z - info: Rendering (child) request finished in 949 ms rootId=evkb0b3mu6kb71t, id=5dyena26fwusvl3, fromEmitProfile=true
+2023-02-21T22:38:22.701Z - info: pdf-utils pdf processing was finished rootId=evkb0b3mu6kb71t, id=evkb0b3mu6kb71t, fromEmitProfile=true
+2023-02-21T22:38:22.703Z - info: Rendering request 9 finished in 966 ms rootId=evkb0b3mu6kb71t, id=evkb0b3mu6kb71t, fromEmitProfile=true
+2023-02-21T22:39:12.731Z - info: Render request 10 queued for execution and waiting for available worker fromEmitProfile=true, rootId=adplvx7toga5ps5, id=adplvx7toga5ps5
+2023-02-21T22:39:12.747Z - info: Starting rendering request 10 rootId=adplvx7toga5ps5, id=adplvx7toga5ps5, fromEmitProfile=true
+2023-02-21T22:39:12.748Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=adplvx7toga5ps5, id=adplvx7toga5ps5, fromEmitProfile=true
+2023-02-21T22:39:13.269Z - warn: Page error: SyntaxError: Unexpected token ',' rootId=adplvx7toga5ps5, id=adplvx7toga5ps5, fromEmitProfile=true
+2023-02-21T22:39:13.359Z - info: pdf-utils is starting pdf processing rootId=adplvx7toga5ps5, id=adplvx7toga5ps5, fromEmitProfile=true
+2023-02-21T22:39:13.361Z - info: Starting rendering (child) request rootId=adplvx7toga5ps5, id=mifdwobb34zfsct, fromEmitProfile=true
+2023-02-21T22:39:13.361Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=adplvx7toga5ps5, id=mifdwobb34zfsct, fromEmitProfile=true
+2023-02-21T22:39:13.606Z - info: Rendering (child) request finished in 861 ms rootId=adplvx7toga5ps5, id=mifdwobb34zfsct, fromEmitProfile=true
+2023-02-21T22:39:13.609Z - info: pdf-utils pdf processing was finished rootId=adplvx7toga5ps5, id=adplvx7toga5ps5, fromEmitProfile=true
+2023-02-21T22:39:13.610Z - info: Rendering request 10 finished in 874 ms rootId=adplvx7toga5ps5, id=adplvx7toga5ps5, fromEmitProfile=true
+2023-02-21T22:39:49.073Z - info: Render request 11 queued for execution and waiting for available worker fromEmitProfile=true, rootId=yrqg1p6iich8rxf, id=yrqg1p6iich8rxf
+2023-02-21T22:39:49.087Z - info: Starting rendering request 11 rootId=yrqg1p6iich8rxf, id=yrqg1p6iich8rxf, fromEmitProfile=true
+2023-02-21T22:39:49.088Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=yrqg1p6iich8rxf, id=yrqg1p6iich8rxf, fromEmitProfile=true
+2023-02-21T22:39:49.650Z - warn: Page error: SyntaxError: Unexpected token ',' rootId=yrqg1p6iich8rxf, id=yrqg1p6iich8rxf, fromEmitProfile=true
+2023-02-21T22:39:49.723Z - info: pdf-utils is starting pdf processing rootId=yrqg1p6iich8rxf, id=yrqg1p6iich8rxf, fromEmitProfile=true
+2023-02-21T22:39:49.726Z - info: Starting rendering (child) request rootId=yrqg1p6iich8rxf, id=9cq1j8078frpto9, fromEmitProfile=true
+2023-02-21T22:39:49.728Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=yrqg1p6iich8rxf, id=9cq1j8078frpto9, fromEmitProfile=true
+2023-02-21T22:39:49.973Z - info: Rendering (child) request finished in 881 ms rootId=yrqg1p6iich8rxf, id=9cq1j8078frpto9, fromEmitProfile=true
+2023-02-21T22:39:49.974Z - info: pdf-utils pdf processing was finished rootId=yrqg1p6iich8rxf, id=yrqg1p6iich8rxf, fromEmitProfile=true
+2023-02-21T22:39:49.974Z - info: Rendering request 11 finished in 899 ms rootId=yrqg1p6iich8rxf, id=yrqg1p6iich8rxf, fromEmitProfile=true
+2023-02-21T22:41:04.397Z - info: Render request 12 queued for execution and waiting for available worker fromEmitProfile=true, rootId=e7q12f3mky7k29x, id=e7q12f3mky7k29x
+2023-02-21T22:41:04.413Z - info: Starting rendering request 12 rootId=e7q12f3mky7k29x, id=e7q12f3mky7k29x, fromEmitProfile=true
+2023-02-21T22:41:04.414Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=e7q12f3mky7k29x, id=e7q12f3mky7k29x, fromEmitProfile=true
+2023-02-21T22:41:04.939Z - warn: Page error: SyntaxError: Unexpected token ',' rootId=e7q12f3mky7k29x, id=e7q12f3mky7k29x, fromEmitProfile=true
+2023-02-21T22:41:04.992Z - info: pdf-utils is starting pdf processing rootId=e7q12f3mky7k29x, id=e7q12f3mky7k29x, fromEmitProfile=true
+2023-02-21T22:41:04.993Z - info: Starting rendering (child) request rootId=e7q12f3mky7k29x, id=z7gyn71sj0voiav, fromEmitProfile=true
+2023-02-21T22:41:04.994Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=e7q12f3mky7k29x, id=z7gyn71sj0voiav, fromEmitProfile=true
+2023-02-21T22:41:05.269Z - info: Rendering (child) request finished in 858 ms rootId=e7q12f3mky7k29x, id=z7gyn71sj0voiav, fromEmitProfile=true
+2023-02-21T22:41:05.270Z - info: pdf-utils pdf processing was finished rootId=e7q12f3mky7k29x, id=e7q12f3mky7k29x, fromEmitProfile=true
+2023-02-21T22:41:05.271Z - info: Rendering request 12 finished in 873 ms rootId=e7q12f3mky7k29x, id=e7q12f3mky7k29x, fromEmitProfile=true
+2023-02-21T22:41:21.647Z - info: Render request 13 queued for execution and waiting for available worker fromEmitProfile=true, rootId=is07j1xugqowwtx, id=is07j1xugqowwtx
+2023-02-21T22:41:21.671Z - info: Starting rendering request 13 rootId=is07j1xugqowwtx, id=is07j1xugqowwtx, fromEmitProfile=true
+2023-02-21T22:41:21.672Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=is07j1xugqowwtx, id=is07j1xugqowwtx, fromEmitProfile=true
+2023-02-21T22:41:22.376Z - info: pdf-utils is starting pdf processing rootId=is07j1xugqowwtx, id=is07j1xugqowwtx, fromEmitProfile=true
+2023-02-21T22:41:22.377Z - info: Starting rendering (child) request rootId=is07j1xugqowwtx, id=a49f9av2lvpomna, fromEmitProfile=true
+2023-02-21T22:41:22.378Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=is07j1xugqowwtx, id=a49f9av2lvpomna, fromEmitProfile=true
+2023-02-21T22:41:22.620Z - info: Rendering (child) request finished in 955 ms rootId=is07j1xugqowwtx, id=a49f9av2lvpomna, fromEmitProfile=true
+2023-02-21T22:41:22.621Z - info: pdf-utils pdf processing was finished rootId=is07j1xugqowwtx, id=is07j1xugqowwtx, fromEmitProfile=true
+2023-02-21T22:41:22.622Z - info: Rendering request 13 finished in 973 ms rootId=is07j1xugqowwtx, id=is07j1xugqowwtx, fromEmitProfile=true
+2023-02-21T22:42:38.077Z - info: Render request 14 queued for execution and waiting for available worker fromEmitProfile=true, rootId=zn3ddb639eh3dzh, id=zn3ddb639eh3dzh
+2023-02-21T22:42:38.088Z - info: Starting rendering request 14 rootId=zn3ddb639eh3dzh, id=zn3ddb639eh3dzh, fromEmitProfile=true
+2023-02-21T22:42:38.089Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=zn3ddb639eh3dzh, id=zn3ddb639eh3dzh, fromEmitProfile=true
+2023-02-21T22:42:38.807Z - info: pdf-utils is starting pdf processing rootId=zn3ddb639eh3dzh, id=zn3ddb639eh3dzh, fromEmitProfile=true
+2023-02-21T22:42:38.815Z - info: Starting rendering (child) request rootId=zn3ddb639eh3dzh, id=gts705gbi9h66xf, fromEmitProfile=true
+2023-02-21T22:42:38.815Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=zn3ddb639eh3dzh, id=gts705gbi9h66xf, fromEmitProfile=true
+2023-02-21T22:42:39.084Z - info: Rendering (child) request finished in 981 ms rootId=zn3ddb639eh3dzh, id=gts705gbi9h66xf, fromEmitProfile=true
+2023-02-21T22:42:39.085Z - info: pdf-utils pdf processing was finished rootId=zn3ddb639eh3dzh, id=zn3ddb639eh3dzh, fromEmitProfile=true
+2023-02-21T22:42:39.086Z - info: Rendering request 14 finished in 1007 ms rootId=zn3ddb639eh3dzh, id=zn3ddb639eh3dzh, fromEmitProfile=true
+2023-02-21T22:43:57.760Z - info: Render request 15 queued for execution and waiting for available worker fromEmitProfile=true, rootId=msf5w1ko5zeiuks, id=msf5w1ko5zeiuks
+2023-02-21T22:43:57.774Z - info: Starting rendering request 15 rootId=msf5w1ko5zeiuks, id=msf5w1ko5zeiuks, fromEmitProfile=true
+2023-02-21T22:43:57.775Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=msf5w1ko5zeiuks, id=msf5w1ko5zeiuks, fromEmitProfile=true
+2023-02-21T22:43:58.552Z - info: pdf-utils is starting pdf processing rootId=msf5w1ko5zeiuks, id=msf5w1ko5zeiuks, fromEmitProfile=true
+2023-02-21T22:43:58.572Z - info: Starting rendering (child) request rootId=msf5w1ko5zeiuks, id=evvj344gd6bste0, fromEmitProfile=true
+2023-02-21T22:43:58.573Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=msf5w1ko5zeiuks, id=evvj344gd6bste0, fromEmitProfile=true
+2023-02-21T22:43:58.857Z - info: Rendering (child) request finished in 1077 ms rootId=msf5w1ko5zeiuks, id=evvj344gd6bste0, fromEmitProfile=true
+2023-02-21T22:43:58.858Z - info: pdf-utils pdf processing was finished rootId=msf5w1ko5zeiuks, id=msf5w1ko5zeiuks, fromEmitProfile=true
+2023-02-21T22:43:58.859Z - info: Rendering request 15 finished in 1097 ms rootId=msf5w1ko5zeiuks, id=msf5w1ko5zeiuks, fromEmitProfile=true
+2023-02-21T22:44:28.492Z - info: Render request 16 queued for execution and waiting for available worker fromEmitProfile=true, rootId=wfg3yz80dzjinkd, id=wfg3yz80dzjinkd
+2023-02-21T22:44:28.506Z - info: Starting rendering request 16 rootId=wfg3yz80dzjinkd, id=wfg3yz80dzjinkd, fromEmitProfile=true
+2023-02-21T22:44:28.506Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=wfg3yz80dzjinkd, id=wfg3yz80dzjinkd, fromEmitProfile=true
+2023-02-21T22:44:29.215Z - info: pdf-utils is starting pdf processing rootId=wfg3yz80dzjinkd, id=wfg3yz80dzjinkd, fromEmitProfile=true
+2023-02-21T22:44:29.216Z - info: Starting rendering (child) request rootId=wfg3yz80dzjinkd, id=ceo52x8013lhj2f, fromEmitProfile=true
+2023-02-21T22:44:29.217Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=wfg3yz80dzjinkd, id=ceo52x8013lhj2f, fromEmitProfile=true
+2023-02-21T22:44:29.480Z - info: Rendering (child) request finished in 968 ms rootId=wfg3yz80dzjinkd, id=ceo52x8013lhj2f, fromEmitProfile=true
+2023-02-21T22:44:29.482Z - info: pdf-utils pdf processing was finished rootId=wfg3yz80dzjinkd, id=wfg3yz80dzjinkd, fromEmitProfile=true
+2023-02-21T22:44:29.482Z - info: Rendering request 16 finished in 987 ms rootId=wfg3yz80dzjinkd, id=wfg3yz80dzjinkd, fromEmitProfile=true
+2023-02-21T22:44:34.010Z - info: Render request 17 queued for execution and waiting for available worker fromEmitProfile=true, rootId=ajkcqe8d4kk60gd, id=ajkcqe8d4kk60gd
+2023-02-21T22:44:34.025Z - info: Starting rendering request 17 rootId=ajkcqe8d4kk60gd, id=ajkcqe8d4kk60gd, fromEmitProfile=true
+2023-02-21T22:44:34.025Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ajkcqe8d4kk60gd, id=ajkcqe8d4kk60gd, fromEmitProfile=true
+2023-02-21T22:44:34.669Z - info: pdf-utils is starting pdf processing rootId=ajkcqe8d4kk60gd, id=ajkcqe8d4kk60gd, fromEmitProfile=true
+2023-02-21T22:44:34.670Z - info: Starting rendering (child) request rootId=ajkcqe8d4kk60gd, id=io8pi2rqnusyf2c, fromEmitProfile=true
+2023-02-21T22:44:34.670Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ajkcqe8d4kk60gd, id=io8pi2rqnusyf2c, fromEmitProfile=true
+2023-02-21T22:44:34.935Z - info: Rendering (child) request finished in 904 ms rootId=ajkcqe8d4kk60gd, id=io8pi2rqnusyf2c, fromEmitProfile=true
+2023-02-21T22:44:34.936Z - info: pdf-utils pdf processing was finished rootId=ajkcqe8d4kk60gd, id=ajkcqe8d4kk60gd, fromEmitProfile=true
+2023-02-21T22:44:34.937Z - info: Rendering request 17 finished in 926 ms rootId=ajkcqe8d4kk60gd, id=ajkcqe8d4kk60gd, fromEmitProfile=true
+2023-02-21T22:45:09.862Z - info: Render request 18 queued for execution and waiting for available worker fromEmitProfile=true, rootId=wx5zr1n5smehkvt, id=wx5zr1n5smehkvt
+2023-02-21T22:45:09.878Z - info: Starting rendering request 18 rootId=wx5zr1n5smehkvt, id=wx5zr1n5smehkvt, fromEmitProfile=true
+2023-02-21T22:45:09.878Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=wx5zr1n5smehkvt, id=wx5zr1n5smehkvt, fromEmitProfile=true
+2023-02-21T22:45:10.564Z - info: pdf-utils is starting pdf processing rootId=wx5zr1n5smehkvt, id=wx5zr1n5smehkvt, fromEmitProfile=true
+2023-02-21T22:45:10.566Z - info: Starting rendering (child) request rootId=wx5zr1n5smehkvt, id=84g5g7svn83binq, fromEmitProfile=true
+2023-02-21T22:45:10.566Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=wx5zr1n5smehkvt, id=84g5g7svn83binq, fromEmitProfile=true
+2023-02-21T22:45:10.828Z - info: Rendering (child) request finished in 944 ms rootId=wx5zr1n5smehkvt, id=84g5g7svn83binq, fromEmitProfile=true
+2023-02-21T22:45:10.830Z - info: pdf-utils pdf processing was finished rootId=wx5zr1n5smehkvt, id=wx5zr1n5smehkvt, fromEmitProfile=true
+2023-02-21T22:45:10.831Z - info: Rendering request 18 finished in 965 ms rootId=wx5zr1n5smehkvt, id=wx5zr1n5smehkvt, fromEmitProfile=true
+2023-02-21T22:46:46.160Z - info: Render request 19 queued for execution and waiting for available worker fromEmitProfile=true, rootId=0htrjo4kgcwdhds, id=0htrjo4kgcwdhds
+2023-02-21T22:46:46.175Z - info: Starting rendering request 19 rootId=0htrjo4kgcwdhds, id=0htrjo4kgcwdhds, fromEmitProfile=true
+2023-02-21T22:46:46.175Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=0htrjo4kgcwdhds, id=0htrjo4kgcwdhds, fromEmitProfile=true
+2023-02-21T22:46:46.800Z - warn: Page error: SyntaxError: Unexpected identifier rootId=0htrjo4kgcwdhds, id=0htrjo4kgcwdhds, fromEmitProfile=true
+2023-02-21T22:46:46.839Z - info: pdf-utils is starting pdf processing rootId=0htrjo4kgcwdhds, id=0htrjo4kgcwdhds, fromEmitProfile=true
+2023-02-21T22:46:46.840Z - info: Starting rendering (child) request rootId=0htrjo4kgcwdhds, id=ai7af7trgvka778, fromEmitProfile=true
+2023-02-21T22:46:46.840Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=0htrjo4kgcwdhds, id=ai7af7trgvka778, fromEmitProfile=true
+2023-02-21T22:46:47.083Z - info: Rendering (child) request finished in 909 ms rootId=0htrjo4kgcwdhds, id=ai7af7trgvka778, fromEmitProfile=true
+2023-02-21T22:46:47.085Z - info: pdf-utils pdf processing was finished rootId=0htrjo4kgcwdhds, id=0htrjo4kgcwdhds, fromEmitProfile=true
+2023-02-21T22:46:47.085Z - info: Rendering request 19 finished in 922 ms rootId=0htrjo4kgcwdhds, id=0htrjo4kgcwdhds, fromEmitProfile=true
+2023-02-21T22:47:22.406Z - info: Render request 20 queued for execution and waiting for available worker fromEmitProfile=true, rootId=box8cspknfguzxo, id=box8cspknfguzxo
+2023-02-21T22:47:22.420Z - info: Starting rendering request 20 rootId=box8cspknfguzxo, id=box8cspknfguzxo, fromEmitProfile=true
+2023-02-21T22:47:22.422Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=box8cspknfguzxo, id=box8cspknfguzxo, fromEmitProfile=true
+2023-02-21T22:47:23.003Z - warn: Page error: SyntaxError: Unexpected identifier rootId=box8cspknfguzxo, id=box8cspknfguzxo, fromEmitProfile=true
+2023-02-21T22:47:23.072Z - info: pdf-utils is starting pdf processing rootId=box8cspknfguzxo, id=box8cspknfguzxo, fromEmitProfile=true
+2023-02-21T22:47:23.073Z - info: Starting rendering (child) request rootId=box8cspknfguzxo, id=3t9oly1scm6o00g, fromEmitProfile=true
+2023-02-21T22:47:23.074Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=box8cspknfguzxo, id=3t9oly1scm6o00g, fromEmitProfile=true
+2023-02-21T22:47:23.352Z - info: Rendering (child) request finished in 924 ms rootId=box8cspknfguzxo, id=3t9oly1scm6o00g, fromEmitProfile=true
+2023-02-21T22:47:23.353Z - info: pdf-utils pdf processing was finished rootId=box8cspknfguzxo, id=box8cspknfguzxo, fromEmitProfile=true
+2023-02-21T22:47:23.354Z - info: Rendering request 20 finished in 947 ms rootId=box8cspknfguzxo, id=box8cspknfguzxo, fromEmitProfile=true
+2023-02-21T22:47:27.143Z - info: Render request 21 queued for execution and waiting for available worker fromEmitProfile=true, rootId=zithy1zo8zq5t5e, id=zithy1zo8zq5t5e
+2023-02-21T22:47:27.160Z - info: Starting rendering request 21 rootId=zithy1zo8zq5t5e, id=zithy1zo8zq5t5e, fromEmitProfile=true
+2023-02-21T22:47:27.160Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=zithy1zo8zq5t5e, id=zithy1zo8zq5t5e, fromEmitProfile=true
+2023-02-21T22:47:27.821Z - info: pdf-utils is starting pdf processing rootId=zithy1zo8zq5t5e, id=zithy1zo8zq5t5e, fromEmitProfile=true
+2023-02-21T22:47:27.823Z - info: Starting rendering (child) request rootId=zithy1zo8zq5t5e, id=8utonoc14mbku15, fromEmitProfile=true
+2023-02-21T22:47:27.823Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=zithy1zo8zq5t5e, id=8utonoc14mbku15, fromEmitProfile=true
+2023-02-21T22:47:28.103Z - info: Rendering (child) request finished in 939 ms rootId=zithy1zo8zq5t5e, id=8utonoc14mbku15, fromEmitProfile=true
+2023-02-21T22:47:28.105Z - info: pdf-utils pdf processing was finished rootId=zithy1zo8zq5t5e, id=zithy1zo8zq5t5e, fromEmitProfile=true
+2023-02-21T22:47:28.107Z - info: Rendering request 21 finished in 959 ms rootId=zithy1zo8zq5t5e, id=zithy1zo8zq5t5e, fromEmitProfile=true
+2023-02-21T22:47:53.397Z - info: Render request 22 queued for execution and waiting for available worker fromEmitProfile=true, rootId=xk3bwtphjihkbxy, id=xk3bwtphjihkbxy
+2023-02-21T22:47:53.412Z - info: Starting rendering request 22 rootId=xk3bwtphjihkbxy, id=xk3bwtphjihkbxy, fromEmitProfile=true
+2023-02-21T22:47:53.413Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=xk3bwtphjihkbxy, id=xk3bwtphjihkbxy, fromEmitProfile=true
+2023-02-21T22:47:54.095Z - info: pdf-utils is starting pdf processing rootId=xk3bwtphjihkbxy, id=xk3bwtphjihkbxy, fromEmitProfile=true
+2023-02-21T22:47:54.097Z - info: Starting rendering (child) request rootId=xk3bwtphjihkbxy, id=99h0xpep6hopcov, fromEmitProfile=true
+2023-02-21T22:47:54.098Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=xk3bwtphjihkbxy, id=99h0xpep6hopcov, fromEmitProfile=true
+2023-02-21T22:47:54.367Z - info: Rendering (child) request finished in 942 ms rootId=xk3bwtphjihkbxy, id=99h0xpep6hopcov, fromEmitProfile=true
+2023-02-21T22:47:54.369Z - info: pdf-utils pdf processing was finished rootId=xk3bwtphjihkbxy, id=xk3bwtphjihkbxy, fromEmitProfile=true
+2023-02-21T22:47:54.370Z - info: Rendering request 22 finished in 970 ms rootId=xk3bwtphjihkbxy, id=xk3bwtphjihkbxy, fromEmitProfile=true
+2023-02-21T22:48:11.141Z - info: Render request 23 queued for execution and waiting for available worker fromEmitProfile=true, rootId=rf2yj2knjm0v9ji, id=rf2yj2knjm0v9ji
+2023-02-21T22:48:11.154Z - info: Starting rendering request 23 rootId=rf2yj2knjm0v9ji, id=rf2yj2knjm0v9ji, fromEmitProfile=true
+2023-02-21T22:48:11.155Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=rf2yj2knjm0v9ji, id=rf2yj2knjm0v9ji, fromEmitProfile=true
+2023-02-21T22:48:11.885Z - info: pdf-utils is starting pdf processing rootId=rf2yj2knjm0v9ji, id=rf2yj2knjm0v9ji, fromEmitProfile=true
+2023-02-21T22:48:11.889Z - info: Starting rendering (child) request rootId=rf2yj2knjm0v9ji, id=k0a8w9pfgmk7n96, fromEmitProfile=true
+2023-02-21T22:48:11.890Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=rf2yj2knjm0v9ji, id=k0a8w9pfgmk7n96, fromEmitProfile=true
+2023-02-21T22:48:12.161Z - info: Rendering (child) request finished in 997 ms rootId=rf2yj2knjm0v9ji, id=k0a8w9pfgmk7n96, fromEmitProfile=true
+2023-02-21T22:48:12.163Z - info: pdf-utils pdf processing was finished rootId=rf2yj2knjm0v9ji, id=rf2yj2knjm0v9ji, fromEmitProfile=true
+2023-02-21T22:48:12.163Z - info: Rendering request 23 finished in 1020 ms rootId=rf2yj2knjm0v9ji, id=rf2yj2knjm0v9ji, fromEmitProfile=true
+2023-02-21T22:48:32.678Z - info: Render request 24 queued for execution and waiting for available worker fromEmitProfile=true, rootId=6w19ynztayi5azx, id=6w19ynztayi5azx
+2023-02-21T22:48:32.693Z - info: Starting rendering request 24 rootId=6w19ynztayi5azx, id=6w19ynztayi5azx, fromEmitProfile=true
+2023-02-21T22:48:32.694Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=6w19ynztayi5azx, id=6w19ynztayi5azx, fromEmitProfile=true
+2023-02-21T22:48:33.376Z - info: pdf-utils is starting pdf processing rootId=6w19ynztayi5azx, id=6w19ynztayi5azx, fromEmitProfile=true
+2023-02-21T22:48:33.379Z - info: Starting rendering (child) request rootId=6w19ynztayi5azx, id=6ouvwwrwq3luqpi, fromEmitProfile=true
+2023-02-21T22:48:33.380Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=6w19ynztayi5azx, id=6ouvwwrwq3luqpi, fromEmitProfile=true
+2023-02-21T22:48:33.631Z - info: Rendering (child) request finished in 935 ms rootId=6w19ynztayi5azx, id=6ouvwwrwq3luqpi, fromEmitProfile=true
+2023-02-21T22:48:33.633Z - info: pdf-utils pdf processing was finished rootId=6w19ynztayi5azx, id=6w19ynztayi5azx, fromEmitProfile=true
+2023-02-21T22:48:33.633Z - info: Rendering request 24 finished in 953 ms rootId=6w19ynztayi5azx, id=6w19ynztayi5azx, fromEmitProfile=true
+2023-02-21T22:48:44.966Z - info: Render request 25 queued for execution and waiting for available worker fromEmitProfile=true, rootId=mcr1yijzf71yzqy, id=mcr1yijzf71yzqy
+2023-02-21T22:48:44.981Z - info: Starting rendering request 25 rootId=mcr1yijzf71yzqy, id=mcr1yijzf71yzqy, fromEmitProfile=true
+2023-02-21T22:48:44.981Z - info: Rendering template { name: authors-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=mcr1yijzf71yzqy, id=mcr1yijzf71yzqy, fromEmitProfile=true
+2023-02-21T22:48:45.658Z - info: pdf-utils is starting pdf processing rootId=mcr1yijzf71yzqy, id=mcr1yijzf71yzqy, fromEmitProfile=true
+2023-02-21T22:48:45.660Z - info: Starting rendering (child) request rootId=mcr1yijzf71yzqy, id=5zpuij56mkud34x, fromEmitProfile=true
+2023-02-21T22:48:45.660Z - info: Rendering template { name: authors-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=mcr1yijzf71yzqy, id=5zpuij56mkud34x, fromEmitProfile=true
+2023-02-21T22:48:45.924Z - info: Rendering (child) request finished in 942 ms rootId=mcr1yijzf71yzqy, id=5zpuij56mkud34x, fromEmitProfile=true
+2023-02-21T22:48:45.926Z - info: pdf-utils pdf processing was finished rootId=mcr1yijzf71yzqy, id=mcr1yijzf71yzqy, fromEmitProfile=true
+2023-02-21T22:48:45.927Z - info: Rendering request 25 finished in 960 ms rootId=mcr1yijzf71yzqy, id=mcr1yijzf71yzqy, fromEmitProfile=true
+2023-02-22T10:51:21.979Z - info: Initializing jsreport (version: 3.10.0, configuration file: jsreport.config.json, nodejs: 16.13.1)
+2023-02-22T10:51:21.983Z - info: Searching for available extensions in D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\
+2023-02-22T10:51:21.996Z - info: Extensions location cache contains up to date information, skipping crawling in D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\
+2023-02-22T10:51:22.051Z - info: Found 35 extension(s)
+2023-02-22T10:51:22.193Z - info: Using extension base@3.0.1
+2023-02-22T10:51:22.202Z - info: Using extension child-templates@3.1.0
+2023-02-22T10:51:22.208Z - info: Using extension cli@3.2.3
+2023-02-22T10:51:22.217Z - info: Using extension components@3.3.0
+2023-02-22T10:51:22.223Z - info: Using extension data@3.1.0
+2023-02-22T10:51:22.226Z - info: Using extension express@3.6.0
+2023-02-22T10:51:22.956Z - info: Using extension freeze@3.0.1
+2023-02-22T10:51:22.959Z - info: Using extension fs-store@3.2.4
+2023-02-22T10:51:23.292Z - info: Using extension handlebars@3.2.1
+2023-02-22T10:51:23.301Z - info: Using extension import-export@3.2.0
+2023-02-22T10:51:23.402Z - info: Using extension jsrender@3.0.0
+2023-02-22T10:51:23.406Z - info: Using extension licensing@3.0.2
+2023-02-22T10:51:23.758Z - info: Using extension localization@3.2.1
+2023-02-22T10:51:23.764Z - info: Using extension npm@3.1.2
+2023-02-22T10:51:23.776Z - info: Using extension pdf-utils@3.7.0
+2023-02-22T10:51:23.788Z - info: Using extension reports@3.1.1
+2023-02-22T10:51:23.799Z - info: Using extension tags@3.1.1
+2023-02-22T10:51:23.807Z - info: Using extension text@3.0.0
+2023-02-22T10:51:23.812Z - info: Using extension version-control@3.1.2
+2023-02-22T10:51:23.877Z - info: Using extension assets@3.6.0
+2023-02-22T10:51:23.946Z - info: Using extension authorization@3.3.0
+2023-02-22T10:51:23.958Z - info: Using extension browser-client@3.1.1
+2023-02-22T10:51:23.967Z - info: Using extension chrome-pdf@3.3.0
+2023-02-22T10:51:23.974Z - info: Using extension docx@3.6.0
+2023-02-22T10:51:23.984Z - info: Using extension html-to-xlsx@3.3.0
+2023-02-22T10:51:24.290Z - info: html-to-xlsx detected chrome as available html engine
+2023-02-22T10:51:24.291Z - info: Using extension pptx@3.4.0
+2023-02-22T10:51:24.296Z - info: Using extension scheduling@3.0.3
+2023-02-22T10:51:24.365Z - info: Using extension scripts@3.4.0
+2023-02-22T10:51:24.368Z - info: Using extension static-pdf@3.0.1
+2023-02-22T10:51:24.370Z - info: Using extension studio@3.9.0
+2023-02-22T10:51:24.634Z - info: Using extension xlsx@3.4.0
+2023-02-22T10:51:24.694Z - info: Using extension public-templates@3.0.0
+2023-02-22T10:51:24.699Z - info: Using extension sample-template@3.2.1
+2023-02-22T10:51:24.704Z - info: Using extension studio-theme-dark@3.0.1
+2023-02-22T10:51:24.707Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2023-02-22T10:51:24.708Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2023-02-22T10:51:24.708Z - info: Using fs provider for template store.
+2023-02-22T10:51:24.714Z - info: fs store is persisting using fs for D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\data
+2023-02-22T10:51:24.721Z - info: fs store is loading data
+2023-02-22T10:51:24.763Z - info: fs store is initialized successfully
+2023-02-22T10:51:24.788Z - info: Creating default express app.
+2023-02-22T10:51:24.864Z - info: jsreport server successfully started on http port: 5488
+2023-02-22T10:51:24.870Z - info: Verifying license key free
+2023-02-22T10:51:24.879Z - info: Using free license
+2023-02-22T10:51:24.891Z - info: Initializing worker threads
+2023-02-22T10:51:25.839Z - info: 2 worker threads initialized in 949ms
+2023-02-22T10:51:25.840Z - info: Starting temp files cleanup with 180000ms threshold
+2023-02-22T10:51:25.842Z - info: reporter initialized
+2023-02-22T10:54:06.421Z - info: Render request 1 queued for execution and waiting for available worker fromEmitProfile=true, rootId=t5wqxi4a85lddty, id=t5wqxi4a85lddty
+2023-02-22T10:54:06.448Z - info: Starting rendering request 1 rootId=t5wqxi4a85lddty, id=t5wqxi4a85lddty, fromEmitProfile=true
+2023-02-22T10:54:06.449Z - info: Rendering template { name: musicians-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=t5wqxi4a85lddty, id=t5wqxi4a85lddty, fromEmitProfile=true
+2023-02-22T10:54:06.998Z - warn: Error when processing render request 1
+(because) error when evaluating custom script /Musicians/musicians-script
+connect ECONNREFUSED 127.0.0.1:8000
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at Function.AxiosError.from (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:823:14)
+    at RedirectableRequest.handleRequestError (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:2953:25)
+    at RedirectableRequest.emit (node:events:390:28)
+    at RedirectableRequest.emit (node:domain:475:12)
+    at ClientRequest.eventHandlers.<computed> (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\follow-redirects\index.js:14:24)
+    at ClientRequest.emit (node:events:390:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at Socket.socketErrorListener (node:_http_client:447:9)
+    at Socket.emit (node:events:390:28)
+    at Socket.emit (node:domain:475:12) rootId=t5wqxi4a85lddty, id=t5wqxi4a85lddty, fromEmitProfile=true
+2023-02-22T10:54:06.999Z - warn: Rendering request 1 finished with error in 581 ms rootId=t5wqxi4a85lddty, id=t5wqxi4a85lddty, fromEmitProfile=true
+2023-02-22T10:54:07.002Z - error: Report render failed
+(because) error when evaluating custom script /Musicians/musicians-script
+connect ECONNREFUSED 127.0.0.1:8000
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at Function.AxiosError.from (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:823:14)
+    at RedirectableRequest.handleRequestError (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:2953:25)
+    at RedirectableRequest.emit (node:events:390:28)
+    at RedirectableRequest.emit (node:domain:475:12)
+    at ClientRequest.eventHandlers.<computed> (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\follow-redirects\index.js:14:24)
+    at ClientRequest.emit (node:events:390:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at Socket.socketErrorListener (node:_http_client:447:9)
+    at Socket.emit (node:events:390:28)
+    at Socket.emit (node:domain:475:12) rootId=t5wqxi4a85lddty, id=t5wqxi4a85lddty
+2023-02-22T10:54:43.229Z - info: Render request 2 queued for execution and waiting for available worker fromEmitProfile=true, rootId=05acr7vz796cp3m, id=05acr7vz796cp3m
+2023-02-22T10:54:43.243Z - info: Starting rendering request 2 rootId=05acr7vz796cp3m, id=05acr7vz796cp3m, fromEmitProfile=true
+2023-02-22T10:54:43.244Z - info: Rendering template { name: musicians-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=05acr7vz796cp3m, id=05acr7vz796cp3m, fromEmitProfile=true
+2023-02-22T10:54:50.811Z - info: pdf-utils is starting pdf processing rootId=05acr7vz796cp3m, id=05acr7vz796cp3m, fromEmitProfile=true
+2023-02-22T10:54:50.819Z - info: Starting rendering (child) request rootId=05acr7vz796cp3m, id=t5w1xx3vy8vss0u, fromEmitProfile=true
+2023-02-22T10:54:50.819Z - info: Rendering template { name: musicians-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=05acr7vz796cp3m, id=t5w1xx3vy8vss0u, fromEmitProfile=true
+2023-02-22T10:54:51.184Z - info: Rendering (child) request finished in 7912 ms rootId=05acr7vz796cp3m, id=t5w1xx3vy8vss0u, fromEmitProfile=true
+2023-02-22T10:54:51.188Z - info: pdf-utils pdf processing was finished rootId=05acr7vz796cp3m, id=05acr7vz796cp3m, fromEmitProfile=true
+2023-02-22T10:54:51.188Z - info: Rendering request 2 finished in 7955 ms rootId=05acr7vz796cp3m, id=05acr7vz796cp3m, fromEmitProfile=true
+2023-02-22T10:55:33.367Z - info: Verifying license key free
+2023-02-22T10:55:33.761Z - info: Using enterprise trial license
+2023-02-22T11:15:39.354Z - info: Render request 3 queued for execution and waiting for available worker fromEmitProfile=true, rootId=nysjefegkov1v51, id=nysjefegkov1v51
+2023-02-22T11:15:39.375Z - info: Starting rendering request 3 rootId=nysjefegkov1v51, id=nysjefegkov1v51, fromEmitProfile=true
+2023-02-22T11:15:39.376Z - info: Rendering template { name: events-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=nysjefegkov1v51, id=nysjefegkov1v51, fromEmitProfile=true
+2023-02-22T11:15:39.706Z - warn: Error when processing render request 3
+(because) error when evaluating custom script /Events/events-script
+musician is not defined
+
+(sandbox.js line 16:20)
+
+  14 |         count = 0;
+  15 |         event['count']= event['musicians'].length;
+> 16 |         names.push(musician.name);
+     |                    ^
+  17 |         counts.push(musician.count);
+  18 |         });
+  19 |     req.data.events.push(names);
+
+(sandbox.js line 13:26)
+
+  11 |      counts = [];
+  12 |      special_count = [];
+> 13 |      resEvents.data.data.forEach(event => {
+     |                          ^
+  14 |         count = 0;
+  15 |         event['count']= event['musicians'].length;
+  16 |         names.push(musician.name);
+
+
+ReferenceError: musician is not defined
+    at sandbox.js:16:20
+    at Array.forEach (<anonymous>)
+    at Object.beforeRender (sandbox.js:13:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async executionFn (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\executeScript.js:67:11)
+    at async run (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-core\lib\worker\sandbox\createSandbox.js:184:24)
+    at async WorkerReporter._runInSandbox (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-core\lib\worker\sandbox\runInSandbox.js:180:14)
+    at async executeScript (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\executeScript.js:122:12)
+    at async Scripts._runScript (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\worker.js:140:30)
+    at async Scripts.handleBeforeRender (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\worker.js:64:7) rootId=nysjefegkov1v51, id=nysjefegkov1v51, fromEmitProfile=true
+2023-02-22T11:15:39.707Z - warn: Rendering request 3 finished with error in 352 ms rootId=nysjefegkov1v51, id=nysjefegkov1v51, fromEmitProfile=true
+2023-02-22T11:16:10.718Z - info: Render request 4 queued for execution and waiting for available worker fromEmitProfile=true, rootId=ocgtfgd4cf3k3rq, id=ocgtfgd4cf3k3rq
+2023-02-22T11:16:10.732Z - info: Starting rendering request 4 rootId=ocgtfgd4cf3k3rq, id=ocgtfgd4cf3k3rq, fromEmitProfile=true
+2023-02-22T11:16:10.734Z - info: Rendering template { name: events-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ocgtfgd4cf3k3rq, id=ocgtfgd4cf3k3rq, fromEmitProfile=true
+2023-02-22T11:16:11.318Z - warn: Page error: SyntaxError: Unexpected token ',' rootId=ocgtfgd4cf3k3rq, id=ocgtfgd4cf3k3rq, fromEmitProfile=true
+2023-02-22T11:16:11.372Z - info: pdf-utils is starting pdf processing rootId=ocgtfgd4cf3k3rq, id=ocgtfgd4cf3k3rq, fromEmitProfile=true
+2023-02-22T11:16:11.373Z - info: Starting rendering (child) request rootId=ocgtfgd4cf3k3rq, id=oa9bhu0s9vco63f, fromEmitProfile=true
+2023-02-22T11:16:11.374Z - info: Rendering template { name: events-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ocgtfgd4cf3k3rq, id=oa9bhu0s9vco63f, fromEmitProfile=true
+2023-02-22T11:16:11.649Z - info: Rendering (child) request finished in 910 ms rootId=ocgtfgd4cf3k3rq, id=oa9bhu0s9vco63f, fromEmitProfile=true
+2023-02-22T11:16:11.651Z - info: pdf-utils pdf processing was finished rootId=ocgtfgd4cf3k3rq, id=ocgtfgd4cf3k3rq, fromEmitProfile=true
+2023-02-22T11:16:11.652Z - info: Rendering request 4 finished in 931 ms rootId=ocgtfgd4cf3k3rq, id=ocgtfgd4cf3k3rq, fromEmitProfile=true
+2023-02-22T11:17:29.056Z - info: Render request 5 queued for execution and waiting for available worker fromEmitProfile=true, rootId=qfoby0rw8bwznoc, id=qfoby0rw8bwznoc
+2023-02-22T11:17:29.071Z - info: Starting rendering request 5 rootId=qfoby0rw8bwznoc, id=qfoby0rw8bwznoc, fromEmitProfile=true
+2023-02-22T11:17:29.072Z - info: Rendering template { name: events-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=qfoby0rw8bwznoc, id=qfoby0rw8bwznoc, fromEmitProfile=true
+2023-02-22T11:17:29.333Z - warn: Error when processing render request 5
+(because) error when evaluating custom script /Events/events-script
+special_count is not defined
+
+(sandbox.js line 19:17)
+
+  17 |     req.data.events.push(names);
+  18 |     req.data.events.push(counts);
+> 19 |     console.log(special_count);
+     |                 ^
+  20 |     return req.data.events;
+  21 | }
+
+
+ReferenceError: special_count is not defined
+    at Object.beforeRender (sandbox.js:19:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async executionFn (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\executeScript.js:67:11)
+    at async run (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-core\lib\worker\sandbox\createSandbox.js:184:24)
+    at async WorkerReporter._runInSandbox (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-core\lib\worker\sandbox\runInSandbox.js:180:14)
+    at async executeScript (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\executeScript.js:122:12)
+    at async Scripts._runScript (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\worker.js:140:30)
+    at async Scripts.handleBeforeRender (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-scripts\lib\worker.js:64:7)
+    at async ListenerCollection.fire (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+    at async beforeRender (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:25:5) rootId=qfoby0rw8bwznoc, id=qfoby0rw8bwznoc, fromEmitProfile=true
+2023-02-22T11:17:29.335Z - warn: Rendering request 5 finished with error in 278 ms rootId=qfoby0rw8bwznoc, id=qfoby0rw8bwznoc, fromEmitProfile=true
+2023-02-22T11:17:33.782Z - info: Render request 6 queued for execution and waiting for available worker fromEmitProfile=true, rootId=58t2iwn6mt2sqet, id=58t2iwn6mt2sqet
+2023-02-22T11:17:33.796Z - info: Starting rendering request 6 rootId=58t2iwn6mt2sqet, id=58t2iwn6mt2sqet, fromEmitProfile=true
+2023-02-22T11:17:33.797Z - info: Rendering template { name: events-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=58t2iwn6mt2sqet, id=58t2iwn6mt2sqet, fromEmitProfile=true
+2023-02-22T11:17:34.364Z - warn: Page error: SyntaxError: Unexpected token ',' rootId=58t2iwn6mt2sqet, id=58t2iwn6mt2sqet, fromEmitProfile=true
+2023-02-22T11:17:34.403Z - info: pdf-utils is starting pdf processing rootId=58t2iwn6mt2sqet, id=58t2iwn6mt2sqet, fromEmitProfile=true
+2023-02-22T11:17:34.405Z - info: Starting rendering (child) request rootId=58t2iwn6mt2sqet, id=sx6ua5vol0fha10, fromEmitProfile=true
+2023-02-22T11:17:34.405Z - info: Rendering template { name: events-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=58t2iwn6mt2sqet, id=sx6ua5vol0fha10, fromEmitProfile=true
+2023-02-22T11:17:34.662Z - info: Rendering (child) request finished in 866 ms rootId=58t2iwn6mt2sqet, id=sx6ua5vol0fha10, fromEmitProfile=true
+2023-02-22T11:17:34.663Z - info: pdf-utils pdf processing was finished rootId=58t2iwn6mt2sqet, id=58t2iwn6mt2sqet, fromEmitProfile=true
+2023-02-22T11:17:34.664Z - info: Rendering request 6 finished in 879 ms rootId=58t2iwn6mt2sqet, id=58t2iwn6mt2sqet, fromEmitProfile=true
+2023-02-22T11:19:11.318Z - info: Render request 7 queued for execution and waiting for available worker fromEmitProfile=true, rootId=s2qu6l7azurahfa, id=s2qu6l7azurahfa
+2023-02-22T11:19:11.337Z - info: Starting rendering request 7 rootId=s2qu6l7azurahfa, id=s2qu6l7azurahfa, fromEmitProfile=true
+2023-02-22T11:19:11.338Z - info: Rendering template { name: events-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=s2qu6l7azurahfa, id=s2qu6l7azurahfa, fromEmitProfile=true
+2023-02-22T11:19:11.996Z - info: pdf-utils is starting pdf processing rootId=s2qu6l7azurahfa, id=s2qu6l7azurahfa, fromEmitProfile=true
+2023-02-22T11:19:11.998Z - info: Starting rendering (child) request rootId=s2qu6l7azurahfa, id=cmz2kf0dw66la1r, fromEmitProfile=true
+2023-02-22T11:19:11.998Z - info: Rendering template { name: events-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=s2qu6l7azurahfa, id=cmz2kf0dw66la1r, fromEmitProfile=true
+2023-02-22T11:19:12.256Z - info: Rendering (child) request finished in 924 ms rootId=s2qu6l7azurahfa, id=cmz2kf0dw66la1r, fromEmitProfile=true
+2023-02-22T11:19:12.257Z - info: pdf-utils pdf processing was finished rootId=s2qu6l7azurahfa, id=s2qu6l7azurahfa, fromEmitProfile=true
+2023-02-22T11:19:12.257Z - info: Rendering request 7 finished in 937 ms rootId=s2qu6l7azurahfa, id=s2qu6l7azurahfa, fromEmitProfile=true
+2023-02-22T11:20:02.248Z - info: Render request 8 queued for execution and waiting for available worker fromEmitProfile=true, rootId=bsvaevbu76qlkgh, id=bsvaevbu76qlkgh
+2023-02-22T11:20:02.263Z - info: Starting rendering request 8 rootId=bsvaevbu76qlkgh, id=bsvaevbu76qlkgh, fromEmitProfile=true
+2023-02-22T11:20:02.263Z - info: Rendering template { name: events-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=bsvaevbu76qlkgh, id=bsvaevbu76qlkgh, fromEmitProfile=true
+2023-02-22T11:20:02.945Z - info: pdf-utils is starting pdf processing rootId=bsvaevbu76qlkgh, id=bsvaevbu76qlkgh, fromEmitProfile=true
+2023-02-22T11:20:02.946Z - info: Starting rendering (child) request rootId=bsvaevbu76qlkgh, id=o8br736p94qjctj, fromEmitProfile=true
+2023-02-22T11:20:02.947Z - info: Rendering template { name: events-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=bsvaevbu76qlkgh, id=o8br736p94qjctj, fromEmitProfile=true
+2023-02-22T11:20:03.204Z - info: Rendering (child) request finished in 940 ms rootId=bsvaevbu76qlkgh, id=o8br736p94qjctj, fromEmitProfile=true
+2023-02-22T11:20:03.205Z - info: pdf-utils pdf processing was finished rootId=bsvaevbu76qlkgh, id=bsvaevbu76qlkgh, fromEmitProfile=true
+2023-02-22T11:20:03.206Z - info: Rendering request 8 finished in 955 ms rootId=bsvaevbu76qlkgh, id=bsvaevbu76qlkgh, fromEmitProfile=true
+2023-02-22T11:20:20.535Z - info: Render request 9 queued for execution and waiting for available worker fromEmitProfile=true, rootId=371fk433skjjkmr, id=371fk433skjjkmr
+2023-02-22T11:20:20.550Z - info: Starting rendering request 9 rootId=371fk433skjjkmr, id=371fk433skjjkmr, fromEmitProfile=true
+2023-02-22T11:20:20.550Z - info: Rendering template { name: musicians-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=371fk433skjjkmr, id=371fk433skjjkmr, fromEmitProfile=true
+2023-02-22T11:20:21.195Z - info: pdf-utils is starting pdf processing rootId=371fk433skjjkmr, id=371fk433skjjkmr, fromEmitProfile=true
+2023-02-22T11:20:21.201Z - info: Starting rendering (child) request rootId=371fk433skjjkmr, id=rjb84y48seee6s8, fromEmitProfile=true
+2023-02-22T11:20:21.203Z - info: Rendering template { name: musicians-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=371fk433skjjkmr, id=rjb84y48seee6s8, fromEmitProfile=true
+2023-02-22T11:20:21.519Z - info: Rendering (child) request finished in 960 ms rootId=371fk433skjjkmr, id=rjb84y48seee6s8, fromEmitProfile=true
+2023-02-22T11:20:21.522Z - info: pdf-utils pdf processing was finished rootId=371fk433skjjkmr, id=371fk433skjjkmr, fromEmitProfile=true
+2023-02-22T11:20:21.523Z - info: Rendering request 9 finished in 983 ms rootId=371fk433skjjkmr, id=371fk433skjjkmr, fromEmitProfile=true
+2023-02-22T11:24:12.869Z - info: Render request 10 queued for execution and waiting for available worker fromEmitProfile=true, rootId=k9zpslgilih0ovr, id=k9zpslgilih0ovr
+2023-02-22T11:24:12.888Z - info: Starting rendering request 10 rootId=k9zpslgilih0ovr, id=k9zpslgilih0ovr, fromEmitProfile=true
+2023-02-22T11:24:12.888Z - info: Rendering template { name: events-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=k9zpslgilih0ovr, id=k9zpslgilih0ovr, fromEmitProfile=true
+2023-02-22T11:24:13.572Z - info: pdf-utils is starting pdf processing rootId=k9zpslgilih0ovr, id=k9zpslgilih0ovr, fromEmitProfile=true
+2023-02-22T11:24:13.583Z - info: Starting rendering (child) request rootId=k9zpslgilih0ovr, id=fb3qfw2opl8a17u, fromEmitProfile=true
+2023-02-22T11:24:13.584Z - info: Rendering template { name: events-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=k9zpslgilih0ovr, id=fb3qfw2opl8a17u, fromEmitProfile=true
+2023-02-22T11:24:13.838Z - info: Rendering (child) request finished in 955 ms rootId=k9zpslgilih0ovr, id=fb3qfw2opl8a17u, fromEmitProfile=true
+2023-02-22T11:24:13.840Z - info: pdf-utils pdf processing was finished rootId=k9zpslgilih0ovr, id=k9zpslgilih0ovr, fromEmitProfile=true
+2023-02-22T11:24:13.841Z - info: Rendering request 10 finished in 970 ms rootId=k9zpslgilih0ovr, id=k9zpslgilih0ovr, fromEmitProfile=true

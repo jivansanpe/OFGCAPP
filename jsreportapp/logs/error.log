@@ -16,3 +16,41 @@ ReferenceError: data is not defined
     at Socket.emit (node:events:390:28)
     at Socket.emit (node:domain:537:15)
     at addChunk (node:internal/streams/readable:315:12) rootId=9xk55ej49cc4yie, id=9xk55ej49cc4yie
+2023-02-21T21:55:44.235Z - error: Report render failed
+(because) error when evaluating custom script /Authors/authors-script
+connect ECONNREFUSED 127.0.0.1:8000
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at Function.AxiosError.from (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:823:14)
+    at RedirectableRequest.handleRequestError (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:2953:25)
+    at RedirectableRequest.emit (node:events:390:28)
+    at RedirectableRequest.emit (node:domain:475:12)
+    at ClientRequest.eventHandlers.<computed> (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\follow-redirects\index.js:14:24)
+    at ClientRequest.emit (node:events:390:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at Socket.socketErrorListener (node:_http_client:447:9)
+    at Socket.emit (node:events:390:28)
+    at Socket.emit (node:domain:475:12) rootId=keoaeaoj6vkyog4, id=keoaeaoj6vkyog4
+2023-02-21T22:36:28.119Z - error: Report render failed
+(because) error when evaluating custom script /Musicians/authors-script
+Request failed with status code 404
+AxiosError: Request failed with status code 404
+    at settle (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:1894:12)
+    at IncomingMessage.handleStreamEnd (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:2932:11)
+    at IncomingMessage.emit (node:events:402:35)
+    at IncomingMessage.emit (node:domain:537:15)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) rootId=jb7bi4lhhi3mo9q, id=jb7bi4lhhi3mo9q
+2023-02-22T10:54:07.002Z - error: Report render failed
+(because) error when evaluating custom script /Musicians/musicians-script
+connect ECONNREFUSED 127.0.0.1:8000
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at Function.AxiosError.from (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:823:14)
+    at RedirectableRequest.handleRequestError (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\axios\dist\node\axios.cjs:2953:25)
+    at RedirectableRequest.emit (node:events:390:28)
+    at RedirectableRequest.emit (node:domain:475:12)
+    at ClientRequest.eventHandlers.<computed> (D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\node_modules\follow-redirects\index.js:14:24)
+    at ClientRequest.emit (node:events:390:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at Socket.socketErrorListener (node:_http_client:447:9)
+    at Socket.emit (node:events:390:28)
+    at Socket.emit (node:domain:475:12) rootId=t5wqxi4a85lddty, id=t5wqxi4a85lddty

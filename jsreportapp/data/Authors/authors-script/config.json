@@ -1,0 +1,19 @@
+{
+    "name": "authors-script",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1677016506676
+    },
+    "modificationDate": {
+        "$$date": 1677064695652
+    },
+    "scope": "template",
+    "isGlobal": false,
+    "entitySet": "scripts",
+    "type": "entity",
+    "key": "VNLlqmTIuctRhFCu",
+    "shortid": "R0lgp_c",
+    "_id": "ht3l5xu26NfTw6ny",
+    "$entitySet": "scripts"
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Events",
+    "__entitySet": "folders",
+    "__name": "Musicians",
+    "creationDate": {
+        "$$date": 1677063324751
+    },
+    "modificationDate": {
+        "$$date": 1677063368053
+    },
+    "shortid": "utG0irm",
+    "_id": "HGkYPazP08CZjTxP",
+    "$entitySet": "folders"
+}

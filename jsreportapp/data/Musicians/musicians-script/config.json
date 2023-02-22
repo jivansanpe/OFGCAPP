@@ -1,0 +1,19 @@
+{
+    "name": "musicians-script",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1677016710016
+    },
+    "modificationDate": {
+        "$$date": 1677063175889
+    },
+    "scope": "template",
+    "isGlobal": false,
+    "entitySet": "scripts",
+    "type": "entity",
+    "key": "VNLlqmTIuctRhFCu",
+    "shortid": "LzD1Qor",
+    "_id": "427PZdoDY4sNDKoD",
+    "$entitySet": "scripts"
+}
