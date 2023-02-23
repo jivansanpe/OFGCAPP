@@ -4808,3 +4808,56 @@ ReferenceError: special_count is not defined
 2023-02-22T11:24:13.838Z - info: Rendering (child) request finished in 955 ms rootId=k9zpslgilih0ovr, id=fb3qfw2opl8a17u, fromEmitProfile=true
 2023-02-22T11:24:13.840Z - info: pdf-utils pdf processing was finished rootId=k9zpslgilih0ovr, id=k9zpslgilih0ovr, fromEmitProfile=true
 2023-02-22T11:24:13.841Z - info: Rendering request 10 finished in 970 ms rootId=k9zpslgilih0ovr, id=k9zpslgilih0ovr, fromEmitProfile=true
+2023-02-23T00:39:17.764Z - info: Initializing jsreport (version: 3.10.0, configuration file: jsreport.config.json, nodejs: 16.13.1)
+2023-02-23T00:39:17.767Z - info: Searching for available extensions in D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\
+2023-02-23T00:39:17.778Z - info: Extensions location cache contains up to date information, skipping crawling in D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\
+2023-02-23T00:39:17.832Z - info: Found 35 extension(s)
+2023-02-23T00:39:17.952Z - info: Using extension base@3.0.1
+2023-02-23T00:39:17.959Z - info: Using extension child-templates@3.1.0
+2023-02-23T00:39:17.964Z - info: Using extension cli@3.2.3
+2023-02-23T00:39:17.971Z - info: Using extension components@3.3.0
+2023-02-23T00:39:17.974Z - info: Using extension data@3.1.0
+2023-02-23T00:39:17.975Z - info: Using extension express@3.6.0
+2023-02-23T00:39:18.615Z - info: Using extension freeze@3.0.1
+2023-02-23T00:39:18.618Z - info: Using extension fs-store@3.2.4
+2023-02-23T00:39:18.823Z - info: Using extension handlebars@3.2.1
+2023-02-23T00:39:18.826Z - info: Using extension import-export@3.2.0
+2023-02-23T00:39:18.850Z - info: Using extension jsrender@3.0.0
+2023-02-23T00:39:18.851Z - info: Using extension licensing@3.0.2
+2023-02-23T00:39:18.917Z - info: Using extension localization@3.2.1
+2023-02-23T00:39:18.920Z - info: Using extension npm@3.1.2
+2023-02-23T00:39:18.926Z - info: Using extension pdf-utils@3.7.0
+2023-02-23T00:39:18.930Z - info: Using extension reports@3.1.1
+2023-02-23T00:39:18.936Z - info: Using extension tags@3.1.1
+2023-02-23T00:39:18.942Z - info: Using extension text@3.0.0
+2023-02-23T00:39:18.944Z - info: Using extension version-control@3.1.2
+2023-02-23T00:39:18.983Z - info: Using extension assets@3.6.0
+2023-02-23T00:39:19.015Z - info: Using extension authorization@3.3.0
+2023-02-23T00:39:19.023Z - info: Using extension browser-client@3.1.1
+2023-02-23T00:39:19.030Z - info: Using extension chrome-pdf@3.3.0
+2023-02-23T00:39:19.034Z - info: Using extension docx@3.6.0
+2023-02-23T00:39:19.039Z - info: Using extension html-to-xlsx@3.3.0
+2023-02-23T00:39:19.235Z - info: html-to-xlsx detected chrome as available html engine
+2023-02-23T00:39:19.236Z - info: Using extension pptx@3.4.0
+2023-02-23T00:39:19.240Z - info: Using extension scheduling@3.0.3
+2023-02-23T00:39:19.293Z - info: Using extension scripts@3.4.0
+2023-02-23T00:39:19.295Z - info: Using extension static-pdf@3.0.1
+2023-02-23T00:39:19.297Z - info: Using extension studio@3.9.0
+2023-02-23T00:39:19.517Z - info: Using extension xlsx@3.4.0
+2023-02-23T00:39:19.567Z - info: Using extension public-templates@3.0.0
+2023-02-23T00:39:19.570Z - info: Using extension sample-template@3.2.1
+2023-02-23T00:39:19.574Z - info: Using extension studio-theme-dark@3.0.1
+2023-02-23T00:39:19.577Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2023-02-23T00:39:19.577Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2023-02-23T00:39:19.578Z - info: Using fs provider for template store.
+2023-02-23T00:39:19.587Z - info: fs store is persisting using fs for D:\Clase\Segundo\Proyecto\OFGCAPP\jsreportapp\data
+2023-02-23T00:39:19.592Z - info: fs store is loading data
+2023-02-23T00:39:19.632Z - info: fs store is initialized successfully
+2023-02-23T00:39:19.652Z - info: Creating default express app.
+2023-02-23T00:39:19.707Z - info: jsreport server successfully started on http port: 5488
+2023-02-23T00:39:19.709Z - info: Verifying license key free
+2023-02-23T00:39:20.130Z - info: Using enterprise trial license
+2023-02-23T00:39:20.133Z - info: Initializing worker threads
+2023-02-23T00:39:20.526Z - info: 2 worker threads initialized in 393ms
+2023-02-23T00:39:20.526Z - info: Starting temp files cleanup with 180000ms threshold
+2023-02-23T00:39:20.527Z - info: reporter initialized

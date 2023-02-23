@@ -30,17 +30,19 @@ export class FormComponent implements OnInit {
   eventId: any;
   name = '';
   description = '';
+  date = '';
+  category = '';
   toastColor: string;
   token: any;
   image: any;
-  imageDisplayed: any;
+  imageDisplayed: any = null;
   @Input() type: string;
   @Input() page: string;
   constructor(private router: Router, private sanitizer: DomSanitizer, private photoService: PhotoService,
     private pieceService: PieceService, private tokenService: TokenService, private eventsService: EventsService,
     private activatedRoute: ActivatedRoute, private musicianService: MusicianService, private authorService: AuthorService, private toastController: ToastController) { }
   ngOnInit() {
-    console.log('awa')
+    console.log(this.imageDisplayed)
     if (this.page == 'Create' && this.type == 'Piece') {
       this.getAllEvents();
       this.getAllAuthors();
@@ -203,6 +205,26 @@ export class FormComponent implements OnInit {
         )
         break;
       }
+      case 'Event': {
+        this.newElement = new Event(this.name, this.description, this.date, this.category);
+        this.eventsService.createEvent(this.newElement, blob).subscribe(
+          data => {
+            this.toastColor = 'success'
+            this.presentToast(data.message);
+            this.router.navigate([`/${this.type.toLowerCase()}-list`]);
+          },
+          err => {
+            this.toastColor = 'danger'
+            console.log(this.newElement);
+            if (err.status == 404) {
+              this.presentToast(err.error.message);
+            } else {
+              this.presentToast(err.error.message);
+            }
+          }
+        )
+        break;
+      }
     }
 
   }
@@ -213,7 +235,7 @@ export class FormComponent implements OnInit {
       return;
     }
     let blob: any;
-    if (this.type != 'Piece') {
+    if (this.type != 'Piece' && this.imageDisplayed != null) {
       const response = await fetch(this.image);
       blob = await response.blob();
     }
@@ -244,11 +266,12 @@ export class FormComponent implements OnInit {
           data => {
             this.toastColor = 'success'
             this.presentToast(data.message);
+            console.log(data.message);
             this.router.navigate([`/${this.type.toLowerCase()}-list`]);
           },
           err => {
             this.toastColor = 'danger'
-            console.log(this.newElement);
+            console.log(err.message);
             if (err.status == 404) {
               this.presentToast(err.error.message);
             } else {

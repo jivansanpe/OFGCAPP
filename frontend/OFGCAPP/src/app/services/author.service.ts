@@ -38,10 +38,10 @@ export class AuthorService {
     data.append("description", author.description);
     return this.httpClient.post<any>(this.endpoint, data, this.httpOptionsUsingUrlEncoded);
   }
-  public updateAuthor(id: any, author: Author, blob: Blob): Observable<any> {
+  public updateAuthor(id: any, author: Author, blob?: Blob): Observable<any> {
     let data = new FormData();
     data.append("name", author.name);
-    data.append("image", blob);
+
     data.append("description", author.description);
     return this.httpClient.put<any>(this.endpoint + '/' + id, data, this.httpOptionsUsingUrlEncoded);
   }

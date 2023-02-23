@@ -19,6 +19,7 @@ class MusicianResource extends JsonResource
             'name' => $this->name,
             'image' => $this->image,
             'description' => $this->description,
+            'events' => $this->events,
         ];
     }
 }

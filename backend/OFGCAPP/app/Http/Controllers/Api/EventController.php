@@ -120,17 +120,7 @@ class EventController extends BaseController
      */
     public function update(Request $request, Event $event)
     {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-            'description' => 'required',
-            'date' => 'required',
-            'category' => 'required',
-        ]);
 
-        if ($validator->fails()) {
-            return $this->sendError('Error validation', $validator->errors());
-        }
         if($request->input('image')){
             $image_name = "storage/".$event->image;
             if(File::exists($image_name)) {

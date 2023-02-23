@@ -32,8 +32,16 @@ export class EventsService {
         // catchError(this.handleError<Story[]>(`Get story id=${id}`))
       );
   }
-  public createEvent(event: Event): Observable<any> {
-    return this.httpClient.post<any>(this.endpoint, event, this.httpOptionsUsingUrlEncoded);
+  public createEvent(event: Event, blob?: Blob): Observable<any> {
+    let data = new FormData();
+    data.append("name", event.name);
+    if (blob) {
+      data.append("image", blob);
+    }
+    data.append("description", event.description);
+    data.append("date", event.date);
+    data.append("category", event.category);
+    return this.httpClient.post<any>(this.endpoint, data, this.httpOptionsUsingUrlEncoded);
   }
   public updateEvent(id: any, event: Event): Observable<any> {
     return this.httpClient.put<any>(this.endpoint + '/' + id, event, this.httpOptionsUsingUrlEncoded);

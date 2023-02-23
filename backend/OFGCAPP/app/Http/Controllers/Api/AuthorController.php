@@ -100,17 +100,16 @@ class AuthorController extends BaseController
      * @param  \App\Models\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Author $author)
+    public function update(Author $author, Request $request )
     {   
-        $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-            'description' => 'required',
-        ]);
+        // $validator = Validator::make($request->all(), [
+        //     'name' => 'required',
+        //     'description' => 'required',
+        // ]);
 
-        if ($validator->fails()) {
-            return $this->sendError(''.$request->name, $validator->errors());
-        }
+        // if ($validator->fails()) {
+        //     return $this->sendError('Error validation', $validator->errors());
+        // }
         if($request->input('image')){
             $image_name = "storage/".$author->image;
             if(File::exists($image_name)) {
@@ -128,7 +127,7 @@ class AuthorController extends BaseController
         
         
         return response()->json([
-            'message' => "Author updated successfully!",
+            'message' => $request->file('name'),
             'author' => $author
         ], 200);
     }
