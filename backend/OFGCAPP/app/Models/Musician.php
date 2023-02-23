@@ -14,4 +14,5 @@ class Musician extends Model
     {
         return $this->belongsToMany(Event::class);
     }
+    
 }

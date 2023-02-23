@@ -1,17 +1,11 @@
 <?php
 
 namespace Tests\Unit;
+
 use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use App\User;
 use Tests\TestCase;
 use App\Models\Event;
-use App\Models\Musician;
-use App\Http\Resources\EventResource;
-use App\Http\Resources\MusicianResource;
-use App\Http\Controllers\Api\MusicianController;
-use Illuminate\Http\Request;
+
 class EventTest extends TestCase
 {
     use WithoutMiddleware;
@@ -35,5 +29,62 @@ class EventTest extends TestCase
             'message' => "Event saved successfully!"
         ]);
     }
-}
 
+    public function test_can_get_list_of_events()
+    {
+        $response = $this->get('/api/events');
+        $response->assertStatus(200);
+    }
+
+    public function test_can_get_list_of_events_with_pieces()
+    {
+        $response = $this->get('/api/events?include=pieces');
+        $response->assertStatus(200);
+    }
+
+    public function test_can_create_event()
+    {
+        $data = [
+            'name' => 'Test Event',
+            'description' => 'Test description',
+            'date' => '2023-02-25',
+            'category' => 'Test category'
+        ];
+
+        $response = $this->post('/api/events', $data);
+        $response->assertStatus(200);
+    }
+
+    public function test_can_update_event()
+    {
+        $event = Event::create([
+            'name' => 'Test Event',
+            'description' => 'Test description',
+            'date' => '2023-02-23',
+            'category' => 'Test category'
+        ]);
+
+        $data = [
+            'name' => 'Updated Event Name',
+            'description' => 'Updated Event Description',
+            'date' => '2023-02-25',
+            'category' => 'Updated Event Category'
+        ];
+
+        $response = $this->put('/api/events/' . $event->id, $data);
+        $response->assertStatus(200);
+    }
+
+    public function test_can_delete_event()
+    {
+        $event = Event::create([
+            'name' => 'Test Event',
+            'description' => 'Test description',
+            'date' => '2023-02-25',
+            'category' => 'Test category'
+        ]);
+
+        $response = $this->delete('/api/events/' . $event->id);
+        $response->assertStatus(200);
+    }
+}
