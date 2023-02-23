@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Login } from '../models/login';
 import { ToastController } from '@ionic/angular';
+import { HttpClient } from '@angular/common/http';
 
 import { AuthService } from '../services/auth.service';
 import { TokenService } from '../services/token.service';
@@ -19,7 +20,7 @@ export class LoginPage implements OnInit {
   password = '';
   email = '';
   toastColor: string;
-  constructor(private tokenService: TokenService, private toastController: ToastController, private authService: AuthService, private router: Router, public formBuilder: FormBuilder) { }
+  constructor(public http: HttpClient, private tokenService: TokenService, private toastController: ToastController, private authService: AuthService, private router: Router, public formBuilder: FormBuilder) { }
   ngOnInit() {
 
   }

@@ -114,4 +114,6 @@ export class RegisterPage implements OnInit {
     return regex.test(password);
   }
 
+  
+
 }
