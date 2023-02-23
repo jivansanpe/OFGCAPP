@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Login } from '../../models/login';
 import { ToastController } from '@ionic/angular';
+import { HttpClient } from '@angular/common/http';
 
 import { AuthService } from '../../services/auth.service';
 import { TokenService } from '../../services/token.service';
@@ -18,7 +19,8 @@ export class LoginPage implements OnInit {
   loginUser: Login;
   password = '';
   email = '';
-  constructor(private tokenService: TokenService, private toastController: ToastController, private authService: AuthService, private router: Router, public formBuilder: FormBuilder) { }
+  toastColor: string;
+  constructor(public http: HttpClient, private tokenService: TokenService, private toastController: ToastController, private authService: AuthService, private router: Router, public formBuilder: FormBuilder) { }
   ngOnInit() {
 
   }
@@ -33,7 +35,22 @@ export class LoginPage implements OnInit {
     this.vaciar();
   }
   onLogin(): void {
-    this.loginUser = new Login(this.email, this.password,);
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(this.email)) {
+      this.toastColor = 'danger';
+      this.presentToast("Invalid email address. The email adress must have a valid format.");
+      return;
+    }
+
+    const passwordRegex = /^[a-zA-Z0-9]+$/;
+    if (!passwordRegex.test(this.password)) {
+      this.toastColor = 'danger';
+      this.presentToast("Invalid password. Passwords should only contain letters and/or digits.");
+      return;
+    }
+
+    this.loginUser = new Login(this.email, btoa(this.password));
     this.authService.loginUser(this.loginUser).subscribe(
       data => {
         this.isLogged = true;
@@ -52,8 +69,8 @@ export class LoginPage implements OnInit {
   async presentToast(mss: string) {
     const toast = await this.toastController.create({
       message: mss,
-      duration: 2800,
-      position: 'middle',
+      duration: 2500,
+      position: 'top',
       color: "danger",
       icon: "alert-circle-outline",
       animated: true

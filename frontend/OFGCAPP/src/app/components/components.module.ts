@@ -7,6 +7,7 @@ import { TopPartComponent } from './top-part/top-part.component'
 import { CardComponent } from './card/card.component'
 import { FormComponent } from './form/form.component'
 import { IonicModule } from '@ionic/angular';
+import { TabComponent } from './tab/tab.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { IonicModule } from '@ionic/angular';
     HeaderComponent,
     TopPartComponent,
     CardComponent,
+    TabComponent,
     FormComponent
   ],
   exports: [
@@ -21,6 +23,7 @@ import { IonicModule } from '@ionic/angular';
     HeaderComponent,
     TopPartComponent,
     CardComponent,
+    TabComponent,
     FormComponent
   ],
   imports: [

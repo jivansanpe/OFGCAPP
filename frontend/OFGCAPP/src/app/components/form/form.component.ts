@@ -138,6 +138,17 @@ export class FormComponent implements OnInit {
       this.presentToast('Please fill all fields');
       return;
     }
+    if (this.name.length > 50) {
+      this.toastColor = 'danger'
+      this.presentToast('The name can not be longer than 50 characters.');
+      return;
+    }
+
+    if (this.description.length > 100) {
+      this.toastColor = 'danger'
+      this.presentToast('The description can not be longer than 100 characters.');
+      return;
+    }
     let blob: any;
     if (this.type != 'Piece') {
       const response = await fetch(this.image);

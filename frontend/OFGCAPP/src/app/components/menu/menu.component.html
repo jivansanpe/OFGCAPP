@@ -1,27 +1,27 @@
 <ion-menu side="end" contentId="main-content">
   <div class="border-div">
     <ion-header>
-      <ion-title>Menu </ion-title>
+      <ion-title>Menu</ion-title>
     </ion-header>
   </div>
   <ion-content class="ion-padding">
     <div class="item-div">
-      <ion-item [ngClass]="{'item': activeList != 'event-list', 'highlighted' : activeList === 'event-list' }"
+      <ion-item [ngClass]="{'item': activeList !== 'event-list', 'highlighted' : activeList === 'event-list' }"
         lines="full" button detail="false" (click)="goToPage('event-list')">
         <ion-icon name="pricetag-outline"></ion-icon>Events</ion-item>
     </div>
     <div class="item-div">
-      <ion-item [ngClass]="{'item': activeList != 'musician-list', 'highlighted' : activeList === 'musician-list' }"
+      <ion-item [ngClass]="{'item': activeList !== 'musician-list', 'highlighted' : activeList === 'musician-list' }"
         lines="full" button detail="false" (click)="goToPage('musician-list')">
         <ion-icon name="musical-notes-outline"></ion-icon>Musicians</ion-item>
     </div>
     <div class="item-div">
-      <ion-item [ngClass]="{'item': activeList != 'author-list', 'highlighted' : activeList === 'author-list' }"
+      <ion-item [ngClass]="{'item': activeList !== 'author-list', 'highlighted' : activeList === 'author-list' }"
         lines="full" button detail="false" (click)="goToPage('author-list')">
         <ion-icon name="book-outline"></ion-icon>Authors</ion-item>
     </div>
     <div class="item-div">
-      <ion-item [ngClass]="{'item': activeList != 'piece-list', 'highlighted' : activeList === 'piece-list' }"
+      <ion-item [ngClass]="{'item': activeList !== 'piece-list', 'highlighted' : activeList === 'piece-list' }"
         lines="full" button detail="false" (click)="goToPage('piece-list')">
         <ion-icon name="receipt-outline"></ion-icon>Pieces</ion-item>
     </div>

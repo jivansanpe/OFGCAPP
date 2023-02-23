@@ -11,7 +11,9 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() { }
+
   goToHome() {
-    this.router.navigateByUrl("/event-list");
+    this.router.navigateByUrl("/event-list", { replaceUrl: true });
   }
+  
 }

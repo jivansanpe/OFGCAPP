@@ -1,0 +1,30 @@
+// Definimos la clase de nuestro tab
+.my-tab {
+    // Establecemos la posición relativa para el componente
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+
+    // Definimos la altura del tab-bar
+    ion-tab-bar {
+      height: 56px;
+  
+      // Establecemos un gradiente de fondo
+      background: linear-gradient(to bottom, #004D4D, #02a5a5);
+      color: 004D4D;
+  
+      // Establecemos un borde superior
+      border-top: 1px solid #004D4D;
+  
+      // Modificamos los estilos de los botones dentro del tab-bar
+      ion-tab-button {
+        --color: #004D4D;
+        --color-selected: #004D4D;
+        --background-selected: #ffffff11;
+        --ripple-color: #004D4D;
+      }
+    }
+  }
+  

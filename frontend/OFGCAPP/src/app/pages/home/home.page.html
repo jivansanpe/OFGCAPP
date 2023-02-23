@@ -2,9 +2,17 @@
   <div class='circle'></div>
   <ion-img class="home-logo" src="../../assets/images/logo.jpg"></ion-img>
 
-  <div class='tap'>
+  <!-- <div class='tap'>
     <ion-text (click)="goToEventlist()">Tap to start</ion-text>
-  </div>
+  </div> -->
+  <ion-slides (click)="goToEventlist()">
+    <ion-slide>
+      <ion-img class="A" src="assets/img/elmarhombre.jpg" alt="A"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img class="B" src="assets/img/mar.jpg" alt="B"></ion-img>
+    </ion-slide>
+  </ion-slides>
   <div class='circle2'></div>
   <div class='tap'>
     <ion-text class="logText" *ngIf="!isLoggedIn" (click)="goToLogin()">Log in as admin</ion-text>

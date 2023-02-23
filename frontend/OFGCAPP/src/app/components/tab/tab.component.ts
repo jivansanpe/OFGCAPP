@@ -1,15 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common'
 import { TokenService } from '../../services/token.service';
 const TOKEN_KEY = 'api_token';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  selector: 'app-tab',
+  templateUrl: './tab.component.html',
+  styleUrls: ['./tab.component.scss'],
 })
-export class MenuComponent implements OnInit {
+export class TabComponent implements OnInit {
   isLoggedIn: any;
   activeList = '';
   constructor(private router: Router, private tokenService: TokenService, private location: Location) { }
