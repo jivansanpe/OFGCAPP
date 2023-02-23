@@ -91,6 +91,19 @@ As we can see, the admin has full control of all the CRUDS while the average use
 The basic prototype helped me to obtain the style and feel that I want to convey through the app,
 along with the navigation structure and the page's design.
 
+## Style
+
+The colors of the OFGC website, which are turquoise blue, brown, and white, have been used as the predominant shades.
+
+## Usability and accessibility
+
+- The application is easy to understand: It is a simple agenda where events can be added, modified, deleted, and consulted. It is designed to be accessed through a simple login where the user needs to provide their email and password. Both fields have validations. It should be noted that the password is encrypted in base 64 when it reaches the backend.
+- Navigation is up to the user's preference. It can be done through a stack navigation (using classic "back" buttons and back arrows), a side menu (swiping the screen on the main page to display a simple menu with several routes), and the classic tab bar buttons of any mobile device.
+- The fields to fill have a placeholder, or in their absence, a label, that clearly indicates what type of data needs to be entered. It is difficult for a user to be confused, and if so, the validations and their respective messages will do their job.
+- The icons are representative of the function to be performed. For example, the profile icon is unmistakable, and once inside, the organization is clean and tidy with more representative icons and accompanying text.
+- At the code level, it is important to note that "alt" (optional informative text for each element) is used to add more clarity to the code and make scaling easier.
+The font size and colors are pleasing to the eye and give a good sense of polish to the project.
+
 ## Project organization
 
 A basic project and task organization of this app was done in my Github Projects tool.
