@@ -161,6 +161,7 @@ export class FormComponent implements OnInit {
         this.pieceService.createPiece(this.newElement).subscribe(
           data => {
             this.toastColor = 'success'
+            console.log(data.message);
             this.presentToast(data.message);
             this.router.navigate([`/${this.type.toLowerCase()}-list`]);
           },
@@ -276,13 +277,13 @@ export class FormComponent implements OnInit {
         this.authorService.updateAuthor(this.id, this.newElement, blob).subscribe(
           data => {
             this.toastColor = 'success'
-            this.presentToast(data.message);
             console.log(data.message);
+            this.presentToast(data.message);
             this.router.navigate([`/${this.type.toLowerCase()}-list`]);
           },
           err => {
             this.toastColor = 'danger'
-            console.log(err.message);
+            console.log(err);
             if (err.status == 404) {
               this.presentToast(err.error.message);
             } else {

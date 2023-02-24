@@ -50,7 +50,7 @@ export class LoginPage implements OnInit {
       return;
     }
 
-    this.loginUser = new Login(this.email, btoa(this.password));
+    this.loginUser = new Login(this.email, this.password);
     this.authService.loginUser(this.loginUser).subscribe(
       data => {
         this.isLogged = true;
@@ -59,7 +59,7 @@ export class LoginPage implements OnInit {
       },
       err => {
         if (err.status == 404) {
-          this.presentToast("Incorrect email or password");
+          this.presentToast(err.message);
         } else {
           this.presentToast("Can not connect to server")
         }

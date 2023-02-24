@@ -36,15 +36,20 @@ export class AuthorService {
     data.append("name", author.name);
     data.append("image", blob);
     data.append("description", author.description);
+    data.append("method", 'POST');
     return this.httpClient.post<any>(this.endpoint, data, this.httpOptionsUsingUrlEncoded);
   }
-  public updateAuthor(id: any, author: Author, blob?: Blob): Observable<any> {
-    let data = new FormData();
-    data.append("name", author.name);
 
+  public updateAuthor(id: any, author: Author, blob: Blob): Observable<any> {
+    let data = new FormData();
+    data.append("id", id);
+    data.append("name", author.name);
     data.append("description", author.description);
-    return this.httpClient.put<any>(this.endpoint + '/' + id, data, this.httpOptionsUsingUrlEncoded);
+    data.append("method", 'PUT');
+    data.append("image", blob);
+    return this.httpClient.post<any>(this.endpoint, data, this.httpOptionsUsingUrlEncoded);
   }
+
   public deleteAuthor(id: any) {
     return this.httpClient.delete<any>(this.endpoint + '/' + id, this.httpOptionsUsingUrlEncoded);
   }

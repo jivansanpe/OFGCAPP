@@ -9,15 +9,6 @@ import { NewUser } from '../models/new-user';
   providedIn: 'root'
 })
 export class AuthService {
-  getUserProfile() {
-      throw new Error('Method not implemented.');
-  }
-  updateUserProfile(updatedUserProfile: { id: number; name: string; email: string; }) {
-      throw new Error('Method not implemented.');
-  }
-  changeUserPassword(passwordData: { current_password: string; new_password: string; confirm_new_password: string; }) {
-      throw new Error('Method not implemented.');
-  }
 
   authUrl = "http://localhost:8000/api/"
 

@@ -75,7 +75,8 @@ export class RegisterPage implements OnInit {
         if (err.status == 404) {
           this.presentToast("Incorrect email.");
         } else {
-          this.presentToast("Can not connect to server.")
+          console.log(err.message)
+          this.presentToast(err.message)
         }
       }
     );
@@ -114,6 +115,6 @@ export class RegisterPage implements OnInit {
     return regex.test(password);
   }
 
-  
+
 
 }
