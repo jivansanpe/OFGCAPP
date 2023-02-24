@@ -69,12 +69,15 @@ If you want to test the API and check the different endpoints before jumping in,
 * description: the event's description.
 * category: the event's category.
 * date: the event's date.
+* image: the event's image.
 #### Musicians
 * name: the musician's name.
 * description: the musician's description.
+* image: the musician's image.
 #### Authors
 * name: the author's name.
 * description: the author's description.
+* image: the author's image.
 #### Pieces
 * name: the piece's name.
 * description: the piece's description.
