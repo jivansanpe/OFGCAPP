@@ -54,11 +54,11 @@ If you want to test the API and check the different endpoints before jumping in,
 ## Data Model
 
 ### Entity Relationship Diagram
-![diagrama er proyecto drawio](https://user-images.githubusercontent.com/56371021/208326724-0597ff0f-e288-42cf-b982-084e0e7176af.png)
+![diagrama er proyecto drawio](https://user-images.githubusercontent.com/56371021/221216305-bac92f17-ae37-4ce4-9988-94a0ec104c7a.png)
 ### Relational Diagram
-![diagrama relacional drawio](https://user-images.githubusercontent.com/56371021/208326733-70f8e832-52a5-4000-9540-ecc869852e59.png)
+![diagrama relacional drawio](https://user-images.githubusercontent.com/56371021/221216362-a83ed10b-4d90-451a-b49c-9a25f7359fa6.png)
 ### UML Diagram
-![Diagrama UML](https://user-images.githubusercontent.com/56371021/208326738-f4d4c430-5c53-4079-979a-3f104483523d.png)
+![Captura de pantalla (2376)](https://user-images.githubusercontent.com/56371021/221216412-588739f4-9be3-406f-b23d-62b59076319e.png)
 ### Entities and attributes explained
 #### Users
 * name: the user's name.
