@@ -36,14 +36,17 @@ export class MusicianService {
     data.append("name", musician.name);
     data.append("image", blob);
     data.append("description", musician.description);
+    data.append("method", 'POST');
     return this.httpClient.post<any>(this.endpoint, data, this.httpOptionsUsingUrlEncoded);
   }
   public updateMusician(id: any, musician: Musician, blob: Blob): Observable<any> {
     let data = new FormData();
+    data.append("id", id);
     data.append("name", musician.name);
-    data.append("image", blob);
     data.append("description", musician.description);
-    return this.httpClient.put<any>(this.endpoint + '/' + id, data, this.httpOptionsUsingUrlEncoded);
+    data.append("method", 'PUT');
+    data.append("image", blob);
+    return this.httpClient.post<any>(this.endpoint, data, this.httpOptionsUsingUrlEncoded);
   }
   public deleteMusician(id: any) {
     return this.httpClient.delete<any>(this.endpoint + '/' + id, this.httpOptionsUsingUrlEncoded);

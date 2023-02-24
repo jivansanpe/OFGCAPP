@@ -59,6 +59,15 @@ class AuthorController extends BaseController
             'image' => $image_path,
             'description' => $request->description,
         ]);
+            } else{
+                $author->update([
+                    'name' => $request->name,
+                    'description' => $request->description
+                ]);
+
+            }
+        }
+        
 
         return response()->json([
             'message' => "Author saved successfully!",

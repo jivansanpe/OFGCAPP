@@ -34,7 +34,7 @@ export class FormComponent implements OnInit {
   category = '';
   toastColor: string;
   token: any;
-  image: any;
+  image: any = null;
   imageDisplayed: any = null;
   @Input() type: string;
   @Input() page: string;
@@ -62,6 +62,10 @@ export class FormComponent implements OnInit {
           this.getMusician(this.id);
           break;
         }
+        case 'Event': {
+          this.getEvent(this.id);
+          break;
+        }
       };
     }
 
@@ -71,6 +75,17 @@ export class FormComponent implements OnInit {
     this.eventsService.getEvents().subscribe(response => {
       this.events = response;
       this.events = this.events['data'];
+    });
+  }
+  getEvent(id: any) {
+    this.eventsService.getEvent(id).subscribe(response => {
+      this.event = response;
+      this.event = this.event['data'];
+      this.name = this.event.name;
+      this.description = this.event.description;
+      this.category = this.event.category;
+      this.date = this.event.date;
+
     });
   }
   getMusician(id: any) {
@@ -149,8 +164,13 @@ export class FormComponent implements OnInit {
       this.presentToast('The description can not be longer than 100 characters.');
       return;
     }
+    if (this.image == null) {
+      this.toastColor = 'danger'
+      this.presentToast('Please add an image.');
+      return;
+    }
     let blob: any;
-    if (this.type != 'Piece') {
+    if (this.type != 'Piece' && this.image != null) {
       const response = await fetch(this.image);
       blob = await response.blob();
     }
@@ -304,6 +324,27 @@ export class FormComponent implements OnInit {
           err => {
             this.toastColor = 'danger'
             console.log(this.newElement);
+            if (err.status == 404) {
+              this.presentToast(err.error.message);
+            } else {
+              this.presentToast(err.error.message);
+            }
+          }
+        )
+        break;
+      }
+      case 'Event': {
+        this.newElement = new Event(this.name, this.description, this.date, this.category);
+        this.eventsService.updateEvent(this.id, this.newElement, blob).subscribe(
+          data => {
+            this.toastColor = 'success'
+            console.log(data.message);
+            this.presentToast(data.message);
+            this.router.navigate([`/${this.type.toLowerCase()}-list`]);
+          },
+          err => {
+            this.toastColor = 'danger'
+            console.log(err);
             if (err.status == 404) {
               this.presentToast(err.error.message);
             } else {

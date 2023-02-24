@@ -5,35 +5,6 @@
     <div>
       <app-top-part title='{{event.name}}'></app-top-part>
     </div>
-    <div class="ion-padding">
-      <form #log="ngForm" (ngSubmit)="onUpdate()" novalidate>
-        <div class="input-div">
-          <ion-label class="subtext">Musician name</ion-label>
-          <ion-item>
-            <ion-input [(ngModel)]="name" name="name" required></ion-input>
-          </ion-item>
-        </div>
-        <div class="input-div">
-          <ion-label class="subtext">Event date</ion-label>
-          <ion-item>
-            <ion-input [(ngModel)]="date" name="date" required></ion-input>
-          </ion-item>
-        </div>
-        <div class="input-div">
-          <ion-label class="subtext">Event description</ion-label>
-          <ion-item>
-            <ion-input [(ngModel)]="description" name="description" required></ion-input>
-          </ion-item>
-        </div>
-
-        <div class="input-div">
-          <ion-label class="subtext">Event category</ion-label>
-          <ion-item>
-            <ion-input [(ngModel)]="category" name="category" required></ion-input>
-          </ion-item>
-        </div>
-        <ion-button type="submit">Update</ion-button>
-      </form>
-    </div>
+    <app-form type="Event" page="Update"></app-form>
   </ion-content>
 </div>

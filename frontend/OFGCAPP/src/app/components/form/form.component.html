@@ -86,11 +86,23 @@
         <ion-input [(ngModel)]="name" name="name" required placeholder="{{type}} name"></ion-input>
       </ion-item>
     </div>
+    <div *ngIf="type=='Event'" class="input-div">
+      <ion-label class="subtext">{{type}} date</ion-label>
+      <ion-item>
+        <ion-textarea [(ngModel)]="date" name="date" required placeholder="YYYY-MM-DD"></ion-textarea>
+      </ion-item>
+    </div>
     <div class="input-div">
       <ion-label class="subtext">{{type}} description</ion-label>
       <ion-item>
         <ion-textarea [(ngModel)]="description" name="description" required
           placeholder="{{type}} description"></ion-textarea>
+      </ion-item>
+    </div>
+    <div *ngIf="type=='Event'" class="input-div">
+      <ion-label class="subtext">{{type}} category</ion-label>
+      <ion-item>
+        <ion-textarea [(ngModel)]="category" name="category" required placeholder="{{type}} Category"></ion-textarea>
       </ion-item>
     </div>
     <ion-button class="submit" type="submit">Update</ion-button>
