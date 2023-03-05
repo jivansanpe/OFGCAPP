@@ -57,9 +57,11 @@ class EventController extends BaseController
     }
     public function store(Request $request)
     {
+        if($request->image != "undefined"){
+            $image_aux = $request->file('image')->store('image', 'public');
+        }
         $validator = Validator::make($request->all(), [
             'name' => 'required',
-            'image' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'description' => 'required',
             'date' => 'required|date',
             'category' => 'required',
@@ -68,14 +70,39 @@ class EventController extends BaseController
         if ($validator->fails()) {
             return $this->sendError('Error validation', $validator->errors());
         }
-        $image_path = $request->file('image')->store('image', 'public');
-        $event = Event::create([
-            'name' => $request->name,
-            'image' => $image_path,
-            'description' => $request->description,
-            'date' => $request->date,
-            'category' => $request->category,
-        ]);
+        if($request->input('method')=='POST'){
+            $event = Event::create([
+                'name' => $request->name,
+                'image' => $image_aux,
+                'description' => $request->description,
+                'date' => $request->date,
+                'category' => $request->category,
+            ]);
+        }
+        if($request->input('method')=='PUT'){
+            $event = Event::find($request->input('id'));
+            if($request->image != "undefined"){
+                // $image_name = "storage/".$author->image;
+                // if(File::exists($image_name)) {
+                //     File::delete($image_name);
+                // }
+                $event->update([
+                    'name' => $request->name,
+                    'image' => isset($image_aux) ? $image_aux : $event->image,
+                    'description' => $request->description,
+                    'date' => $request->date,
+                    'category' => $request->category,
+                ]);
+            } else{
+                $event->update([
+                    'name' => $request->name,
+                    'description' => $request->description,
+                    'date' => $request->date,
+                    'category' => $request->category,
+                ]);
+
+            }
+        }
         if($request->input('musicians')){
             $this->assignMusicians($event,$request->input('musicians'));
         } 
@@ -137,9 +164,11 @@ class EventController extends BaseController
         } else{
             $event->update($request->all());
         }
+
         if($request->input('musicians')){
             $this->assignMusicians($event, $request->input('musicians'));
         } 
+        
         return response()->json([ 
             'message' => "Event updated successfully!",
             'request' => $request->input()
@@ -155,7 +184,8 @@ class EventController extends BaseController
     public function destroy(Event $event)
     {
         $event->delete();
-        $image_name = "storage/".$author->image;
+ 
+        $image_name = "storage/".$event->image;
         if(File::exists($image_name)) {
             File::delete($image_name);
         }

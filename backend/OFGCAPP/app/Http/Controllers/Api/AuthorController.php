@@ -9,6 +9,7 @@ use App\Models\Author;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File; 
 use Validator;
+use Illuminate\Foundation\Http\FormRequest;
 
 class AuthorController extends BaseController
 {
@@ -45,6 +46,9 @@ class AuthorController extends BaseController
      */
     public function store(Request $request)
     {
+        if($request->image != "undefined"){
+            $image_aux = $request->file('image')->store('image', 'public');
+        }
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'description' => 'required',
@@ -53,12 +57,25 @@ class AuthorController extends BaseController
         if ($validator->fails()) {
             return $this->sendError('Error validation', $validator->errors());
         }
-        $image_path = $request->file('image')->store('image', 'public');
-        $author = Author::create([
-            'name' => $request->name,
-            'image' => $image_path,
-            'description' => $request->description,
-        ]);
+        if($request->input('method')=='POST'){
+            $author = Author::create([
+                'name' => $request->name,
+                'image' => $image_aux,
+                'description' => $request->description,
+            ]);
+        }
+        if($request->input('method')=='PUT'){
+            $author = Author::find($request->input('id'));
+            if($request->image != "undefined"){
+                // $image_name = "storage/".$author->image;
+                // if(File::exists($image_name)) {
+                //     File::delete($image_name);
+                // }
+                $author->update([
+                    'name' => $request->name,
+                    'image' => isset($image_aux) ? $image_aux : $author->image,
+                    'description' => $request->description,
+                ]);
             } else{
                 $author->update([
                     'name' => $request->name,
@@ -131,13 +148,20 @@ class AuthorController extends BaseController
                 'description' => $request->description,
             ]);
         } else{
+
+            // error_log('Some message here pablo.');
+            // var_dump("chacho tu");
+            // error_log(print_r($request->all()));
+            $algote = $request->getContent();
             $author->update($request->all());
         }
         
         
         return response()->json([
-            'message' => $request->file('name'),
-            'author' => $author
+            'message' => 'dwidw',
+            'author' => $author,
+            'alguillo' => $algote,
+            'hh' => $request->all(),
         ], 200);
     }
 

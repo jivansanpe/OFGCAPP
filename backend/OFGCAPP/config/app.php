@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'dev'),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://localhost'),
+    'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL'),
 
