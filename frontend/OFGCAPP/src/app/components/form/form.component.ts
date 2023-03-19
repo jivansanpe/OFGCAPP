@@ -164,7 +164,7 @@ export class FormComponent implements OnInit {
       this.presentToast('The description can not be longer than 100 characters.');
       return;
     }
-    if (this.image == null) {
+    if (this.image == null && this.type != 'Piece') {
       this.toastColor = 'danger'
       this.presentToast('Please add an image.');
       return;

@@ -7,12 +7,6 @@
       <app-top-part title="Events"></app-top-part>
       <ion-searchbar [(ngModel)]="filterTerm" name="filterTerm"></ion-searchbar>
     </div>
-    <div class="ion-padding">
-      <iframe width="330" height="180" src="https://www.youtube.com/embed/6AG_yNKfuz8" title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    </div>
     <ion-row *ngFor="let e of events | filter:filterTerm">
       <app-card [element]=e type="event"></app-card>
     </ion-row>
