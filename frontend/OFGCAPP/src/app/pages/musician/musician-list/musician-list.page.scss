@@ -24,6 +24,11 @@ ion-searchbar {
   font-family: Raleway;
 }
 
+.cards-container {
+  display: flex;
+  justify-content: center;
+}
+
 .title-div {
   position: relative;
   margin-bottom: 80px;
