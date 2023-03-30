@@ -1,24 +1,22 @@
 <div class="ion-padding">
-  <div *ngIf="type!='Piece'" class="input-div-image">
-    <ion-label class="subtext">{{type}} image</ion-label>
+  <div *ngIf="type!=='Piece'" class="input-div-image">
+    <ion-label class="subtext">Elige una imagen</ion-label>
     <img *ngIf="!image " src="../../assets/No-Image-Placeholder.svg" alt="image" />
     <img *ngIf="image && !imageDisplayed" src="http://localhost:8000/storage/{{image}}" alt="image" />
     <img *ngIf="image && imageDisplayed" [src]="imageDisplayed" alt="image" />
     <ion-row class="ion-align-items-center">
       <ion-button class="img-pickers" color="primary" fill="outline" (click)="pickImage()">
         <ion-icon name="image-outline"></ion-icon>
-        Pick an image
       </ion-button>
       <ion-button class="img-pickers" color="danger" fill="outline" (click)="discardImage()">
         <ion-icon name="aperture"></ion-icon>
-        Discard image
       </ion-button>
     </ion-row>
   </div>
-  <form *ngIf="page=='Create'" #log="ngForm" (ngSubmit)="onCreate()" novalidate>
-    <div *ngIf="type=='Piece'">
+  <form *ngIf="page==='Create'" #log="ngForm" (ngSubmit)="onCreate()" novalidate>
+    <div *ngIf="type==='Piece'">
       <div class="input-div">
-        <ion-label class="subtext">Events</ion-label>
+        <ion-label class="subtext">Eventos</ion-label>
         <ion-item>
           <ion-select name="eventId" [(ngModel)]="eventId">
             <ion-select-option *ngFor="let e of events" value='{{e.id}}'>{{e.name}}</ion-select-option>
@@ -26,7 +24,7 @@
         </ion-item>
       </div>
       <div class="input-div">
-        <ion-label class="subtext">Authors</ion-label>
+        <ion-label class="subtext">Autores</ion-label>
         <ion-item>
           <ion-select name="authorId" [(ngModel)]="authorId">
             <ion-select-option *ngFor="let a of authors" value='{{a.id}}'>{{a.name}}</ion-select-option>
@@ -35,36 +33,43 @@
       </div>
     </div>
     <div class="input-div">
-      <ion-label class="subtext">{{type}} name</ion-label>
+      <ion-label class="subtext">Nombre</ion-label>
       <ion-item>
-        <ion-input [(ngModel)]="name" name="name" required placeholder="{{type}} name"></ion-input>
+        <ion-textarea [(ngModel)]="name" name="name" required placeholder="Nombre"></ion-textarea>
       </ion-item>
     </div>
-    <div *ngIf="type=='Event'" class="input-div">
-      <ion-label class="subtext">{{type}} date</ion-label>
+    <div *ngIf="type==='Event'" class="input-div">
+      <ion-label class="subtext">Fecha</ion-label>
       <ion-item>
         <ion-textarea [(ngModel)]="date" name="date" required placeholder="YYYY-MM-DD"></ion-textarea>
       </ion-item>
     </div>
-    <div class="input-div">
-      <ion-label class="subtext">{{type}} description</ion-label>
+    <div *ngIf="type!=='Event'" class="input-div">
+      <ion-label class="subtext">Descripción</ion-label>
       <ion-item>
         <ion-textarea [(ngModel)]="description" name="description" required
-          placeholder="{{type}} description"></ion-textarea>
+          placeholder="Descripción"></ion-textarea>
       </ion-item>
     </div>
-    <div *ngIf="type=='Event'" class="input-div">
-      <ion-label class="subtext">{{type}} category</ion-label>
+    <div *ngIf="type==='Event'" class="input-div">
+      <ion-label class="subtext">Músicos</ion-label>
       <ion-item>
-        <ion-textarea [(ngModel)]="category" name="category" required placeholder="{{type}} Category"></ion-textarea>
+        <ion-textarea cols="40" rows="8" [(ngModel)]="description" name="description" required
+          placeholder="Músicos"></ion-textarea>
       </ion-item>
     </div>
-    <ion-button class="submit" type="submit">Create</ion-button>
+    <div *ngIf="type==='Event'" class="input-div">
+      <ion-label class="subtext">Director</ion-label>
+      <ion-item>
+        <ion-textarea [(ngModel)]="category" name="category" required placeholder="Director"></ion-textarea>
+      </ion-item>
+    </div>
+    <ion-button class="submit" type="submit">Crear</ion-button>
   </form>
-  <form *ngIf="page=='Update'" #log="ngForm" (ngSubmit)="onUpdate()" novalidate>
-    <div *ngIf="type=='Piece'">
+  <form *ngIf="page==='Update'" #log="ngForm" (ngSubmit)="onUpdate()" novalidate>
+    <div *ngIf="type==='Piece'">
       <div class="input-div">
-        <ion-label class="subtext">Events</ion-label>
+        <ion-label class="subtext">Eventos</ion-label>
         <ion-item>
           <ion-select name="eventId" [(ngModel)]="eventId">
             <ion-select-option *ngFor="let e of events" value='{{e.id}}'>{{e.name}}</ion-select-option>
@@ -72,7 +77,7 @@
         </ion-item>
       </div>
       <div class="input-div">
-        <ion-label class="subtext">Authors</ion-label>
+        <ion-label class="subtext">Autores</ion-label>
         <ion-item>
           <ion-select name="authorId" [(ngModel)]="authorId">
             <ion-select-option *ngFor="let a of authors" value='{{a.id}}'>{{a.name}}</ion-select-option>
@@ -81,30 +86,37 @@
       </div>
     </div>
     <div class="input-div">
-      <ion-label class="subtext">{{type}} name</ion-label>
+      <ion-label class="subtext">Nombre</ion-label>
       <ion-item>
-        <ion-input [(ngModel)]="name" name="name" required placeholder="{{type}} name"></ion-input>
+        <ion-textarea [(ngModel)]="name" name="name" required placeholder="Nombre"></ion-textarea>
       </ion-item>
     </div>
-    <div *ngIf="type=='Event'" class="input-div">
-      <ion-label class="subtext">{{type}} date</ion-label>
+    <div *ngIf="type==='Event'" class="input-div">
+      <ion-label class="subtext">{{type}} fecha</ion-label>
       <ion-item>
         <ion-textarea [(ngModel)]="date" name="date" required placeholder="YYYY-MM-DD"></ion-textarea>
       </ion-item>
     </div>
-    <div class="input-div">
-      <ion-label class="subtext">{{type}} description</ion-label>
+    <div *ngIf="type!=='Event'" class="input-div">
+      <ion-label class="subtext">Descripción</ion-label>
       <ion-item>
         <ion-textarea [(ngModel)]="description" name="description" required
-          placeholder="{{type}} description"></ion-textarea>
+          placeholder="Descripción"></ion-textarea>
       </ion-item>
     </div>
-    <div *ngIf="type=='Event'" class="input-div">
-      <ion-label class="subtext">{{type}} category</ion-label>
+    <div *ngIf="type==='Event'" class="input-div">
+      <ion-label class="subtext">Músicos</ion-label>
       <ion-item>
-        <ion-textarea [(ngModel)]="category" name="category" required placeholder="{{type}} Category"></ion-textarea>
+        <ion-textarea cols="40" rows="8" [(ngModel)]="description" name="description" required
+          placeholder="Músicos"></ion-textarea>
       </ion-item>
     </div>
-    <ion-button class="submit" type="submit">Update</ion-button>
+    <div *ngIf="type==='Event'" class="input-div">
+      <ion-label class="subtext">Director</ion-label>
+      <ion-item>
+        <ion-textarea [(ngModel)]="category" name="category" required placeholder="Director"></ion-textarea>
+      </ion-item>
+    </div>
+    <ion-button class="submit" type="submit">Modificar</ion-button>
   </form>
 </div>

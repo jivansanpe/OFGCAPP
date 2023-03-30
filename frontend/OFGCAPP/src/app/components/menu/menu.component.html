@@ -8,46 +8,26 @@
     <div class="item-div">
       <ion-item [ngClass]="{'item': activeList !== 'event-list', 'highlighted' : activeList === 'event-list' }"
         lines="full" button detail="false" (click)="goToPage('event-list')">
-        <ion-icon name="pricetag-outline"></ion-icon>Events</ion-item>
+        <ion-icon name="pricetag-outline"></ion-icon>Eventos</ion-item>
     </div>
     <div class="item-div">
       <ion-item [ngClass]="{'item': activeList !== 'musician-list', 'highlighted' : activeList === 'musician-list' }"
         lines="full" button detail="false" (click)="goToPage('musician-list')">
-        <ion-icon name="musical-notes-outline"></ion-icon>Musicians</ion-item>
+        <ion-icon name="musical-notes-outline"></ion-icon>Directores</ion-item>
     </div>
     <div class="item-div">
       <ion-item [ngClass]="{'item': activeList !== 'author-list', 'highlighted' : activeList === 'author-list' }"
         lines="full" button detail="false" (click)="goToPage('author-list')">
-        <ion-icon name="book-outline"></ion-icon>Authors</ion-item>
+        <ion-icon name="book-outline"></ion-icon>Autores</ion-item>
     </div>
     <div class="item-div">
       <ion-item [ngClass]="{'item': activeList !== 'piece-list', 'highlighted' : activeList === 'piece-list' }"
         lines="full" button detail="false" (click)="goToPage('piece-list')">
-        <ion-icon name="receipt-outline"></ion-icon>Pieces</ion-item>
-    </div>
-    <div class="item-div">
-      <ion-item *ngIf="isLoggedIn" href="http://localhost:5488/templates/LnSEZAA" target="blank" lines="full" button
-        detail="false">
-        <ion-icon name="arrow-redo-outline"></ion-icon>Author Reports</ion-item>
-    </div>
-    <div class="item-div">
-      <ion-item *ngIf="isLoggedIn" href="http://localhost:5488/templates/i2WIet3" target="blank" lines="full" button
-        detail="false">
-        <ion-icon name="arrow-redo-outline"></ion-icon>Musician Reports</ion-item>
-    </div>
-    <div class="item-div">
-      <ion-item *ngIf="isLoggedIn" href="http://localhost:5488/templates/AWibzzw" target="blank" lines="full" button
-        detail="false">
-        <ion-icon name="arrow-redo-outline"></ion-icon>Event Reports</ion-item>
-    </div>
-    <div class="item-div">
-      <ion-item *ngIf="isLoggedIn" href="../../../assets/help/OFGCAPP Help.html" target="blank" lines="full" button
-        detail="false">
-        <ion-icon name="arrow-redo-outline"></ion-icon>Help</ion-item>
+        <ion-icon name="receipt-outline"></ion-icon>Obras</ion-item>
     </div>
     <div class="item-div">
       <ion-item *ngIf="isLoggedIn" lines="full" button detail="false" (click)="logOut()">
-        <ion-icon name="person-remove-outline"></ion-icon>Log Out</ion-item>
+        <ion-icon name="person-remove-outline"></ion-icon>Cerrar sesión</ion-item>
     </div>
 
   </ion-content>

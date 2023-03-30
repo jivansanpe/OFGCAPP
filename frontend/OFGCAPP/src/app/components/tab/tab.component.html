@@ -4,25 +4,25 @@
     <ion-tab-button [ngClass]="{'item': activeList !== 'event-list', 'highlighted' : activeList === 'event-list' }"
       lines="full" button detail="false" (click)="goToPage('event-list')">
       <ion-icon name="calendar"></ion-icon>
-      <ion-label>Events</ion-label>
+      <ion-label>Eventos</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button [ngClass]="{'item': activeList !== 'musician-list', 'highlighted' : activeList === 'musician-list' }"
+    <!-- <ion-tab-button [ngClass]="{'item': activeList !== 'musician-list', 'highlighted' : activeList === 'musician-list' }"
       lines="full" button detail="false" (click)="goToPage('musician-list')">
       <ion-icon name="person-circle"></ion-icon>
-      <ion-label>Musicians</ion-label>
-    </ion-tab-button>
+      <ion-label>Músicos</ion-label>
+    </ion-tab-button> -->
 
     <ion-tab-button [ngClass]="{'item': activeList !== 'author-list', 'highlighted' : activeList === 'author-list' }"
       lines="full" button detail="false" (click)="goToPage('author-list')">
       <ion-icon name="book"></ion-icon>
-      <ion-label>Authors</ion-label>
+      <ion-label>Autores</ion-label>
     </ion-tab-button>
 
     <ion-tab-button [ngClass]="{'item': activeList !== 'piece-list', 'highlighted' : activeList === 'piece-list' }"
       lines="full" button detail="false" (click)="goToPage('piece-list')">
       <ion-icon name="musical-note"></ion-icon>
-      <ion-label>Pieces</ion-label>
+      <ion-label>Obras</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

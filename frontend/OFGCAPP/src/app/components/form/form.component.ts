@@ -26,8 +26,10 @@ export class FormComponent implements OnInit {
   piece: any;
   authors: any = [];
   events: any = [];
+  musicians: any = [];
   authorId: any;
   eventId: any;
+  musicianId: any;
   name = '';
   description = '';
   date = '';
@@ -47,6 +49,10 @@ export class FormComponent implements OnInit {
       this.getAllEvents();
       this.getAllAuthors();
     }
+    if (this.page == 'Create' && this.type == 'Event') {
+      this.getAllMusicians();
+    }
+    
     if (this.page == 'Update') {
       this.id = this.activatedRoute.snapshot.paramMap.get('id')
       switch (this.type) {
@@ -96,6 +102,12 @@ export class FormComponent implements OnInit {
       this.description = this.musician.description;
       console.log(this.musician);
 
+    });
+  }
+  getAllMusicians() {
+    this.musicianService.getMusicians().subscribe(response => {
+      this.musicians = response;
+      this.musicians = this.musicians['data'];
     });
   }
   getPiece(id: any) {

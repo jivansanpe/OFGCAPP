@@ -37,7 +37,7 @@ ion-header {
     text-align: left;
     font-size: 1.5em;
     color: #004D4D;
-
+    margin-bottom: 10px;
 
   }
 
@@ -88,8 +88,8 @@ ion-header {
 
 .subtitle-div-pieces {
   position: relative;
-  margin-bottom: 80px;
-  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-top: 0px;
   z-index: 2;
   text-align: left;
 
@@ -97,9 +97,8 @@ ion-header {
 
 
     font-family: TexGyreHeros;
-    padding: 0%;
+    margin-top: -20px;
     padding-left: 20px;
-    padding-top: 10px;
     padding-bottom: 10px;
     text-align: left;
     font-size: 2em;

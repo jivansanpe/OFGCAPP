@@ -40,6 +40,9 @@ export class EventDetailsPage implements OnInit {
   goToPage(path: any) {
     this.router.navigateByUrl("/" + path);
   }
+  createPiece() {
+    this.router.navigateByUrl("new-piece");
+  }
   logOut(): void {
     this.tokenService.logOut();
     this.router.navigateByUrl("/home");

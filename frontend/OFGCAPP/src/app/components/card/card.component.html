@@ -1,13 +1,13 @@
 <ion-card (click)="goToOne(element.id)" button="true">
   <ion-row>
     <ion-col *ngIf="element.image">
-      <img alt="Pulsos de europa" src="http://localhost:8000/storage/{{element.image}}" />
+      <img src="http://localhost:8000/storage/{{element.image}}" />
     </ion-col>
     <ion-col>
       <ion-card-header>
         <ion-card-title>{{element.name}}</ion-card-title>
         <div class="subtext">
-          <ion-card-subtitle>{{element.description}}</ion-card-subtitle>
+          <ion-card-subtitle>{{element.date}}</ion-card-subtitle>
         </div>
       </ion-card-header>
     </ion-col>
@@ -15,11 +15,11 @@
   <div class="buttons-div">
     <ion-button *ngIf="isLoggedIn" (click)="goToUpdate(element.id, $event)">
       <ion-icon name="create-outline"></ion-icon>
-      Update
+      Modificar
     </ion-button>
     <ion-button *ngIf="isLoggedIn" (click)="deleteElement(element.id, $event)">
       <ion-icon name="trash-bin-outline"></ion-icon>
-      Delete
+      Eliminar
     </ion-button>
   </div>
 </ion-card>
