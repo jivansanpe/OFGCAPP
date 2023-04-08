@@ -4,13 +4,13 @@
   <app-header></app-header>
   <ion-content class="ion-padding">
     <div>
-      <app-top-part title="Musicians"></app-top-part>
+      <app-top-part title="Directores"></app-top-part>
       <ion-searchbar [(ngModel)]="filterTerm" name="filterTerm"></ion-searchbar>
     </div>
     <ion-row class="cards-container" *ngFor="let m of musicians | filter:filterTerm">
       <app-card [element]=m type="musician"></app-card>
     </ion-row>
-    <ion-button *ngIf="isLoggedIn" expand="full" (click)="createMusician()">Create</ion-button>
+    <ion-button *ngIf="isLoggedIn" expand="full" (click)="createMusician()">Crear</ion-button>
   </ion-content>
 </div>
 

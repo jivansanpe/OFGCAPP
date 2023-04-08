@@ -4,13 +4,13 @@
   <app-header></app-header>
   <ion-content class="ion-padding">
     <div>
-      <app-top-part title="Pieces"></app-top-part>
+      <app-top-part title="Obras"></app-top-part>
       <ion-searchbar [(ngModel)]="filterTerm" name="filterTerm"></ion-searchbar>
     </div>
     <ion-row class="cards-container" *ngFor="let p of pieces | filter:filterTerm">
       <app-card [element]=p type="piece"></app-card>
     </ion-row>
-    <ion-button *ngIf="isLoggedIn" expand="full" (click)="createPiece()">Create</ion-button>
+    <ion-button *ngIf="isLoggedIn" expand="full" (click)="createPiece()">Crear</ion-button>
   </ion-content>
 </div>
 

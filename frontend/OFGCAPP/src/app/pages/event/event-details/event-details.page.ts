@@ -4,6 +4,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { EventsService } from '../../../services/events.service';
 import { TokenService } from '../../../services/token.service';
 
+const TOKEN_KEY = 'api_token';
+
 @Component({
   selector: 'app-event-details',
   templateUrl: './event-details.page.html',
@@ -12,6 +14,7 @@ import { TokenService } from '../../../services/token.service';
 export class EventDetailsPage implements OnInit {
   event: any;
   id: any;
+  isLoggedIn: boolean;
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private eventsService: EventsService, private tokenService: TokenService) {
     this.id = this.activatedRoute.snapshot.paramMap.get('id')
   }
@@ -19,8 +22,16 @@ export class EventDetailsPage implements OnInit {
 
   }
   ionViewWillEnter() {
+    this.isLogged();
     this.getEvent(this.id);
   }
+  isLogged() {
+    if (window.sessionStorage.getItem(TOKEN_KEY)) {
+      this.isLoggedIn = true;
+    } else {
+      this.isLoggedIn = false;
+    }
+  }  
   getEvent(id: any) {
     this.eventsService.getEvent(id).subscribe(response => {
       this.event = response;
