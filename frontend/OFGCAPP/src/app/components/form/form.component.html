@@ -71,7 +71,7 @@
           <ion-select-option *ngFor="let m of musicians" value='{{m.id}}'>{{m.name}}</ion-select-option>
         </ion-select>
       </ion-item>
-    </div>
+    </div>  
     <ion-button class="submit" type="submit">Crear</ion-button>
   </form>
   <form *ngIf="page==='Update'" #log="ngForm" (ngSubmit)="onUpdate()" novalidate>
@@ -123,14 +123,6 @@
       <ion-label class="subtext">Lugar</ion-label>
       <ion-item>
         <ion-textarea [(ngModel)]="category" name="category" required placeholder="Lugar"></ion-textarea>
-      </ion-item>
-    </div>
-    <div *ngIf="type==='Event'" class="input-div">
-      <ion-label class="subtext">Director</ion-label>
-      <ion-item>
-        <ion-select name="musicianId" [(ngModel)]="musicianId">
-          <ion-select-option *ngFor="let m of musicians" value='{{m.id}}'>{{m.name}}</ion-select-option>
-        </ion-select>
       </ion-item>
     </div>
     <ion-button class="submit" type="submit">Modificar</ion-button>
