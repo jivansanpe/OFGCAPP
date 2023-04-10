@@ -91,7 +91,8 @@ export class FormComponent implements OnInit {
       this.description = this.event.description;
       this.category = this.event.category;
       this.date = this.event.date;
-
+      this.musicianId = this.event.musician.id;
+      console.log('ahhhhhhhhhhhhhhh');
     });
   }
   getMusician(id: any) {
@@ -250,7 +251,7 @@ export class FormComponent implements OnInit {
         break;
       }
       case 'Event': {
-        this.newElement = new Event(this.name, this.description, this.date, this.category);
+        this.newElement = new Event(this.name, this.description, this.date, this.category, this.musicianId);
         this.eventsService.createEvent(this.newElement, blob).subscribe(
           data => {
             this.toastColor = 'success'
@@ -346,7 +347,7 @@ export class FormComponent implements OnInit {
         break;
       }
       case 'Event': {
-        this.newElement = new Event(this.name, this.description, this.date, this.category);
+        this.newElement = new Event(this.name, this.description, this.date, this.category, this.musicianId);
         this.eventsService.updateEvent(this.id, this.newElement, blob).subscribe(
           data => {
             this.toastColor = 'success'

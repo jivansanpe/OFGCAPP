@@ -19,7 +19,7 @@ export class EventDetailsPage implements OnInit {
     this.id = this.activatedRoute.snapshot.paramMap.get('id')
   }
   ngOnInit(): void {
-
+    this.getEvent(this.id);
   }
   ionViewWillEnter() {
     this.isLogged();

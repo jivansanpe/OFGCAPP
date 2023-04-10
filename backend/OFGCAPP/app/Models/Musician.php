@@ -12,6 +12,6 @@ class Musician extends Model
     protected $fillable = ['name', 'image', 'description'];
     public function events()
     {
-        return $this->belongsToMany(Event::class)->withPivot('special');
+        return $this->hasMany(Event::class);
     }
 }

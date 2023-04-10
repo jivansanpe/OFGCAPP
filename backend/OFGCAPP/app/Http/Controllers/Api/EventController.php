@@ -47,14 +47,14 @@ class EventController extends BaseController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function assignMusicians(Event $event, $musData)
-    {
-         if($musData){
-             foreach($musData as $valor){
-                 $event->musicians()->save(Musician::find($valor['id']), array('category' => $valor['category'],'special' => $valor['special']));
-             }
-         }      
-    }
+    // public function assignMusicians(Event $event, $musData)
+    // {
+    //      if($musData){
+    //          foreach($musData as $valor){
+    //              $event->musicians()->save(Musician::find($valor['id']), array('category' => $valor['category'],'special' => $valor['special']));
+    //          }
+    //      }      
+    // }
     public function store(Request $request)
     {
         if($request->image != "undefined"){
@@ -65,6 +65,7 @@ class EventController extends BaseController
             'description' => 'required',
             'date' => 'required|date',
             'category' => 'required',
+            'musician_id' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -77,6 +78,7 @@ class EventController extends BaseController
                 'description' => $request->description,
                 'date' => $request->date,
                 'category' => $request->category,
+                'musician_id' => $request->musician_id
             ]);
         }
         if($request->input('method')=='PUT'){
@@ -92,6 +94,7 @@ class EventController extends BaseController
                     'description' => $request->description,
                     'date' => $request->date,
                     'category' => $request->category,
+                    'musician_id' => $request->musician_id
                 ]);
             } else{
                 $event->update([
@@ -99,13 +102,14 @@ class EventController extends BaseController
                     'description' => $request->description,
                     'date' => $request->date,
                     'category' => $request->category,
+                    'musician_id' => $request->musician_id
                 ]);
 
             }
         }
-        if($request->input('musicians')){
-            $this->assignMusicians($event,$request->input('musicians'));
-        } 
+        // if($request->input('musicians')){
+        //     $this->assignMusicians($event,$request->input('musicians'));
+        // } 
 
         return response()->json([
             'message' => "Event saved successfully!"
@@ -160,14 +164,15 @@ class EventController extends BaseController
                 'description' => $request->description,
                 'date' => $request->date,
                 'category' => $request->category,
+                'musician_id' => $request->musician_id
             ]);
         } else{
             $event->update($request->all());
         }
 
-        if($request->input('musicians')){
-            $this->assignMusicians($event, $request->input('musicians'));
-        } 
+        // if($request->input('musicians')){
+        //     $this->assignMusicians($event, $request->input('musicians'));
+        // } 
         
         return response()->json([ 
             'message' => "Event updated successfully!",

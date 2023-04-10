@@ -20,6 +20,10 @@ return new class extends Migration
             $table->longText('description');
             $table->string('category');
             $table->date('date');
+            $table->unsignedBigInteger('musician_id');
+            $table->foreign('musician_id')->references('id')->on('musicians')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

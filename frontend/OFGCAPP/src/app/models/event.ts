@@ -3,13 +3,13 @@ export class Event {
   description: string;
   date: string;
   category: string;
-  musicians?: [];
+  musician_id: string;
 
-  constructor(name: string, description: string, date: string, category: string, musicians?: []) {
+  constructor(name: string, description: string, date: string, category: string, musician_id: string) {
     this.name = name;
     this.description = description;
     this.date = date;
     this.category = category;
-    this.musicians = musicians;
+    this.musician_id = musician_id;
   }
 }

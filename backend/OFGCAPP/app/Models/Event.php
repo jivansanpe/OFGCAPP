@@ -9,13 +9,13 @@ class Event extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'image', 'description', 'date', 'category'];
+    protected $fillable = ['name', 'image', 'description', 'date', 'category', 'musician_id'];
     public function pieces()
     {
         return $this->hasMany(Piece::class);
     }
-    public function musicians()
+    public function musician()
     {
-        return $this->belongsToMany(Musician::class)->withPivot('category');
+        return $this->belongsTo(Musician::class);
     }
 }
