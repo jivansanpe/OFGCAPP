@@ -24,6 +24,7 @@ return new class extends Migration
             $table->foreign('musician_id')->references('id')->on('musicians')
             ->onUpdate('cascade')
             ->onDelete('cascade');
+            $table->string('link');
             $table->timestamps();
         });
     }

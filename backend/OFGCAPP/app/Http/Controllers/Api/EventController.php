@@ -65,7 +65,8 @@ class EventController extends BaseController
             'description' => 'required',
             'date' => 'required|date',
             'category' => 'required',
-            'musician_id' => 'required'
+            'musician_id' => 'required',
+            'link' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -78,7 +79,8 @@ class EventController extends BaseController
                 'description' => $request->description,
                 'date' => $request->date,
                 'category' => $request->category,
-                'musician_id' => $request->musician_id
+                'musician_id' => $request->musician_id,
+                'link' => $request->link
             ]);
         }
         if($request->input('method')=='PUT'){
@@ -94,7 +96,8 @@ class EventController extends BaseController
                     'description' => $request->description,
                     'date' => $request->date,
                     'category' => $request->category,
-                    'musician_id' => $request->musician_id
+                    'musician_id' => $request->musician_id,
+                    'link' => $request->link
                 ]);
             } else{
                 $event->update([
@@ -102,7 +105,8 @@ class EventController extends BaseController
                     'description' => $request->description,
                     'date' => $request->date,
                     'category' => $request->category,
-                    'musician_id' => $request->musician_id
+                    'musician_id' => $request->musician_id,
+                    'link' => $request->link
                 ]);
 
             }
@@ -164,7 +168,8 @@ class EventController extends BaseController
                 'description' => $request->description,
                 'date' => $request->date,
                 'category' => $request->category,
-                'musician_id' => $request->musician_id
+                'musician_id' => $request->musician_id,
+                'link' => $request->link
             ]);
         } else{
             $event->update($request->all());

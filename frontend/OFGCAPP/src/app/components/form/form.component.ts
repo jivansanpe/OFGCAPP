@@ -34,6 +34,7 @@ export class FormComponent implements OnInit {
   description = '';
   date = '';
   category = '';
+  link = '';
   toastColor: string;
   token: any;
   image: any = null;
@@ -92,6 +93,7 @@ export class FormComponent implements OnInit {
       this.category = this.event.category;
       this.date = this.event.date;
       this.musicianId = this.event.musician.id;
+      this.link = this.event.link;
       console.log('ahhhhhhhhhhhhhhh');
     });
   }
@@ -251,7 +253,7 @@ export class FormComponent implements OnInit {
         break;
       }
       case 'Event': {
-        this.newElement = new Event(this.name, this.description, this.date, this.category, this.musicianId);
+        this.newElement = new Event(this.name, this.description, this.date, this.category, this.musicianId, this.link);
         this.eventsService.createEvent(this.newElement, blob).subscribe(
           data => {
             this.toastColor = 'success'
@@ -347,7 +349,7 @@ export class FormComponent implements OnInit {
         break;
       }
       case 'Event': {
-        this.newElement = new Event(this.name, this.description, this.date, this.category, this.musicianId);
+        this.newElement = new Event(this.name, this.description, this.date, this.category, this.musicianId, this.link);
         this.eventsService.updateEvent(this.id, this.newElement, blob).subscribe(
           data => {
             this.toastColor = 'success'

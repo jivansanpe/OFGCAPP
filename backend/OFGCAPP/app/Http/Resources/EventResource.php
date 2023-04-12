@@ -23,7 +23,8 @@ class EventResource extends JsonResource
             'date' => $this->date,
             'category' => $this->category,
             'pieces'=> PieceResource::collection($this->whenLoaded('pieces')),
-            'musician'=> $this->musician
+            'musician'=> $this->musician,
+            'link' => $this->link
             // 'musicians'=> MusicianResource::collection($this->whenLoaded('musicians')),
             // 'musicians' => $this->musicians,
             
