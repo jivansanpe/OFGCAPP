@@ -24,7 +24,8 @@ class EventResource extends JsonResource
             'category' => $this->category,
             'pieces'=> PieceResource::collection($this->whenLoaded('pieces')),
             'musician'=> $this->musician,
-            'link' => $this->link
+            'link' => $this->link,
+            'status' => $this->status
             // 'musicians'=> MusicianResource::collection($this->whenLoaded('musicians')),
             // 'musicians' => $this->musicians,
             

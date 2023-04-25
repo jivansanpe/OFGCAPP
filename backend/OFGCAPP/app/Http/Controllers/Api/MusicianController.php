@@ -45,7 +45,7 @@ class MusicianController extends BaseController
         }
         $validator = Validator::make($request->all(), [
             'name' => 'required',
-            'description' => 'required',
+            'description' => 'nullable',
         ]);
 
         if ($validator->fails()) {
@@ -119,7 +119,7 @@ class MusicianController extends BaseController
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-            'description' => 'required',
+            'description' => 'nullable',
         ]);
 
         if ($validator->fails()) {

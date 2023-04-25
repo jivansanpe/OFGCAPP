@@ -35,6 +35,7 @@ export class FormComponent implements OnInit {
   date = '';
   category = '';
   link = '';
+  status = '';
   toastColor: string;
   token: any;
   image: any = null;
@@ -94,6 +95,7 @@ export class FormComponent implements OnInit {
       this.date = this.event.date;
       this.musicianId = this.event.musician.id;
       this.link = this.event.link;
+      this.status = this.event.status;
       console.log('ahhhhhhhhhhhhhhh');
     });
   }
@@ -163,9 +165,9 @@ export class FormComponent implements OnInit {
     toast.present();
   }
   async onCreate() {
-    if (this.name == '' || this.description == '') {
+    if (this.name == '') {
       this.toastColor = 'danger'
-      this.presentToast('Please fill all fields');
+      this.presentToast('Please fill name field');
       return;
     }
     if (this.name.length > 50) {
@@ -253,7 +255,7 @@ export class FormComponent implements OnInit {
         break;
       }
       case 'Event': {
-        this.newElement = new Event(this.name, this.description, this.date, this.category, this.musicianId, this.link);
+        this.newElement = new Event(this.name, this.description, this.date, this.category, this.musicianId, this.link, this.status);
         this.eventsService.createEvent(this.newElement, blob).subscribe(
           data => {
             this.toastColor = 'success'
@@ -276,9 +278,9 @@ export class FormComponent implements OnInit {
 
   }
   async onUpdate() {
-    if (this.name == '' || this.description == '') {
+    if (this.name == '') {
       this.toastColor = 'danger'
-      this.presentToast('Please fill all fields');
+      this.presentToast('Please fill name field');
       return;
     }
     let blob: any;
@@ -349,7 +351,7 @@ export class FormComponent implements OnInit {
         break;
       }
       case 'Event': {
-        this.newElement = new Event(this.name, this.description, this.date, this.category, this.musicianId, this.link);
+        this.newElement = new Event(this.name, this.description, this.date, this.category, this.musicianId, this.link, this.status);
         this.eventsService.updateEvent(this.id, this.newElement, blob).subscribe(
           data => {
             this.toastColor = 'success'

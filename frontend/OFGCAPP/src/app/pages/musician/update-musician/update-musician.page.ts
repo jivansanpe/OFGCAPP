@@ -44,9 +44,9 @@ export class UpdateMusicianPage implements OnInit {
     });
   }
   onUpdate() {
-    if (this.name.trim() == '' || this.description.trim() == '') {
+    if (this.name.trim() == '') {
       this.toastColor = 'danger'
-      this.presentToast('Please fill all fields');
+      this.presentToast('Please fill name field');
       return;
     }
 

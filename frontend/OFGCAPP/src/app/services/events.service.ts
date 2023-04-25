@@ -42,6 +42,7 @@ export class EventsService {
     data.append("category", event.category);
     data.append("musician_id", event.musician_id);
     data.append("link", event.link);
+    data.append("status", event.status);
     return this.httpClient.post<any>(this.endpoint, data, this.httpOptionsUsingUrlEncoded);
   }
   public updateEvent(id: any, event: Event, blob: Blob): Observable<any> {
@@ -55,6 +56,7 @@ export class EventsService {
     data.append("category", event.category);
     data.append("musician_id", event.musician_id);
     data.append("link", event.link);
+    data.append("status", event.status);
     console.log(blob);
     return this.httpClient.post<any>(this.endpoint, data, this.httpOptionsUsingUrlEncoded);
   }

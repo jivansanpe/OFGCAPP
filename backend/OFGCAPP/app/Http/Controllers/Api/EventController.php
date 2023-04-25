@@ -10,8 +10,9 @@ use App\Http\Resources\EventResource;
 use App\Http\Resources\MusicianResource;
 use App\Http\Controllers\Api\MusicianController;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File; 
+use Illuminate\Support\Facades\File;
 use Validator;
+
 class EventController extends BaseController
 {
 
@@ -23,13 +24,13 @@ class EventController extends BaseController
     public function index(Request $request)
     {
         $temp = $request->all();
-        if(isset($temp['include']) && $temp['include']=='pieces'){
+        if (isset($temp['include']) && $temp['include'] == 'pieces') {
             return EventResource::collection(Event::with('pieces')->get());
-        } else{
+        } else {
             return EventResource::collection(Event::all());
         }
     }
-    
+
 
     /**
      * Show the form for creating a new resource.
@@ -57,7 +58,7 @@ class EventController extends BaseController
     // }
     public function store(Request $request)
     {
-        if($request->image != "undefined"){
+        if ($request->image != "undefined") {
             $image_aux = $request->file('image')->store('image', 'public');
         }
         $validator = Validator::make($request->all(), [
@@ -66,13 +67,14 @@ class EventController extends BaseController
             'date' => 'required|date',
             'category' => 'required',
             'musician_id' => 'required',
-            'link' => 'required'
+            'link' => 'required',
+            'status' => 'required'
         ]);
 
         if ($validator->fails()) {
             return $this->sendError('Error validation', $validator->errors());
         }
-        if($request->input('method')=='POST'){
+        if ($request->input('method') == 'POST') {
             $event = Event::create([
                 'name' => $request->name,
                 'image' => $image_aux,
@@ -80,12 +82,13 @@ class EventController extends BaseController
                 'date' => $request->date,
                 'category' => $request->category,
                 'musician_id' => $request->musician_id,
-                'link' => $request->link
+                'link' => $request->link,
+                'status' => $request->status
             ]);
         }
-        if($request->input('method')=='PUT'){
+        if ($request->input('method') == 'PUT') {
             $event = Event::find($request->input('id'));
-            if($request->image != "undefined"){
+            if ($request->image != "undefined") {
                 // $image_name = "storage/".$author->image;
                 // if(File::exists($image_name)) {
                 //     File::delete($image_name);
@@ -97,18 +100,18 @@ class EventController extends BaseController
                     'date' => $request->date,
                     'category' => $request->category,
                     'musician_id' => $request->musician_id,
-                    'link' => $request->link
+                    'link' => $request->link,
+                    'status' => $request->status
                 ]);
-            } else{
+            } else {
                 $event->update([
                     'name' => $request->name,
                     'description' => $request->description,
                     'date' => $request->date,
                     'category' => $request->category,
                     'musician_id' => $request->musician_id,
-                    'link' => $request->link
+                    'status' => $request->status
                 ]);
-
             }
         }
         // if($request->input('musicians')){
@@ -125,12 +128,12 @@ class EventController extends BaseController
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event,Request $request)
+    public function show(Event $event, Request $request)
     {
-        if($request->input("include") && $request->input("include")=='pieces'){
+        if ($request->input("include") && $request->input("include") == 'pieces') {
             $event = Event::with(['pieces'])->where('id', $event['id'])->first();
             return new EventResource($event);
-        } else{
+        } else {
             return new EventResource($event);
         }
     }
@@ -156,9 +159,9 @@ class EventController extends BaseController
     public function update(Request $request, Event $event)
     {
 
-        if($request->input('image')){
-            $image_name = "storage/".$event->image;
-            if(File::exists($image_name)) {
+        if ($request->input('image')) {
+            $image_name = "storage/" . $event->image;
+            if (File::exists($image_name)) {
                 File::delete($image_name);
             }
             $image_path = $request->file('image')->store('image', 'public');
@@ -169,17 +172,18 @@ class EventController extends BaseController
                 'date' => $request->date,
                 'category' => $request->category,
                 'musician_id' => $request->musician_id,
-                'link' => $request->link
+                'link' => $request->link,
+                'status' => $request->status
             ]);
-        } else{
+        } else {
             $event->update($request->all());
         }
 
         // if($request->input('musicians')){
         //     $this->assignMusicians($event, $request->input('musicians'));
         // } 
-        
-        return response()->json([ 
+
+        return response()->json([
             'message' => "Event updated successfully!",
             'request' => $request->input()
         ], 200);
@@ -194,9 +198,9 @@ class EventController extends BaseController
     public function destroy(Event $event)
     {
         $event->delete();
- 
-        $image_name = "storage/".$event->image;
-        if(File::exists($image_name)) {
+
+        $image_name = "storage/" . $event->image;
+        if (File::exists($image_name)) {
             File::delete($image_name);
         }
         return response()->json([

@@ -7,10 +7,22 @@
       <app-top-part title="Eventos"></app-top-part>
       <ion-searchbar [(ngModel)]="filterTerm" name="filterTerm"></ion-searchbar>
     </div>
-    <ion-row class="cards-container" *ngFor="let e of events | filter:filterTerm">
-      <app-card [element]=e type="event"></app-card>
-    </ion-row>
+    <ng-container *ngIf="isLoggedIn; else publicEvents">
+      <ion-row class="cards-container" *ngFor="let e of events | filter:filterTerm">
+        <app-card [element]=e type="event"></app-card>
+      </ion-row>
+    </ng-container>
+    <ng-template #publicEvents>
+      <ion-row class="cards-container">
+        <ng-container *ngFor="let e of events | filter:filterTerm">
+          <ng-container *ngIf="e.status === 'Público'">
+            <app-card [element]=e type="event"></app-card>
+          </ng-container>
+        </ng-container>
+      </ion-row>  
+    </ng-template>   
     <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="createEvent()">Crear</ion-button>
+    <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="deleteAllEventsNow()">Vaciar</ion-button>
   </ion-content>
 </div>
 

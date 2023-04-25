@@ -77,7 +77,16 @@
       <ion-item>
         <ion-textarea [(ngModel)]="link" name="link" required placeholder="Link"></ion-textarea>
       </ion-item>
-    </div>    
+    </div>
+    <div *ngIf="type==='Event'" class="input-div">
+      <ion-label class="subtext">Estado</ion-label>
+      <ion-item>
+        <ion-select [(ngModel)]="status" name="status" required>
+          <ion-select-option value="Privado">Privado</ion-select-option>
+          <ion-select-option value="Público">Público</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>        
     <ion-button class="submit" type="submit">Crear</ion-button>
   </form>
   <form *ngIf="page==='Update'" #log="ngForm" (ngSubmit)="onUpdate()" novalidate>
@@ -136,7 +145,16 @@
       <ion-item>
         <ion-textarea [(ngModel)]="link" name="link" required placeholder="Link"></ion-textarea>
       </ion-item>
-    </div>    
+    </div>
+    <div *ngIf="type==='Event'" class="input-div">
+      <ion-label class="subtext">Estado</ion-label>
+      <ion-item>
+        <ion-select [(ngModel)]="status" name="status" required>
+          <ion-select-option value="Privado">Privado</ion-select-option>
+          <ion-select-option value="Público">Público</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>       
     <ion-button class="submit" type="submit">Modificar</ion-button>
   </form>
 </div>

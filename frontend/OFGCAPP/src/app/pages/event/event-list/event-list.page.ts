@@ -4,6 +4,7 @@ import { EventsService } from '../../../services/events.service';
 import { TokenService } from '../../../services/token.service';
 import { ToastController } from '@ionic/angular';
 import { Location } from '@angular/common'
+import { finalize, forkJoin } from 'rxjs';
 
 const TOKEN_KEY = 'api_token';
 
@@ -45,6 +46,25 @@ export class EventListPage {
   createEvent() {
     this.router.navigateByUrl("new-event");
   }
+
+  // changeAllPrivateEvents() {
+  //   this.events.forEach((event: any) => {
+  //     if (event.status === 'Privado') {
+  //       event.status = 'Público';
+  //       this.eventsService.updateEvent(event.id, event, this.image).subscribe(
+  //         data => {
+  //           this.toastColor = 'success';
+  //           this.presentToast("Eventos actualizados correctamente");
+  //         },
+  //         err => {
+  //           this.toastColor = 'danger';
+  //           this.presentToast("No se pudo actualizar el evento");
+  //         }
+  //       );
+  //     }
+  //   });
+  // }
+
   deleteEvent(id: any) {
     this.eventsService.deleteEvent(id).subscribe(
       data => {
@@ -58,11 +78,32 @@ export class EventListPage {
       }
     )
   }
+  deleteAllEventsNow() {
+    const deleteRequests = this.events.map((event: { id: any; }) => {
+      return this.eventsService.deleteEvent(event.id);
+    });
+  
+    forkJoin(deleteRequests).pipe(
+      finalize(() => {
+        this.router.navigate(['/event-list']).then(() => {
+          location.reload();
+        });
+      })
+    ).subscribe(
+      data => {
+        console.log(`Events deleted`);
+      },
+      err => {
+        console.log(`Error deleting events: ${err.error.message}`);
+      }
+    );
+  }  
+  
   async presentToast(msj: string) {
     const toast = await this.toastController.create({
       message: msj,
       duration: 2000,
-      position: 'bottom',
+      position: 'top',
       color: this.toastColor,
       icon: "alert-circle-outline",
       animated: true
