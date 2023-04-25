@@ -11,12 +11,12 @@
   </ion-slides>
 
   <div class='tap'>
-    <ion-text (click)="goToEventlist()">Tap to start</ion-text>
+    <ion-text (click)="goToEventlist()">Toca para empezar</ion-text>
   </div>
 
   <div class='circle2'></div>
   <div class='tap'>
-    <ion-text class="logText" *ngIf="!isLoggedIn" (click)="goToLogin()">Log in as admin</ion-text>
-    <ion-text class="logText" *ngIf="isLoggedIn" (click)="logOut()">Log out</ion-text>
+    <ion-text class="logText" *ngIf="!isLoggedIn" (click)="goToLogin()">Admin</ion-text>
+    <ion-text class="logText" *ngIf="isLoggedIn" (click)="logOut()">Cerrar sesión</ion-text>
   </div>
 </ion-content>

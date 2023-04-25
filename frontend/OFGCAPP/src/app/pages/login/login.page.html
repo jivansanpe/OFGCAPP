@@ -3,28 +3,28 @@
   <app-header inApp=true></app-header>
   <ion-content class="ion-padding">
     <div>
-      <app-top-part title="Login"></app-top-part>
+      <app-top-part title="Iniciar sesión"></app-top-part>
     </div>
     <div class="ion-padding">
       <form #log="ngForm" (ngSubmit)="onLogin()" novalidate>
         <div class="input-div">
-          <ion-label class="subtext">Email</ion-label>
+          <ion-label class="subtext">Correo electrónico</ion-label>
           <ion-item>
-            <ion-input [(ngModel)]="email" name="email" required placeholder="Enter your email"></ion-input>
+            <ion-input [(ngModel)]="email" name="email" required placeholder="Escribe tu correo"></ion-input>
           </ion-item>
         </div>
         <div class="input-div">
-          <ion-label class="subtext">Password</ion-label>
+          <ion-label class="subtext">Contraseña</ion-label>
           <ion-item>
-            <ion-input [(ngModel)]="password" name="password" required type="password" placeholder="Enter your password"></ion-input>
+            <ion-input [(ngModel)]="password" name="password" required type="password" placeholder="Escribe tu contraseña"></ion-input>
           </ion-item>
         </div>
 
-        <ion-button type="submit">Log in </ion-button>
+        <ion-button type="submit">Entrar</ion-button>
       </form>
-      <div class="text-div">
+      <!-- <div class="text-div">
         <ion-text (click)="goToRegister()">Not registered yet? Register here!</ion-text>
-      </div>
+      </div> -->
     </div>
   </ion-content>
 </div>
