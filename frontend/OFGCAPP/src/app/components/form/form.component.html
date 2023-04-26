@@ -87,6 +87,9 @@
         </ion-select>
       </ion-item>
     </div>        
+    <div *ngIf="type==='Event'" class="input-div">
+      <ion-button expand="full" (click)="createMusician()">Crear director</ion-button>
+    </div>  
     <ion-button class="submit" type="submit">Crear</ion-button>
   </form>
   <form *ngIf="page==='Update'" #log="ngForm" (ngSubmit)="onUpdate()" novalidate>

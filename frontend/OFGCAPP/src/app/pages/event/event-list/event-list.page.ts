@@ -46,24 +46,7 @@ export class EventListPage {
   createEvent() {
     this.router.navigateByUrl("new-event");
   }
-
-  // changeAllPrivateEvents() {
-  //   this.events.forEach((event: any) => {
-  //     if (event.status === 'Privado') {
-  //       event.status = 'Público';
-  //       this.eventsService.updateEvent(event.id, event, this.image).subscribe(
-  //         data => {
-  //           this.toastColor = 'success';
-  //           this.presentToast("Eventos actualizados correctamente");
-  //         },
-  //         err => {
-  //           this.toastColor = 'danger';
-  //           this.presentToast("No se pudo actualizar el evento");
-  //         }
-  //       );
-  //     }
-  //   });
-  // }
+  
 
   deleteEvent(id: any) {
     this.eventsService.deleteEvent(id).subscribe(

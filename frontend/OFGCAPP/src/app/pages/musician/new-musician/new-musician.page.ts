@@ -4,6 +4,7 @@ import { Musician } from '../../../models/musician';
 import { MusicianService } from '../../../services/musician.service';
 import { TokenService } from '../../../services/token.service';
 import { ToastController } from '@ionic/angular';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-new-musician',
@@ -16,10 +17,10 @@ export class NewMusicianPage {
   description = '';
   toastColor: string;
   token: any;
-  constructor(private router: Router, private musicianService: MusicianService, private tokenService: TokenService, private toastController: ToastController) { }
+  constructor(private router: Router, private musicianService: MusicianService, private tokenService: TokenService, private toastController: ToastController, private location: Location) { }
 
   ionViewWillEnter() {
-
+    
   }
   goToHome() {
     this.router.navigateByUrl("/event-list");
@@ -49,7 +50,7 @@ export class NewMusicianPage {
       data => {
         this.toastColor = 'success'
         this.presentToast(data.message);
-        this.router.navigate(['/musician-list']);
+        this.location.back();
       },
       err => {
         this.toastColor = 'danger'

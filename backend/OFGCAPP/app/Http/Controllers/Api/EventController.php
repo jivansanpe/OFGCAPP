@@ -110,6 +110,7 @@ class EventController extends BaseController
                     'date' => $request->date,
                     'category' => $request->category,
                     'musician_id' => $request->musician_id,
+                    'link' => $request->link,
                     'status' => $request->status
                 ]);
             }

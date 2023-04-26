@@ -6,6 +6,7 @@ export class Event {
   musician_id: string;
   link: string;
   status: string;
+  image?: Blob;
 
   constructor(name: string, description: string, date: string, category: string, musician_id: string, link: string, status: string) {
     this.name = name;

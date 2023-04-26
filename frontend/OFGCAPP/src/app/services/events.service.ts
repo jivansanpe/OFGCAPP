@@ -60,6 +60,8 @@ export class EventsService {
     console.log(blob);
     return this.httpClient.post<any>(this.endpoint, data, this.httpOptionsUsingUrlEncoded);
   }
+  
+  
   public deleteEvent(id: any) {
     return this.httpClient.delete<any>(this.endpoint + '/' + id, this.httpOptionsUsingUrlEncoded);
   }

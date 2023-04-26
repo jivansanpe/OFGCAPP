@@ -12,6 +12,8 @@ import { TokenService } from '../../services/token.service';
 import { ToastController } from '@ionic/angular';
 import { PhotoService } from '../../services/photo.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Location } from '@angular/common';
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -44,7 +46,7 @@ export class FormComponent implements OnInit {
   @Input() page: string;
   constructor(private router: Router, private sanitizer: DomSanitizer, private photoService: PhotoService,
     private pieceService: PieceService, private tokenService: TokenService, private eventsService: EventsService,
-    private activatedRoute: ActivatedRoute, private musicianService: MusicianService, private authorService: AuthorService, private toastController: ToastController) { }
+    private activatedRoute: ActivatedRoute, private musicianService: MusicianService, private authorService: AuthorService, private toastController: ToastController, private location: Location) { }
   ngOnInit() {
     console.log(this.imageDisplayed)
     if (this.page == 'Create' && this.type == 'Piece') {
@@ -240,7 +242,7 @@ export class FormComponent implements OnInit {
           data => {
             this.toastColor = 'success'
             this.presentToast(data.message);
-            this.router.navigate([`/${this.type.toLowerCase()}-list`]);
+            this.location.back();
           },
           err => {
             this.toastColor = 'danger'
@@ -372,6 +374,9 @@ export class FormComponent implements OnInit {
         break;
       }
     }
+  }
+  createMusician() {
+    this.router.navigateByUrl("new-musician");
   }
 
 }
