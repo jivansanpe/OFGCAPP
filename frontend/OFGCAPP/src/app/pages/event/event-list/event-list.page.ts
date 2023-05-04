@@ -6,6 +6,7 @@ import { ToastController } from '@ionic/angular';
 import { Location } from '@angular/common'
 import { finalize, forkJoin } from 'rxjs';
 
+
 const TOKEN_KEY = 'api_token';
 
 @Component({
@@ -62,25 +63,28 @@ export class EventListPage {
     )
   }
   deleteAllEventsNow() {
-    const deleteRequests = this.events.map((event: { id: any; }) => {
-      return this.eventsService.deleteEvent(event.id);
-    });
+    if (window.confirm('Are you sure you want to delete all events?')) {
+      const deleteRequests = this.events.map((event: { id: any; }) => {
+        return this.eventsService.deleteEvent(event.id);
+      });
   
-    forkJoin(deleteRequests).pipe(
-      finalize(() => {
-        this.router.navigate(['/event-list']).then(() => {
-          location.reload();
-        });
-      })
-    ).subscribe(
-      data => {
-        console.log(`Events deleted`);
-      },
-      err => {
-        console.log(`Error deleting events: ${err.error.message}`);
-      }
-    );
-  }  
+      forkJoin(deleteRequests).pipe(
+        finalize(() => {
+          this.router.navigate(['/event-list']).then(() => {
+            location.reload();
+          });
+        })
+      ).subscribe(
+        data => {
+          console.log(`Events deleted`);
+        },
+        err => {
+          console.log(`Error deleting events: ${err.error.message}`);
+        }
+      );
+    }
+  }
+  
   
   async presentToast(msj: string) {
     const toast = await this.toastController.create({
