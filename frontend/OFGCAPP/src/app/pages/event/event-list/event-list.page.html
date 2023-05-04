@@ -22,7 +22,7 @@
       </ion-row>  
     </ng-template>   
     <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="createEvent()">Crear</ion-button>
-    <!-- <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="changeAllPrivateEvents()">Publicar todo</ion-button> -->
+    <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="changeAllPrivateEvents()">Publicar todo</ion-button>
     <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="deleteAllEventsNow()">Vaciar</ion-button>
   </ion-content>
 </div>

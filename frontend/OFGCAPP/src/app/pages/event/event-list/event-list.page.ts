@@ -44,6 +44,14 @@ export class EventListPage {
       this.presentToast("Can not connect to server")
     });
   }
+  changeAllPrivateEvents() {
+    this.eventsService.changeAllEventStatusToPublic().subscribe(() => {
+      console.log('Todos los eventos se han actualizado con éxito');
+    }, (err) => {
+      console.error('Error al actualizar eventos', err);
+    });
+    
+  }
   createEvent() {
     this.router.navigateByUrl("new-event");
   }

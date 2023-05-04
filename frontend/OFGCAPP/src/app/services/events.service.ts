@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { tap } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 import { Event } from '../models/event';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpHeaders } from '@angular/common/http';
+import { forkJoin } from 'rxjs';
 
 const TOKEN_KEY = 'api_token';
 @Injectable({
@@ -59,6 +60,22 @@ export class EventsService {
     data.append("status", event.status);
     console.log(blob);
     return this.httpClient.post<any>(this.endpoint, data, this.httpOptionsUsingUrlEncoded);
+  }
+  public changeEventStatusToPublic(id: any): Observable<any> {
+    const event = { status: 'Público' };
+    return this.httpClient.put<any>(this.endpoint + '/' + id, event, this.httpOptionsUsingUrlEncoded);
+  }
+  public changeAllEventStatusToPublic(): Observable<any> {
+    const events = this.getEvents().pipe(map((response: any) => response.data));
+    return events.pipe(
+      switchMap((events: any) => {
+        const obsList = events.map((event: any) => {
+          const eventUpdate = { status: 'Público' };
+          return this.httpClient.put<any>(`${this.endpoint}/${event.id}`, eventUpdate, this.httpOptionsUsingUrlEncoded);
+        });
+        return forkJoin(obsList);
+      })
+    );
   }
   
   
