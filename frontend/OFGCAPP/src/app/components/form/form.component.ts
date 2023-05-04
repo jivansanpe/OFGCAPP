@@ -31,6 +31,7 @@ export class FormComponent implements OnInit {
   musicians: any = [];
   authorId: any;
   eventId: any;
+  selectedEventIds: any[] = [];
   musicianId: any;
   name = '';
   description = '';
@@ -124,7 +125,7 @@ export class FormComponent implements OnInit {
       this.name = this.piece.name;
       this.description = this.piece.description;
       this.authorId = this.piece.author.id;
-      this.eventId = this.piece.event.id;
+      this.selectedEventIds = this.piece.event.id;
       console.log(this.piece);
     });
   }
@@ -196,7 +197,7 @@ export class FormComponent implements OnInit {
 
     switch (this.type) {
       case 'Piece': {
-        this.newElement = new Piece(this.authorId, this.eventId, this.name, this.description);
+        this.newElement = new Piece(this.authorId, this.selectedEventIds, this.name, this.description);
         this.pieceService.createPiece(this.newElement).subscribe(
           data => {
             this.toastColor = 'success'
@@ -292,7 +293,7 @@ export class FormComponent implements OnInit {
     }
     switch (this.type) {
       case 'Piece': {
-        this.newElement = new Piece(this.authorId, this.eventId, this.name, this.description);
+        this.newElement = new Piece(this.authorId, this.selectedEventIds, this.name, this.description);
         this.pieceService.updatePiece(this.id, this.newElement).subscribe(
           data => {
             this.toastColor = 'success'

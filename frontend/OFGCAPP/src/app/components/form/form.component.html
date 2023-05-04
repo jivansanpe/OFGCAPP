@@ -18,10 +18,13 @@
       <div class="input-div">
         <ion-label class="subtext">Eventos</ion-label>
         <ion-item>
-          <ion-select name="eventId" [(ngModel)]="eventId">
-            <ion-select-option *ngFor="let e of events" value='{{e.id}}'>{{e.name}}</ion-select-option>
-          </ion-select>
-        </ion-item>
+          <ion-list lines="none">
+            <ion-item *ngFor="let event of events">
+              <ion-label>{{ event.name }}</ion-label>
+              <ion-checkbox [(ngModel)]="selectedEventIds[event.id]" [ngModelOptions]="{standalone: true}" name="selectedEvent"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+        </ion-item>        
       </div>
       <div class="input-div">
         <ion-label class="subtext">Autores</ion-label>
@@ -96,11 +99,11 @@
     <div *ngIf="type==='Piece'">
       <div class="input-div">
         <ion-label class="subtext">Eventos</ion-label>
-        <ion-item>
+        <!-- <ion-item>
           <ion-select name="eventId" [(ngModel)]="eventId">
             <ion-select-option *ngFor="let e of events" value='{{e.id}}'>{{e.name}}</ion-select-option>
           </ion-select>
-        </ion-item>
+        </ion-item> -->
       </div>
       <div class="input-div">
         <ion-label class="subtext">Autores</ion-label>

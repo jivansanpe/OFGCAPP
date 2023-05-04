@@ -18,6 +18,7 @@ export class UpdatePiecePage implements OnInit {
   description = '';
   authorId = '';
   eventId = '';
+  selectedEvents: any[] = [];
   toastColor: string;
   token: any;
   piece: any;
@@ -41,13 +42,13 @@ export class UpdatePiecePage implements OnInit {
       this.name = this.piece.name;
       this.description = this.piece.description;
       this.authorId = this.piece.author.id;
-      this.eventId = this.piece.event.id;
+      this.selectedEvents = this.piece.event;
       console.log(this.piece);
 
     });
   }
   onUpdate() {
-    if (this.name.trim() == '' || this.description.trim() == '' || this.authorId == '' || this.eventId == '') {
+    if (this.name.trim() == '' || this.description.trim() == '' || this.authorId == '' || this.selectedEvents.length == 0) {
       this.toastColor = 'danger'
       this.presentToast('Please fill all fields');
       return;
@@ -65,7 +66,7 @@ export class UpdatePiecePage implements OnInit {
       return;
     }
 
-    this.newPiece = new Piece(this.authorId, this.eventId, this.name, this.description);
+    this.newPiece = new Piece(this.authorId, this.selectedEvents, this.name, this.description);
     this.pieceService.updatePiece(this.id, this.newPiece).subscribe(
       data => {
         this.toastColor = 'success'
