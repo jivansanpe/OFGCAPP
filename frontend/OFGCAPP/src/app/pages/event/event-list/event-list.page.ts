@@ -45,17 +45,18 @@ export class EventListPage {
     });
   }
   changeAllPrivateEvents() {
-    this.eventsService.changeAllEventStatusToPublic().subscribe(() => {
-      console.log('Todos los eventos se han actualizado con éxito');
-    }, (err) => {
-      console.error('Error al actualizar eventos', err);
-    });
-    
+    if (window.confirm('¿Seguro que quieres publicar todos los eventos?')) {
+      this.eventsService.changeAllEventStatusToPublic().subscribe(() => {
+        console.log('Todos los eventos se han actualizado con éxito');
+      }, (err) => {
+        console.error('Error al actualizar eventos', err);
+      });
+    }
   }
   createEvent() {
     this.router.navigateByUrl("new-event");
   }
-  
+
 
   deleteEvent(id: any) {
     this.eventsService.deleteEvent(id).subscribe(
@@ -71,11 +72,11 @@ export class EventListPage {
     )
   }
   deleteAllEventsNow() {
-    if (window.confirm('Are you sure you want to delete all events?')) {
+    if (window.confirm('¿Seguro que quieres borrar todos los eventos?')) {
       const deleteRequests = this.events.map((event: { id: any; }) => {
         return this.eventsService.deleteEvent(event.id);
       });
-  
+
       forkJoin(deleteRequests).pipe(
         finalize(() => {
           this.router.navigate(['/event-list']).then(() => {
@@ -92,8 +93,8 @@ export class EventListPage {
       );
     }
   }
-  
-  
+
+
   async presentToast(msj: string) {
     const toast = await this.toastController.create({
       message: msj,
