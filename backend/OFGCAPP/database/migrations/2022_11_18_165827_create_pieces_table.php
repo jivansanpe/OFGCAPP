@@ -19,10 +19,10 @@ return new class extends Migration
             $table->foreign('author_id')->references('id')->on('authors')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-            $table->unsignedBigInteger('event_id');
-            $table->foreign('event_id')->references('id')->on('events')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
+            // $table->unsignedBigInteger('event_id');
+            // $table->foreign('event_id')->references('id')->on('events')
+            //     ->onUpdate('cascade')
+            //     ->onDelete('cascade');
             $table->string('name');
             $table->longText('description');
             $table->timestamps();

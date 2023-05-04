@@ -41,22 +41,28 @@ class PieceController extends BaseController
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'event_id' => 'required',
             'author_id' => 'required',
             'name' => 'required',
             'description' => 'required',
+            'events' => 'required|array',
         ]);
-
+    
         if ($validator->fails()) {
             return $this->sendError('Error validation', $validator->errors());
         }
-        $piece = Piece::create($request->all());
-
+    
+        $events = $request->input('events'); // Añadir esta línea
+    
+        $piece = Piece::create($request->except('events'));
+    
+        $piece->events()->sync($events); // Modificar esta línea
+    
         return response()->json([
             'message' => "Piece saved successfully!",
-            'piece' => $request->all()
+            'piece' => $piece
         ], 200);
     }
+    
 
     /**
      * Display the specified resource.

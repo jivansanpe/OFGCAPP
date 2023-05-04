@@ -19,7 +19,7 @@ class PieceResource extends JsonResource
             'name' => $this->name,
             'description' => $this->description,
             'author'=> $this->author,
-            'event'=> $this->event,
+            'events' => EventResource::collection($this->whenLoaded('events'))
         ];
     }
 }

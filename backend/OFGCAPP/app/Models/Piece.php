@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Piece extends Model
 {
     use HasFactory;
-    protected $fillable = ['event_id', 'author_id','name', 'description'];
-    public function event()
+    protected $fillable = ['author_id','name', 'description'];
+    public function events()
     {
-        return $this->belongsTo(Event::class);
+        return $this->belongsToMany(Event::class);
     }
     public function author()
     {

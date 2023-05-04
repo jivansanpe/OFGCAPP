@@ -12,7 +12,7 @@ class Event extends Model
     protected $fillable = ['name', 'image', 'description', 'date', 'category', 'musician_id', 'link', 'status'];
     public function pieces()
     {
-        return $this->hasMany(Piece::class);
+        return $this->belongsToMany(Piece::class);
     }
     public function musician()
     {
