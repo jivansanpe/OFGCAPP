@@ -45,7 +45,9 @@ class PieceController extends BaseController
             'name' => 'required',
             'description' => 'required',
             'events' => 'required|array',
+            'selectedEventIds' => 'required|array'
         ]);
+        
     
         if ($validator->fails()) {
             return $this->sendError('Error validation', $validator->errors());

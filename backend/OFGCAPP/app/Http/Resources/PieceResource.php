@@ -15,11 +15,13 @@ class PieceResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id'=> $this->id,
+            'id' => $this->id,
             'name' => $this->name,
             'description' => $this->description,
-            'author'=> $this->author,
+            'author' => $this->author,
+            'selectedEventIds' => $this->selected_event_ids,
             'events' => EventResource::collection($this->whenLoaded('events'))
         ];
     }
+    
 }
