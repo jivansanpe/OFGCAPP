@@ -19,12 +19,13 @@
         <ion-label class="subtext">Eventos</ion-label>
         <ion-item>
           <ion-list lines="none">
-            <ion-item *ngFor="let event of events">
+            <ion-item *ngFor="let event of events; let i = index">
               <ion-label>{{ event.name }}</ion-label>
-              <ion-checkbox [(ngModel)]="selectedEventIds[event.id]" [ngModelOptions]="{standalone: true}" name="selectedEvent"></ion-checkbox>
+              <ion-checkbox [(ngModel)]="selectedEventIds[i]" name="selectedEvent"></ion-checkbox>
             </ion-item>
+            
           </ion-list>
-        </ion-item>        
+        </ion-item>              
       </div>
       <div class="input-div">
         <ion-label class="subtext">Autores</ion-label>

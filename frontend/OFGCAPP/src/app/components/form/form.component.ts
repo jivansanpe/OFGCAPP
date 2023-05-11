@@ -31,7 +31,7 @@ export class FormComponent implements OnInit {
   musicians: any = [];
   authorId: any;
   eventId: any;
-  selectedEventIds: any[] = [];
+  selectedEventIds: boolean[] = [];
   musicianId: any;
   name = '';
   description = '';
@@ -57,7 +57,7 @@ export class FormComponent implements OnInit {
     if (this.page == 'Create' && this.type == 'Event') {
       this.getAllMusicians();
     }
-    
+
     if (this.page == 'Update') {
       this.id = this.activatedRoute.snapshot.paramMap.get('id')
       switch (this.type) {
@@ -200,13 +200,13 @@ export class FormComponent implements OnInit {
         this.newElement = new Piece(this.authorId, this.selectedEventIds, this.name, this.description);
         this.pieceService.createPiece(this.newElement).subscribe(
           data => {
-            this.toastColor = 'success'
+            this.toastColor = 'success';
             console.log(data.message);
             this.presentToast(data.message);
             this.router.navigate([`/${this.type.toLowerCase()}-list`]);
           },
           err => {
-            this.toastColor = 'danger'
+            this.toastColor = 'danger';
             console.log(this.newElement);
             if (err.status == 404) {
               this.presentToast(err.error.message);
@@ -214,9 +214,9 @@ export class FormComponent implements OnInit {
               this.presentToast(err.error.message);
             }
           }
-        )
+        );
         break;
-      }
+      }      
       case 'Author': {
         this.newElement = new Author(this.name, this.description);
         this.authorService.createAuthor(this.newElement, blob).subscribe(

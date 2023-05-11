@@ -46,7 +46,7 @@ export class PieceService {
     return this.httpClient.delete<any>(this.endpoint + '/' + id, this.httpOptionsUsingUrlEncoded);
   }
 
-  private createPieceAndEvents(piece: Piece, selectedEventIds: number[]): Observable<any> {
+  private createPieceAndEvents(piece: Piece, selectedEventIds: boolean[]): Observable<any> {
     // Crear la pieza y obtener su ID
     return this.httpClient.post<any>(this.endpoint, piece, this.httpOptionsUsingUrlEncoded)
       .pipe(
@@ -55,7 +55,7 @@ export class PieceService {
           // Crear los registros en la tabla pivote para vincular la pieza con los eventos seleccionados
           for (const eventId of selectedEventIds) {
             const data = { event_id: eventId, piece_id: pieceId };
-            this.httpClient.post<any>('http://localhost:8000/api/event-piece', data, this.httpOptionsUsingUrlEncoded).subscribe(
+            this.httpClient.post<any>('http://localhost:8000/api/pieces', data, this.httpOptionsUsingUrlEncoded).subscribe(
               res => console.log(res),
               err => console.log(err)
             );

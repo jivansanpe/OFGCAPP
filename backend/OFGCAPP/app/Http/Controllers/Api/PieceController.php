@@ -51,17 +51,18 @@ class PieceController extends BaseController
             return $this->sendError('Error validation', $validator->errors());
         }
     
-        $events = $request->input('events'); // Añadir esta línea
-    
+        $events = $request->input('events');
+        
         $piece = Piece::create($request->except('events'));
     
-        $piece->events()->sync($events); // Modificar esta línea
+        $piece->events()->attach($events); // Aquí se crea la relación en la tabla pivote
     
         return response()->json([
             'message' => "Piece saved successfully!",
             'piece' => $piece
         ], 200);
     }
+    
     
 
     /**
