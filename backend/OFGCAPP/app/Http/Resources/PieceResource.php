@@ -20,7 +20,7 @@ class PieceResource extends JsonResource
             'description' => $this->description,
             'author' => $this->author,
             'selectedEventIds' => $this->selected_event_ids,
-            'events' => EventResource::collection($this->whenLoaded('events'))
+            // 'events' => EventResource::collection($this->whenLoaded('events'))
         ];
     }
     

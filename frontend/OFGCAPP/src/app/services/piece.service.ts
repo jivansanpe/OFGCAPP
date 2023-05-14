@@ -35,7 +35,8 @@ export class PieceService {
   }
 
   public createPiece(piece: Piece): Observable<any> {
-    return this.createPieceAndEvents(piece, piece.selectedEventIds);
+    // console.log(piece.selectedEventIds);
+    return this.httpClient.post<any>(this.endpoint, piece, this.httpOptionsUsingUrlEncoded);
   }
 
   public updatePiece(id: any, piece: Piece): Observable<any> {
@@ -46,9 +47,9 @@ export class PieceService {
     return this.httpClient.delete<any>(this.endpoint + '/' + id, this.httpOptionsUsingUrlEncoded);
   }
 
-  private createPieceAndEvents(piece: Piece, selectedEventIds: boolean[]): Observable<any> {
+  // private createPieceAndEvents(piece: Piece, selectedEventIds: string[]): Observable<any> {
     // Crear la pieza y obtener su ID
-    return this.httpClient.post<any>(this.endpoint, piece, this.httpOptionsUsingUrlEncoded)
+    // return this.httpClient.post<any>(this.endpoint, piece, this.httpOptionsUsingUrlEncoded)
       // .pipe(
       //   tap((response: any) => {
       //     const pieceId = response.id;
@@ -62,5 +63,5 @@ export class PieceService {
       //     }
       //   }),
       // );
-  }
+  // }
 }

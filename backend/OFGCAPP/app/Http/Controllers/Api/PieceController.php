@@ -44,26 +44,29 @@ class PieceController extends BaseController
             'author_id' => 'required',
             'name' => 'required',
             'description' => 'required',
-            'events' => 'required|array',
-            'selectedEventIds' => 'required|array'
+            'selectedEventIds' => 'required|array',
+            'selectedEventIds.*' => 'integer',
         ]);
-        
     
         if ($validator->fails()) {
             return $this->sendError('Error validation', $validator->errors());
         }
     
-        $events = $request->input('events');
-        
-        $piece = Piece::create($request->except('events'));
-    
-        $piece->events()->attach($events); // Aquí se crea la relación en la tabla pivote
+        $piece = Piece::create([
+            'author_id' => $request->input('author_id'),
+            'selectedEventIds' => $request->input('selectedEventIds'),
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+        ]);
     
         return response()->json([
             'message' => "Piece saved successfully!",
             'piece' => $piece
         ], 200);
     }
+    
+    
+    
     
     
 

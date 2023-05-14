@@ -31,7 +31,7 @@ export class FormComponent implements OnInit {
   musicians: any = [];
   authorId: any;
   eventId: any;
-  selectedEventIds: boolean[] = [];
+  selectedEventIds: string[] = [];
   musicianId: any;
   name = '';
   description = '';
@@ -125,8 +125,8 @@ export class FormComponent implements OnInit {
       this.name = this.piece.name;
       this.description = this.piece.description;
       this.authorId = this.piece.author.id;
-      this.selectedEventIds = this.piece.event.id;
-      console.log(this.piece);
+      this.selectedEventIds = this.piece.selectedEventIds;
+      // console.log(this.piece);
     });
   }
   getAuthor(id: any) {
@@ -197,9 +197,16 @@ export class FormComponent implements OnInit {
 
     switch (this.type) {
       case 'Piece': {
-        this.newElement = new Piece(this.authorId, this.selectedEventIds, this.name, this.description);
+        const selectedEventIds = this.events
+          .filter((event: { id: string }, index: number) => this.selectedEventIds[index])
+          .map((event: { id: string }) => event.id);
+        
+        this.newElement = new Piece(this.authorId, selectedEventIds, this.name, this.description);
+        console.log(selectedEventIds);
+        
         this.pieceService.createPiece(this.newElement).subscribe(
           data => {
+            console.log(this.newElement.selectedEventIds);
             this.toastColor = 'success';
             console.log(data.message);
             this.presentToast(data.message);
@@ -215,8 +222,10 @@ export class FormComponent implements OnInit {
             }
           }
         );
+        
         break;
-      }      
+      }
+          
       case 'Author': {
         this.newElement = new Author(this.name, this.description);
         this.authorService.createAuthor(this.newElement, blob).subscribe(
@@ -380,4 +389,11 @@ export class FormComponent implements OnInit {
     this.router.navigateByUrl("new-musician");
   }
 
+  isChecked(eventId: string): boolean {
+    return this.selectedEventIds.includes(eventId);
+  }
+  
+  
+  
+  
 }
