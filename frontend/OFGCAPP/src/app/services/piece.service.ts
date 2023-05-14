@@ -35,7 +35,6 @@ export class PieceService {
   }
 
   public createPiece(piece: Piece): Observable<any> {
-    // console.log(piece.selectedEventIds);
     return this.httpClient.post<any>(this.endpoint, piece, this.httpOptionsUsingUrlEncoded);
   }
 

@@ -40,7 +40,8 @@
     <div class="subtitle-div-pieces">
       <ion-title>Obras <span *ngIf="isLoggedIn" (click)="createPiece()">+</span></ion-title>
     </div>
-    <ion-accordion-group class="ion-padding">
+    
+    <!-- <ion-accordion-group class="ion-padding">
       <ion-accordion *ngFor="let p of event.pieces">
         <ion-item slot="header">
           <ion-label>{{p.name}}</ion-label>
@@ -52,6 +53,6 @@
           <ion-button>Ir al autor</ion-button>
         </div>
       </ion-accordion>
-    </ion-accordion-group>
+    </ion-accordion-group> -->
   </ion-content>
 </div>

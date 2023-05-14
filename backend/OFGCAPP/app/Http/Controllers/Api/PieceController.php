@@ -52,9 +52,11 @@ class PieceController extends BaseController
             return $this->sendError('Error validation', $validator->errors());
         }
     
+        $selectedEventIds = implode(',', $request->input('selectedEventIds'));
+    
         $piece = Piece::create([
             'author_id' => $request->input('author_id'),
-            'selectedEventIds' => $request->input('selectedEventIds'),
+            'selected_event_ids' => $selectedEventIds,
             'name' => $request->input('name'),
             'description' => $request->input('description'),
         ]);
@@ -64,6 +66,7 @@ class PieceController extends BaseController
             'piece' => $piece
         ], 200);
     }
+    
     
     
     
