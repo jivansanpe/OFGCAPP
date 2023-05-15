@@ -48,7 +48,7 @@ export class UpdatePiecePage implements OnInit {
     });
   }
   onUpdate() {
-    if (this.name.trim() == '' || this.description.trim() == '' || this.authorId == '' || this.selectedEvents.length == 0) {
+    if (this.name.trim() == '' || this.description.trim() == '' || this.authorId == '') {
       this.toastColor = 'danger'
       this.presentToast('Please fill all fields');
       return;
