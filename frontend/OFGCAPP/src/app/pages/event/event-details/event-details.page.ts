@@ -82,13 +82,14 @@ export class EventDetailsPage implements OnInit {
   getAllPieces() {
     this.pieceService.getPieces().subscribe((response: any) => {
       const data = response['data'];
-      console.log(data); // Puedes hacer lo que necesites con las piezas obtenidas
-      
+      console.log(data);
+  
       const pieces: Piece[] = data.map((item: any) => {
-        // Verificar si el campo author_id está presente y no es undefined
-        
+        const pieceAuthor = item.author; // Obtener la información del autor anidado
+        const authorId = pieceAuthor ? pieceAuthor.id : null; // Acceder al campo correcto del autor
+  
         return new Piece(
-          item.author_id,
+          authorId, // Pasar el author_id correspondiente
           item.selectedEventIds,
           item.name,
           item.description
@@ -98,6 +99,8 @@ export class EventDetailsPage implements OnInit {
       this.checkMatchingPieceIds(pieces);
     });
   }
+  
+  
   
   checkMatchingPieceIds(pieces: Piece[]) {
     this.matchingPieceIds = pieces
@@ -110,7 +113,9 @@ export class EventDetailsPage implements OnInit {
   
     console.log(this.matchingPieceIds);
   }
-  
+
   
   
 }
+  
+

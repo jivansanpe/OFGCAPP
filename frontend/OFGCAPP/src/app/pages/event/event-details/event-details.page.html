@@ -45,12 +45,13 @@
       <ion-list>
         <ion-item *ngFor="let piece of matchingPieceIds">
           {{ piece.name }}
-          <div class="accordion-info ion-padding" (click)="goToAuthor(piece.author_id)" slot="content">
+          <div class="accordion-info ion-padding" (click)="goToAuthor(piece.author_id)" slot="end">
             <ion-button>Ir al autor</ion-button>
           </div>
         </ion-item>
       </ion-list>
     </div>
+    
 
     
     <!-- <ion-accordion-group class="ion-padding">
