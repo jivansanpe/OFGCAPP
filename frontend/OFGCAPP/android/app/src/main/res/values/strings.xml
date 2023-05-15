@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">OFGCAPP</string>
+    <string name="title_activity_main">OFGCAPP</string>
+    <string name="package_name">com.ofgc.app</string>
+    <string name="custom_url_scheme">com.ofgc.app</string>
+</resources>
