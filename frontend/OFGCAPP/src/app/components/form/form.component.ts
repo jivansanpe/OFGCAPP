@@ -4,10 +4,12 @@ import { Author } from '../../models/author';
 import { Event } from '../../models/event';
 import { Musician } from '../../models/musician';
 import { Piece } from '../../models/piece';
+import { Noti } from '../../models/noti';
 import { PieceService } from '../../services/piece.service';
 import { EventsService } from '../../services/events.service';
 import { AuthorService } from '../../services/author.service';
 import { MusicianService } from '../../services/musician.service';
+import { NotiService } from '../../services/noti.service';
 import { TokenService } from '../../services/token.service';
 import { ToastController } from '@ionic/angular';
 import { PhotoService } from '../../services/photo.service';
@@ -26,15 +28,18 @@ export class FormComponent implements OnInit {
   musician: any;
   event: any;
   piece: any;
+  noti: any;
   authors: any = [];
   events: any = [];
   musicians: any = [];
+  notis: any = [];
   authorId: any;
   eventId: any;
   selectedEventIds: string[] = [];
   musicianId: any;
   name = '';
   description = '';
+  mensaje = '';
   date = '';
   category = '';
   link = '';
@@ -47,7 +52,7 @@ export class FormComponent implements OnInit {
   @Input() page: string;
   constructor(private router: Router, private sanitizer: DomSanitizer, private photoService: PhotoService,
     private pieceService: PieceService, private tokenService: TokenService, private eventsService: EventsService,
-    private activatedRoute: ActivatedRoute, private musicianService: MusicianService, private authorService: AuthorService, private toastController: ToastController, private location: Location) { }
+    private activatedRoute: ActivatedRoute, private musicianService: MusicianService, private notiService: NotiService, private authorService: AuthorService, private toastController: ToastController, private location: Location) { }
   ngOnInit() {
     console.log(this.imageDisplayed)
     if (this.page == 'Create' && this.type == 'Piece') {
@@ -77,6 +82,10 @@ export class FormComponent implements OnInit {
           this.getEvent(this.id);
           break;
         }
+        case 'Noti': {
+          this.getNoti(this.id);
+          break;
+        }
       };
     }
 
@@ -100,6 +109,22 @@ export class FormComponent implements OnInit {
       this.link = this.event.link;
       this.status = this.event.status;
       console.log('ahhhhhhhhhhhhhhh');
+    });
+  }
+  getNoti(id: any) {
+    this.notiService.getNoti(id).subscribe(response => {
+      this.noti = response;
+      this.noti = this.noti['data'];
+      this.name = this.noti.name;
+      this.mensaje = this.noti.mensaje;
+      console.log('oleeeeeeee');
+    });
+  }
+  getAllNotis() {
+    console.log('notiss');
+    this.notiService.getNotis().subscribe(response => {
+      this.notis = response;
+      this.notis = this.notis['data'];
     });
   }
   getMusician(id: any) {
@@ -184,7 +209,7 @@ export class FormComponent implements OnInit {
       this.presentToast('The description can not be longer than 100 characters.');
       return;
     }
-    if (this.image == null && this.type != 'Piece') {
+    if (this.image == null && this.type != 'Piece' && this.type != 'Noti') {
       this.toastColor = 'danger'
       this.presentToast('Please add an image.');
       return;
@@ -286,6 +311,26 @@ export class FormComponent implements OnInit {
         )
         break;
       }
+      case 'Noti': {
+        this.newElement = new Noti(this.name, this.mensaje);
+        this.notiService.createNoti(this.newElement).subscribe(
+          data => {
+            this.toastColor = 'success'
+            this.presentToast(data.message);
+            this.router.navigate([`/${this.type.toLowerCase()}-list`]);
+          },
+          err => {
+            this.toastColor = 'danger'
+            console.log(this.newElement);
+            if (err.status == 404) {
+              this.presentToast(err.error.message);
+            } else {
+              this.presentToast(err.error.message);
+            }
+          }
+        )
+        break;
+      }
     }
 
   }
@@ -365,6 +410,27 @@ export class FormComponent implements OnInit {
       case 'Event': {
         this.newElement = new Event(this.name, this.description, this.date, this.category, this.musicianId, this.link, this.status);
         this.eventsService.updateEvent(this.id, this.newElement, blob).subscribe(
+          data => {
+            this.toastColor = 'success'
+            console.log(data.message);
+            this.presentToast(data.message);
+            this.router.navigate([`/${this.type.toLowerCase()}-list`]);
+          },
+          err => {
+            this.toastColor = 'danger'
+            console.log(err);
+            if (err.status == 404) {
+              this.presentToast(err.error.message);
+            } else {
+              this.presentToast(err.error.message);
+            }
+          }
+        )
+        break;
+      }
+      case 'Noti': {
+        this.newElement = new Noti(this.name, this.mensaje);
+        this.notiService.updateNoti(this.id, this.newElement).subscribe(
           data => {
             this.toastColor = 'success'
             console.log(data.message);

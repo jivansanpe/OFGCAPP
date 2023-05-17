@@ -1,5 +1,5 @@
 <div class="ion-padding">
-  <div *ngIf="type!=='Piece'" class="input-div-image">
+  <div *ngIf="type!=='Piece' && type!=='Noti'" class="input-div-image">
     <ion-label class="subtext">Elige una imagen</ion-label>
     <img *ngIf="!image " src="../../assets/No-Image-Placeholder.svg" alt="image" />
     <img *ngIf="image && !imageDisplayed" src="http://localhost:8000/storage/{{image}}" alt="image" />
@@ -47,7 +47,7 @@
         <ion-textarea [(ngModel)]="date" name="date" required placeholder="YYYY-MM-DD"></ion-textarea>
       </ion-item>
     </div>
-    <div *ngIf="type!=='Event'" class="input-div">
+    <div *ngIf="type!=='Event' && type!=='Noti'" class="input-div">
       <ion-label class="subtext">Descripción</ion-label>
       <ion-item>
         <ion-textarea [(ngModel)]="description" name="description" required
@@ -59,6 +59,12 @@
       <ion-item>
         <ion-textarea cols="40" rows="8" [(ngModel)]="description" name="description" required
           placeholder="Solistas"></ion-textarea>
+      </ion-item>
+    </div>
+    <div *ngIf="type==='Noti'" class="input-div">
+      <ion-label class="subtext">Mensaje</ion-label>
+      <ion-item>
+        <ion-textarea [(ngModel)]="mensaje" name="mensaje" required placeholder="Mensaje"></ion-textarea>
       </ion-item>
     </div>
     <div *ngIf="type==='Event'" class="input-div">
@@ -126,7 +132,13 @@
         <ion-textarea [(ngModel)]="date" name="date" required placeholder="YYYY-MM-DD"></ion-textarea>
       </ion-item>
     </div>
-    <div *ngIf="type!=='Event'" class="input-div">
+    <div *ngIf="type==='Noti'" class="input-div">
+      <ion-label class="subtext">Mensaje</ion-label>
+      <ion-item>
+        <ion-textarea [(ngModel)]="mensaje" name="mensaje" required placeholder="Mensaje"></ion-textarea>
+      </ion-item>
+    </div>
+    <div *ngIf="type!=='Event' && type!=='Noti'" class="input-div">
       <ion-label class="subtext">Descripción</ion-label>
       <ion-item>
         <ion-textarea [(ngModel)]="description" name="description" required
