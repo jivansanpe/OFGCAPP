@@ -16,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     swipeBackEnabled: false
   }),],
 
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy, }],
   bootstrap: [AppComponent],
 
 })
