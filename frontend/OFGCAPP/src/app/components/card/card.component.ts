@@ -4,6 +4,7 @@ import { MusicianService } from '../../services/musician.service';
 import { EventsService } from '../../services/events.service';
 import { PieceService } from '../../services/piece.service';
 import { AuthorService } from '../../services/author.service';
+import { NotiService } from '../../services/noti.service';
 import { ToastController } from '@ionic/angular';
 
 const TOKEN_KEY = 'api_token';
@@ -18,7 +19,7 @@ export class CardComponent implements OnInit {
   isLoggedIn: any;
   toastColor: string;
   constructor(private router: Router, private eventsService: EventsService, private musicianService: MusicianService,
-    private pieceService: PieceService, private authorService: AuthorService, private toastController: ToastController) { }
+    private pieceService: PieceService, private authorService: AuthorService, private notiService: NotiService, private toastController: ToastController) { }
 
   ngOnInit() {
     this.isLogged();
@@ -85,6 +86,19 @@ export class CardComponent implements OnInit {
         }
       )
     }
+    if (this.type == "noti") {
+      this.notiService.deleteNoti(id).subscribe(
+        data => {
+          this.toastColor = 'success'
+          this.presentToast(data.message);
+          window.location.reload();
+        },
+        err => {
+          this.toastColor = 'danger'
+          this.presentToast(err.error.message);
+        }
+      )
+    }
   }
   isLogged() {
     if (window.sessionStorage.getItem(TOKEN_KEY)) {
@@ -97,7 +111,7 @@ export class CardComponent implements OnInit {
     const toast = await this.toastController.create({
       message: msj,
       duration: 2000,
-      position: 'bottom',
+      position: 'top',
       color: this.toastColor,
       icon: "alert-circle-outline",
       animated: true

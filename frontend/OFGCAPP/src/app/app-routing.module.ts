@@ -80,6 +80,22 @@ const routes: Routes = [
     loadChildren: () => import('./pages/piece/update-piece/update-piece.module').then(m => m.UpdatePiecePageModule)
   },
   {
+    path: 'noti-list',
+    loadChildren: () => import('./pages/noti/noti-list/noti-list.module').then(m => m.NotiListPageModule)
+  },
+  {
+    path: 'new-noti',
+    loadChildren: () => import('./pages/noti/new-noti/new-noti.module').then(m => m.NewNotiPageModule)
+  },
+  {
+    path: 'noti-details/:id',
+    loadChildren: () => import('./pages/noti/noti-details/noti-details.module').then(m => m.NotiDetailsPageModule)
+  },
+  {
+    path: 'update-noti/:id',
+    loadChildren: () => import('./pages/noti/update-noti/update-noti.module').then(m => m.UpdateNotiPageModule)
+  },
+  {
     path: 'update-event/:id',
     loadChildren: () => import('./pages/event/update-event/update-event.module').then(m => m.UpdateEventPageModule)
   },

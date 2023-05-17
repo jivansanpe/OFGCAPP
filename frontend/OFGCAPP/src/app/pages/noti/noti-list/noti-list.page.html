@@ -1,0 +1,17 @@
+<app-menu></app-menu>
+
+<div class="ion-page" id="main-content">
+  <app-header></app-header>
+  <ion-content class="ion-padding">
+    <div>
+      <app-top-part title="Notificaciones"></app-top-part>
+      <ion-searchbar [(ngModel)]="filterTerm" name="filterTerm"></ion-searchbar>
+    </div>
+    <ion-row class="cards-container" *ngFor="let n of notis | filter:filterTerm">
+      <app-card [element]=n type="noti"></app-card>
+    </ion-row>
+    <ion-button *ngIf="isLoggedIn" expand="full" (click)="createNoti()">Crear</ion-button>
+  </ion-content>
+</div>
+
+<app-tab></app-tab>
