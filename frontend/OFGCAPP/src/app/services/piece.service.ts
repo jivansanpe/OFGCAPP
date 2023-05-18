@@ -11,7 +11,7 @@ const TOKEN_KEY = 'api_token';
   providedIn: 'root'
 })
 export class PieceService {
-  endpoint = 'http://localhost:8000/api/pieces';
+  endpoint = 'http://10.0.2.2:8000/api/pieces';
   httpOptionsUsingUrlEncoded = {
     headers: new HttpHeaders({ 'Authorization': `Bearer ${window.sessionStorage.getItem(TOKEN_KEY)}` })
   };
@@ -55,7 +55,7 @@ export class PieceService {
       //     // Crear los registros en la tabla pivote para vincular la pieza con los eventos seleccionados
       //     for (const eventId of selectedEventIds) {
       //       const data = { event_id: eventId, piece_id: pieceId };
-      //       this.httpClient.post<any>('http://localhost:8000/api/pieces', data, this.httpOptionsUsingUrlEncoded).subscribe(
+      //       this.httpClient.post<any>('http://127.0.0.1/api/pieces', data, this.httpOptionsUsingUrlEncoded).subscribe(
       //         res => console.log(res),
       //         err => console.log(err)
       //       );

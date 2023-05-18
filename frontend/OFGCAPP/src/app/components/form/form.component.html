@@ -2,7 +2,7 @@
   <div *ngIf="type!=='Piece'" class="input-div-image">
     <ion-label class="subtext">Elige una imagen</ion-label>
     <img *ngIf="!image " src="../../assets/No-Image-Placeholder.svg" alt="image" />
-    <img *ngIf="image && !imageDisplayed" src="http://localhost:8000/storage/{{image}}" alt="image" />
+    <img *ngIf="image && !imageDisplayed" src="http://127.0.0.1:8000/storage/{{image}}" alt="image" />
     <img *ngIf="image && imageDisplayed" [src]="imageDisplayed" alt="image" />
     <ion-row class="ion-align-items-center">
       <ion-button class="img-pickers" color="primary" fill="outline" (click)="pickImage()">

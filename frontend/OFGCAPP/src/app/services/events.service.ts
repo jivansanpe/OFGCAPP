@@ -12,7 +12,7 @@ const TOKEN_KEY = 'api_token';
 })
 export class EventsService {
 
-  endpoint = 'http://localhost:8000/api/events';
+  endpoint = 'http://10.0.2.2:8000/api/events';
   httpOptionsUsingUrlEncoded = {
     headers: new HttpHeaders({ 'Authorization': `Bearer ${window.sessionStorage.getItem(TOKEN_KEY)}` })
   };
