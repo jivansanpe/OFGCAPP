@@ -26,6 +26,11 @@
         <ion-icon name="receipt-outline"></ion-icon>Obras</ion-item>
     </div>
     <div class="item-div">
+      <ion-item [ngClass]="{'item': activeList !== 'noti-list', 'highlighted' : activeList === 'noti-list' }"
+        lines="full" button detail="false" (click)="goToPage('noti-list')">
+        <ion-icon name="alert-circle-outline"></ion-icon>Notificaciones</ion-item>
+    </div>
+    <div class="item-div">
       <ion-item *ngIf="isLoggedIn" lines="full" button detail="false" (click)="logOut()">
         <ion-icon name="person-remove-outline"></ion-icon>Cerrar sesión</ion-item>
     </div>

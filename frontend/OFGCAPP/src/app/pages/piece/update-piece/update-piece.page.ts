@@ -17,13 +17,16 @@ export class UpdatePiecePage implements OnInit {
   name = '';
   description = '';
   authorId = '';
+  authors: any = [];
+  events: any = [];
+  selectedEventIds: string[] = [];
   eventId = '';
   selectedEvents: any[] = [];
   toastColor: string;
   token: any;
   piece: any;
   id: any;
-  constructor(private router: Router, private pieceService: PieceService, private activatedRoute: ActivatedRoute, private tokenService: TokenService, private eventsService: EventsService,
+  constructor(private router: Router, private pieceService: PieceService, private authorService: AuthorService, private activatedRoute: ActivatedRoute, private tokenService: TokenService, private eventsService: EventsService,
     private toastController: ToastController) { this.id = this.activatedRoute.snapshot.paramMap.get('id') }
 
   ionViewWillEnter() {
@@ -31,6 +34,7 @@ export class UpdatePiecePage implements OnInit {
   }
   ngOnInit(): void {
     this.getPiece(this.id);
+    this.getAllAuthors();
   }
   goToHome() {
     this.router.navigateByUrl("/piece-list");
@@ -42,9 +46,15 @@ export class UpdatePiecePage implements OnInit {
       this.name = this.piece.name;
       this.description = this.piece.description;
       this.authorId = this.piece.author.id;
-      this.selectedEvents = this.piece.event;
+      this.selectedEventIds = this.piece.selectedEventIds;
       console.log(this.piece);
 
+    });
+  }
+  getAllAuthors() {
+    this.authorService.getAuthors().subscribe(response => {
+      this.authors = response;
+      this.authors = this.authors['data'];
     });
   }
   onUpdate() {

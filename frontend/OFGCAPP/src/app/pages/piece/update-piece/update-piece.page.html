@@ -8,13 +8,32 @@
     <div class="ion-padding">
       <form #log="ngForm" (ngSubmit)="onUpdate()" novalidate>
         <div class="input-div">
-          <ion-label class="subtext">Piece name</ion-label>
+          <ion-label class="subtext">Nombre de la obra</ion-label>
           <ion-item>
             <ion-input [(ngModel)]="name" name="name" required></ion-input>
           </ion-item>
         </div>
+        <!-- <div class="input-div">
+          <ion-label class="subtext">Eventos</ion-label>
+          <ion-item>
+            <ion-list lines="none">
+              <ion-item *ngFor="let event of events; let i = index">
+                <ion-label>{{ event.name }}</ion-label>
+                <ion-checkbox [(ngModel)]="selectedEventIds[i]" name="selectedEventIds"></ion-checkbox>
+              </ion-item>
+            </ion-list>
+          </ion-item>                   
+        </div> -->
         <div class="input-div">
-          <ion-label class="subtext">Piece description</ion-label>
+          <ion-label class="subtext">Autor</ion-label>
+          <ion-item>
+            <ion-select name="authorId" [(ngModel)]="authorId">
+              <ion-select-option *ngFor="let a of authors" value='{{a.id}}'>{{a.name}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+        <div class="input-div">
+          <ion-label class="subtext">Descripción</ion-label>
           <ion-item>
             <ion-input [(ngModel)]="description" name="description" required></ion-input>
           </ion-item>
