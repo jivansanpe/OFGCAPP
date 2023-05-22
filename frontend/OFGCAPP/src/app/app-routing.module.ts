@@ -98,7 +98,11 @@ const routes: Routes = [
   {
     path: 'update-event/:id',
     loadChildren: () => import('./pages/event/update-event/update-event.module').then(m => m.UpdateEventPageModule)
+  },  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   },
+
 
 ];
 

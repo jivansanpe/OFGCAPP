@@ -19,4 +19,9 @@
     <ion-text class="logText" *ngIf="!isLoggedIn" (click)="goToLogin()">Admin</ion-text>
     <ion-text class="logText" *ngIf="isLoggedIn" (click)="logOut()">Cerrar sesión</ion-text>
   </div>
+
+  <ion-fab class="large-icon" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-icon name="information-circle-outline" (click)="goToAbout()"></ion-icon>
+  </ion-fab>
+  
 </ion-content>
