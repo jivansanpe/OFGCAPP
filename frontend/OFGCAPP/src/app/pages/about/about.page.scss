@@ -1,0 +1,41 @@
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  img {
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.members-container {
+  text-align: center;
+  color: #098181;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+  }
+
+  .centered-text {
+    text-align: center;
+    font-size: 16px;
+    color: #098181;
+    margin-top: 20px;
+  }
+  
+}

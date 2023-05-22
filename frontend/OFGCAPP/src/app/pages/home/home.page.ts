@@ -20,6 +20,9 @@ export class HomePage {
   goToLogin() {
     this.router.navigateByUrl("/login");
   }
+  goToAbout() {
+    this.router.navigateByUrl("/about");
+  }
   isLogged() {
     if (window.sessionStorage.getItem(TOKEN_KEY)) {
       this.isLoggedIn = true;
