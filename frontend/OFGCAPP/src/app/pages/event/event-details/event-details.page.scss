@@ -110,15 +110,15 @@ ion-header {
 }
 
 ion-button {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
   --background: #CD7E3A;
   --background-activated: #a86a33;
   --background-focused: #CD7E3A;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .text-div {
@@ -178,4 +178,5 @@ ion-accordion {
     --background-focused: #CD7E3A;
     font-size: 1.1em;
   }
+  
 }
