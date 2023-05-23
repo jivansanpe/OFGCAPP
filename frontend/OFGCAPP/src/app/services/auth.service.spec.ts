@@ -35,7 +35,7 @@ describe('AuthService', () => {
                 confirm_password: ''
             };
             authService.newUser(newUser).subscribe();
-            const req = httpMock.expectOne('http://10.0.2.2:8000/api/register');
+            const req = httpMock.expectOne('https://www.monche.es/OFGC/backend/OFGCAPP/public/api/register');
             expect(req.request.method).toBe('POST');
             expect(req.request.body).toEqual(newUser);
             req.flush({});
@@ -57,7 +57,7 @@ describe('AuthService', () => {
             authService.loginUser(loginUser).subscribe(res => {
                 expect(res).toEqual(jwtDTO);
             });
-            const req = httpMock.expectOne('http://10.0.2.2:8000/api/login');
+            const req = httpMock.expectOne('https://www.monche.es/OFGC/backend/OFGCAPP/public/api/login');
             expect(req.request.method).toBe('POST');
             expect(req.request.body).toEqual(loginUser);
             req.flush(jwtDTO);

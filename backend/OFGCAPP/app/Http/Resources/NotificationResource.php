@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class NotiResource extends JsonResource
+class NotificationResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,10 +14,12 @@ class NotiResource extends JsonResource
      */
     public function toArray($request)
     {
+        return parent::toArray($request);
         return [
-            'id'=> $this->id,
+            'id' => $this->id,
             'title' => $this->title,
-            'mensaje' => $this->mensaje
+            'message' => $this->message,
+            // Otros campos de dispositivo que deseas incluir
         ];
     }
 }

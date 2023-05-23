@@ -15,6 +15,7 @@ import { ToastController } from '@ionic/angular';
 import { PhotoService } from '../../services/photo.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Location } from '@angular/common';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-form',
@@ -38,8 +39,9 @@ export class FormComponent implements OnInit {
   selectedEventIds: string[] = [];
   musicianId: any;
   name = '';
+  title = '';
   description = '';
-  mensaje = '';
+  message = '';
   date = '';
   category = '';
   link = '';
@@ -52,7 +54,8 @@ export class FormComponent implements OnInit {
   @Input() page: string;
   constructor(private router: Router, private sanitizer: DomSanitizer, private photoService: PhotoService,
     private pieceService: PieceService, private tokenService: TokenService, private eventsService: EventsService,
-    private activatedRoute: ActivatedRoute, private musicianService: MusicianService, private notiService: NotiService, private authorService: AuthorService, private toastController: ToastController, private location: Location) { }
+    private activatedRoute: ActivatedRoute, private musicianService: MusicianService, private notiService: NotiService, private authorService: AuthorService, private location: Location, private http: HttpClient,
+    private toastController: ToastController) { }
   ngOnInit() {
     console.log(this.imageDisplayed)
     if (this.page == 'Create' && this.type == 'Piece') {
@@ -115,8 +118,8 @@ export class FormComponent implements OnInit {
     this.notiService.getNoti(id).subscribe(response => {
       this.noti = response;
       this.noti = this.noti['data'];
-      this.name = this.noti.name;
-      this.mensaje = this.noti.mensaje;
+      this.title = this.noti.title;
+      this.message = this.noti.mensaje;
       console.log('oleeeeeeee');
     });
   }
@@ -312,7 +315,7 @@ export class FormComponent implements OnInit {
         break;
       }
       case 'Noti': {
-        this.newElement = new Noti(this.name, this.mensaje);
+        this.newElement = new Noti(this.title, this.message);
         this.notiService.createNoti(this.newElement).subscribe(
           data => {
             this.toastColor = 'success'
@@ -429,7 +432,7 @@ export class FormComponent implements OnInit {
         break;
       }
       case 'Noti': {
-        this.newElement = new Noti(this.name, this.mensaje);
+        this.newElement = new Noti(this.title, this.message);
         this.notiService.updateNoti(this.id, this.newElement).subscribe(
           data => {
             this.toastColor = 'success'
@@ -460,6 +463,74 @@ export class FormComponent implements OnInit {
   }
   
   
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // NOTIFICACIONES NADIA
+
+  sendNotification() {
+    const data = {
+      title: this.title,
+      message: this.message,
+    };
+
+    this.http.post('https://www.monche.es/OFGC/backend/OFGCAPP/public/api/notifications', data).subscribe(
+      () => {
+        this.showToast('Notificación enviada correctamente');
+        this.clearFields();
+      },
+      (error) => {
+        this.showToast('Error al enviar la notificación');
+        console.error(error);
+      }
+    );
+  }
+
+  async showToast(message: string) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  clearFields() {
+    this.id = null;
+    this.title = '';
+    this.message = '';
+  }
 }
+  

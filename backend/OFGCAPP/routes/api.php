@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\AuthorController;
 use App\Http\Controllers\Api\MusicianController;
 use App\Http\Controllers\Api\NotiController;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\DeviceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +30,8 @@ Route::get('authors', 'App\Http\Controllers\Api\AuthorController@index');
 Route::get('authors/{author}', 'App\Http\Controllers\Api\AuthorController@show');
 Route::get('pieces', 'App\Http\Controllers\Api\PieceController@index');
 Route::get('pieces/{piece}', 'App\Http\Controllers\Api\PieceController@show');
+Route::post('device', 'App\Http\Controllers\Api\DeviceController@registerDevice');
+Route::post('notifications', 'App\Http\Controllers\Api\NotificationController@sendNotification');
 Route::post('login', [AuthController::class, 'signin']);
 Route::post('register', [AuthController::class, 'signup']);
 Route::middleware('auth:sanctum')->group( function () {
