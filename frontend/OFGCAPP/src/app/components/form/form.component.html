@@ -35,7 +35,7 @@
         </ion-item>
       </div>
     </div>
-    <div class="input-div">
+    <div  *ngIf="type!=='Noti'"  class="input-div">
       <ion-label class="subtext">Nombre</ion-label>
       <ion-item>
         <ion-textarea [(ngModel)]="name" name="name" required placeholder="Nombre"></ion-textarea>
@@ -59,12 +59,6 @@
       <ion-item>
         <ion-textarea cols="40" rows="8" [(ngModel)]="description" name="description" required
           placeholder="Solistas"></ion-textarea>
-      </ion-item>
-    </div>
-    <div *ngIf="type==='Noti'" class="input-div">
-      <ion-label class="subtext">Mensaje</ion-label>
-      <ion-item>
-        <ion-textarea [(ngModel)]="mensaje" name="mensaje" required placeholder="Mensaje"></ion-textarea>
       </ion-item>
     </div>
     <div *ngIf="type==='Event'" class="input-div">
@@ -99,7 +93,7 @@
     <div *ngIf="type==='Event'" class="input-div">
       <ion-button expand="full" (click)="createMusician()">Crear director</ion-button>
     </div>  
-    <ion-button class="submit" type="submit">Crear</ion-button>
+    <ion-button class="submit" *ngIf="type!=='Noti'" type="submit">Crear</ion-button>
   </form>
   <form *ngIf="page==='Update'" #log="ngForm" (ngSubmit)="onUpdate()" novalidate>
     <div *ngIf="type==='Piece'">
@@ -126,18 +120,19 @@
         <ion-textarea [(ngModel)]="name" name="name" required placeholder="Nombre"></ion-textarea>
       </ion-item>
     </div>
+    <div class="input-div">
+      <ion-label class="subtext">Título</ion-label>
+      <ion-item>
+        <ion-textarea [(ngModel)]="title" name="title" required placeholder="Título"></ion-textarea>
+      </ion-item>
+    </div>
     <div *ngIf="type==='Event'" class="input-div">
       <ion-label class="subtext">{{type}} fecha</ion-label>
       <ion-item>
         <ion-textarea [(ngModel)]="date" name="date" required placeholder="YYYY-MM-DD"></ion-textarea>
       </ion-item>
     </div>
-    <div *ngIf="type==='Noti'" class="input-div">
-      <ion-label class="subtext">Mensaje</ion-label>
-      <ion-item>
-        <ion-textarea [(ngModel)]="mensaje" name="mensaje" required placeholder="Mensaje"></ion-textarea>
-      </ion-item>
-    </div>
+    
     <div *ngIf="type!=='Event' && type!=='Noti'" class="input-div">
       <ion-label class="subtext">Descripción</ion-label>
       <ion-item>
@@ -174,5 +169,25 @@
       </ion-item>
     </div>       
     <ion-button class="submit" type="submit">Modificar</ion-button>
+  </form>
+
+
+
+
+  <!-- NADIA -->
+  <form *ngIf="page==='Create'" #log="ngForm" (ngSubmit)="sendNotification()" novalidate>
+    <div class="input-div">
+      <ion-label class="subtext">Título</ion-label>
+      <ion-item>
+        <ion-textarea [(ngModel)]="title" name="title" required placeholder="Título"></ion-textarea>
+      </ion-item>
+    </div>
+    <div *ngIf="type==='Noti'" class="input-div">
+      <ion-label class="subtext">Mensaje</ion-label>
+      <ion-item>
+        <ion-textarea [(ngModel)]="message" name="message" required placeholder="Mensaje"></ion-textarea>
+      </ion-item>
+    </div>
+    <ion-button class="submit" *ngIf="type==='Noti'" expand="full" (click)="sendNotification()">Enviar</ion-button>
   </form>
 </div>

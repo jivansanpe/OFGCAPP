@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://10.0.2.2:8000'),
+    'url' => env('APP_URL', 'https://www.monche.es/OFGC/backend/OFGCAPP/public'),
 
     'asset_url' => env('ASSET_URL'),
 

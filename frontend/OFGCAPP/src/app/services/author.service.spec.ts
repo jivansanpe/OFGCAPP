@@ -33,7 +33,7 @@ describe('AuthorService', () => {
       authorService.getAuthors().subscribe(authors => {
         expect(authors).toEqual(mockAuthors);
       });
-      const req = httpMock.expectOne('http://10.0.2.2:8000/api/authors');
+      const req = httpMock.expectOne('https://www.monche.es/OFGC/backend/OFGCAPP/public/api/authors');
       expect(req.request.method).toBe('GET');
       req.flush(mockAuthors);
     });
@@ -45,7 +45,7 @@ describe('AuthorService', () => {
       authorService.getAuthor(1).subscribe(author => {
         expect(author).toEqual(mockAuthor);
       });
-      const req = httpMock.expectOne('http://10.0.2.2/api/authors/1');
+      const req = httpMock.expectOne('https://www.monche.es/OFGC/backend/OFGCAPP/public/api/authors/1');
       expect(req.request.method).toBe('GET');
       req.flush(mockAuthor);
     });
@@ -55,7 +55,7 @@ describe('AuthorService', () => {
   //   it('should send a POST request to the API with the new author data', () => {
   //     const newAuthor: Author = new Author('New Author', 'New Description');
   //     authorService.createAuthor(newAuthor).subscribe();
-  //     const req = httpMock.expectOne('http://10.0.2.2/api/authors');
+  //     const req = httpMock.expectOne('https://www.monche.es/OFGC/backend/OFGCAPP/public/api/authors');
   //     expect(req.request.method).toBe('POST');
   //     expect(req.request.body).toEqual(newAuthor);
   //     req.flush({});
@@ -66,7 +66,7 @@ describe('AuthorService', () => {
   //   it('should send a PUT request to the API with the updated author data', () => {
   //     const updatedAuthor: Author = new Author('Updated Author', 'Updated Description');
   //     authorService.updateAuthor(1, updatedAuthor).subscribe();
-  //     const req = httpMock.expectOne('http://10.0.2.2/api/authors/1');
+  //     const req = httpMock.expectOne('https://www.monche.es/OFGC/backend/OFGCAPP/public/api/authors/1');
   //     expect(req.request.method).toBe('PUT');
   //     expect(req.request.body).toEqual(updatedAuthor);
   //     req.flush({});
@@ -76,7 +76,7 @@ describe('AuthorService', () => {
   describe('deleteAuthor', () => {
     it('should send a DELETE request to the API with the specified author ID', () => {
       authorService.deleteAuthor(1).subscribe();
-      const req = httpMock.expectOne('http://10.0.2.2/api/authors/1');
+      const req = httpMock.expectOne('https://www.monche.es/OFGC/backend/OFGCAPP/public/api/authors/1');
       expect(req.request.method).toBe('DELETE');
       req.flush({});
     });

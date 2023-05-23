@@ -35,7 +35,7 @@ class NotiController extends BaseController
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
+            'title' => 'required',
             'mensaje' => 'required',
         ]);
     
@@ -44,7 +44,7 @@ class NotiController extends BaseController
         }
     
         $noti = Noti::create([
-            'name' => $request->input('name'),
+            'title' => $request->input('title'),
             'mensaje' => $request->input('mensaje'),
         ]);
     
@@ -75,7 +75,7 @@ class NotiController extends BaseController
     {
 
         $noti->update([
-            'name' => $request->name,
+            'title' => $request->title,
             'mensaje' => $request->mensaje,
         ]);
 

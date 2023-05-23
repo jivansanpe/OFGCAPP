@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import androidx.core.app.NotificationCompat;
 
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -38,7 +39,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     new Handler(Looper.getMainLooper()).post(new Runnable() {
       @Override
       public void run() {
-        Toast.makeText(MyFirebaseMessagingService.this.getApplicationContext()," Ofgc ->  " + body,Toast.LENGTH_SHORT).show();
+        Toast.makeText(MyFirebaseMessagingService.this.getApplicationContext(), " Ofgc ->  " + body, Toast.LENGTH_SHORT).show();
       }
     });
 
@@ -73,5 +74,22 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     notificationManager.notify(0 /* ID of notification */, notificationBuilder.build());
+  }
+
+
+  private void sendManualNotification(){
+
+    String topic = "Notifications";
+
+// Crear el mensaje
+    RemoteMessage.Builder builder = new RemoteMessage.Builder(topic);
+    builder.addData("score", "850");
+    builder.addData("time", "2:45");
+    RemoteMessage message = builder.build();
+
+// Enviar el mensaje a los dispositivos suscritos al tema proporcionado
+    FirebaseMessaging.getInstance().send(message);
+
+    System.out.println("Successfully sent message");
   }
 }

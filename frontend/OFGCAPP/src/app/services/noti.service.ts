@@ -11,7 +11,7 @@ const TOKEN_KEY = 'api_token';
   providedIn: 'root'
 })
 export class NotiService {
-  endpoint = 'http://localhost:8000/api/notis';
+  endpoint = 'https://www.monche.es/OFGC/backend/OFGCAPP/public/api/notis';
   httpOptionsUsingUrlEncoded = {
     headers: new HttpHeaders({ 'Authorization': `Bearer ${window.sessionStorage.getItem(TOKEN_KEY)}` })
   };
