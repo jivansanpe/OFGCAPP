@@ -93,8 +93,9 @@ export class EventListPage {
       );
     }
   }
-
-
+  goToNotis() {
+    this.router.navigateByUrl("/noti-list");
+  }
   async presentToast(msj: string) {
     const toast = await this.toastController.create({
       message: msj,

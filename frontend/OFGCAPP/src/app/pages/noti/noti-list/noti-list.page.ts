@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { NotiService } from '../../../services/noti.service';
 import { TokenService } from '../../../services/token.service';
 import { ToastController } from '@ionic/angular';
+import { finalize, forkJoin } from 'rxjs';
 const TOKEN_KEY = 'api_token';
 @Component({
   selector: 'app-noti-list',
@@ -51,6 +52,28 @@ export class NotiListPage {
       }
     )
   }
+  deleteAllNotisNow() {
+    if (window.confirm('¿Seguro que quieres borrar todas las notificaciones?')) {
+      const deleteRequests = this.notis.map((noti: { id: any; }) => {
+        return this.notiService.deleteNoti(noti.id);
+      });
+
+      forkJoin(deleteRequests).pipe(
+        finalize(() => {
+          this.router.navigate(['/noti-list']).then(() => {
+            location.reload();
+          });
+        })
+      ).subscribe(
+        data => {
+          console.log(`Notis deleted`);
+        },
+        err => {
+          console.log(`Error deleting notis: ${err.error.message}`);
+        }
+      );
+    }
+  }
   async presentToast(msj: string) {
     const toast = await this.toastController.create({
       message: msj,
@@ -65,6 +88,9 @@ export class NotiListPage {
   logOut(): void {
     this.tokenService.logOut();
     this.router.navigateByUrl("/home");
+  }
+  goToNotis() {
+    this.router.navigateByUrl("/noti-list");
   }
   isLogged() {
     if (window.sessionStorage.getItem(TOKEN_KEY)) {
