@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('notis', function (Blueprint $table) {
+        Schema::create('devices', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->longText('mensaje');
+            $table->string('token')->unique();
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notis');
+        Schema::dropIfExists('devices');
     }
 };

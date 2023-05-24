@@ -10,7 +10,7 @@ const TOKEN_KEY = 'api_token';
 })
 export class AuthorService {
 
-  endpoint = 'http://10.0.2.2:8000/api/authors';
+  endpoint = 'https://www.monche.es/OFGC/backend/OFGCAPP/public/api/authors';
   httpOptionsUsingUrlEncoded = {
     headers: new HttpHeaders({ 'Authorization': `Bearer ${window.sessionStorage.getItem(TOKEN_KEY)}` })
   };

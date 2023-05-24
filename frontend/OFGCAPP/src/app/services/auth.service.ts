@@ -10,7 +10,7 @@ import { NewUser } from '../models/new-user';
 })
 export class AuthService {
 
-  authUrl = "http://10.0.2.2:8000/api/"
+  authUrl = "https://www.monche.es/OFGC/backend/OFGCAPP/public/index.php/api/"
 
   constructor(private httpClient: HttpClient) { }
 
