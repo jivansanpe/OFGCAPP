@@ -1,32 +1,36 @@
-<app-menu *ngIf="isLoggedIn"></app-menu>
+  <app-menu *ngIf="isLoggedIn"></app-menu>
 
-<div class="ion-page" id="main-content">
-  <app-header></app-header>
-  <ion-content class="ion-padding">
-    <div>
-      <app-top-part title="Eventos"></app-top-part>
-      <ion-searchbar [(ngModel)]="filterTerm" name="filterTerm"></ion-searchbar>
-    </div>
-    <ng-container *ngIf="isLoggedIn; else publicEvents">
-      <ion-row class="cards-container" *ngFor="let e of events | filter:filterTerm">
-        <app-card [element]=e type="event"></app-card>
-      </ion-row>
-    </ng-container>
-    <ng-template #publicEvents>
-      <ion-row class="cards-container">
-        <ng-container *ngFor="let e of events | filter:filterTerm">
-          <ng-container *ngIf="e.status === 'Público'">
-            <app-card [element]=e type="event"></app-card>
+  <div class="ion-page" id="main-content">
+    <app-header></app-header>
+    <ion-content class="ion-padding">
+      <div>
+        <app-top-part title="Eventos"></app-top-part>
+        <ion-searchbar [(ngModel)]="filterTerm" name="filterTerm"></ion-searchbar>
+      </div>
+      <ng-container *ngIf="isLoggedIn; else publicEvents">
+        <ion-row class="cards-container" *ngFor="let e of events | filter:filterTerm">
+          <app-card [element]=e type="event"></app-card>
+        </ion-row>
+      </ng-container>
+      <ng-template #publicEvents>
+        <ion-row class="cards-container">
+          <ng-container *ngFor="let e of events | filter:filterTerm">
+            <ng-container *ngIf="e.status === 'Público'">
+              <app-card [element]=e type="event"></app-card>
+            </ng-container>
           </ng-container>
-        </ng-container>
-      </ion-row>  
-    </ng-template>   
-    <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="createEvent()">Crear</ion-button>
-    <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="changeAllPrivateEvents()">Publicar todo</ion-button>
-    <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="deleteAllEventsNow()">Vaciar</ion-button>
-  </ion-content>
-</div>
+        </ion-row>  
+      </ng-template>   
+      <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="createEvent()">Crear</ion-button>
+      <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="changeAllPrivateEvents()">Publicar todo</ion-button>
+      <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="deleteAllEventsNow()">Vaciar</ion-button>
+    </ion-content>
+  </div>
 
-<div>
-  <app-tab *ngIf="isLoggedIn"></app-tab>
-</div>
+  <ion-fab *ngIf="!isLoggedIn" class="large-icon" vertical="top" horizontal="end" slot="fixed" style="top: 27px; right: 30px;">
+    <ion-icon name="notifications-outline" (click)="goToNotis()"></ion-icon>
+  </ion-fab>
+
+  <div>
+    <app-tab *ngIf="isLoggedIn"></app-tab>
+  </div>

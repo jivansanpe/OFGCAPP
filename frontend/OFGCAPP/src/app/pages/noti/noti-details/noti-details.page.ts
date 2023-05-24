@@ -12,6 +12,7 @@ export class NotiDetailsPage implements OnInit {
 
   noti: any;
   id: any;
+  isLoggedIn: any;
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private tokenService: TokenService, private notiService: NotiService) {
     this.id = this.activatedRoute.snapshot.paramMap.get('id')
   }
