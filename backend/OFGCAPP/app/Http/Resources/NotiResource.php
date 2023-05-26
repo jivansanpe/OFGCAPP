@@ -17,7 +17,8 @@ class NotiResource extends JsonResource
         return [
             'id'=> $this->id,
             'title' => $this->title,
-            'mensaje' => $this->mensaje
+            'mensaje' => $this->mensaje,
+            'created_at' => $this->created_at->toDateTimeString()
         ];
     }
 }

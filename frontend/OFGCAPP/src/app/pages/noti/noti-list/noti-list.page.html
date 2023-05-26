@@ -1,4 +1,4 @@
-<app-menu></app-menu>
+<app-menu *ngIf="isLoggedIn"></app-menu>
 
 <div class="ion-page" id="main-content">
   <app-header></app-header>
@@ -11,7 +11,12 @@
       <app-card [element]=n type="noti"></app-card>
     </ion-row>
     <ion-button *ngIf="isLoggedIn" expand="full" (click)="createNoti()">Crear</ion-button>
+    <ion-button *ngIf="isLoggedIn" class="create-button" expand="full" (click)="deleteAllNotisNow()">Vaciar</ion-button>
   </ion-content>
 </div>
 
-<app-tab></app-tab>
+<ion-fab *ngIf="!isLoggedIn" class="large-icon" vertical="top" horizontal="end" slot="fixed" style="top: 27px; right: 30px;">
+  <ion-icon name="notifications-outline" (click)="goToNotis()"></ion-icon>
+</ion-fab>
+
+<app-tab *ngIf="isLoggedIn"></app-tab>

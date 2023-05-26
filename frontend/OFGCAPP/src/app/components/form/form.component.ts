@@ -228,10 +228,10 @@ export class FormComponent implements OnInit {
         const selectedEventIds = this.events
           .filter((event: { id: string }, index: number) => this.selectedEventIds[index])
           .map((event: { id: string }) => event.id);
-        
+
         this.newElement = new Piece(this.authorId, selectedEventIds, this.name, this.description);
         console.log(selectedEventIds);
-        
+
         this.pieceService.createPiece(this.newElement).subscribe(
           data => {
             console.log(this.newElement.selectedEventIds);
@@ -250,10 +250,10 @@ export class FormComponent implements OnInit {
             }
           }
         );
-        
+
         break;
       }
-          
+
       case 'Author': {
         this.newElement = new Author(this.name, this.description);
         this.authorService.createAuthor(this.newElement, blob).subscribe(
@@ -350,6 +350,9 @@ export class FormComponent implements OnInit {
     }
     switch (this.type) {
       case 'Piece': {
+        const selectedEventIds = this.events
+          .filter((event: { id: string }, index: number) => this.selectedEventIds[index])
+          .map((event: { id: string }) => event.id);
         this.newElement = new Piece(this.authorId, this.selectedEventIds, this.name, this.description);
         this.pieceService.updatePiece(this.id, this.newElement).subscribe(
           data => {
