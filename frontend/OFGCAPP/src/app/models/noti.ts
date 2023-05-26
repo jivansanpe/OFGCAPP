@@ -1,10 +1,10 @@
 export class Noti {
-    name: string;
-    mensaje: string;
+    title: string;
+    message: string;
   
-    constructor(name: string, mensaje: string) {
-      this.name = name;
-      this.mensaje = mensaje;
+    constructor(title: string, message: string) {
+      this.title = title;
+      this.message = message;
     }
   }
   

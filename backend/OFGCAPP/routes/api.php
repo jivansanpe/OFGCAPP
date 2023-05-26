@@ -32,6 +32,7 @@ Route::get('pieces', 'App\Http\Controllers\Api\PieceController@index');
 Route::get('pieces/{piece}', 'App\Http\Controllers\Api\PieceController@show');
 Route::post('device', 'App\Http\Controllers\Api\DeviceController@registerDevice');
 Route::post('notifications', 'App\Http\Controllers\Api\NotificationController@sendNotification');
+Route::get('getnotifications', 'App\Http\Controllers\Api\NotificationController@index');
 Route::post('login', [AuthController::class, 'signin']);
 Route::post('register', [AuthController::class, 'signup']);
 Route::middleware('auth:sanctum')->group( function () {

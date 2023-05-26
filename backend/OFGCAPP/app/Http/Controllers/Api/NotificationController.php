@@ -9,6 +9,12 @@ use App\Http\Controllers\Controller;
 
 class NotificationController extends Controller
 {
+
+    public function index(Request $request)
+    {
+        return NotificationResource::collection(Notification::all());
+    }
+
     public function sendNotification(Request $request)
     {
         $response = new \stdClass();
